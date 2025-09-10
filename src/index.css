@@ -1,1 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Poppins:wght@600;700;800&family=Quicksand:wght@400;600&display=swap');
 @import "tailwindcss";
+
+:root {
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Nunito', sans-serif;
+  --font-accent: 'Quicksand', sans-serif;
+
+  /* ---------- Base Colors ---------- */
+  --color-background: #ffffff;
+  --color-surface: #fdfdfd;
+  --color-border: #e5e7eb;
+  --color-overlay: #f9fafb;
+
+  /* ---------- Core Palette (Bright & Vibrant) ---------- */
+  --color-primary: #2563eb;   /* Bright Blue */
+  --color-secondary: #f97316; /* Vibrant Orange */
+  --color-accent: #22c55e;    /* Fresh Green */
+  --color-pink: #ec4899;      /* Bold Pink */
+  --color-yellow: #facc15;    /* Bright Yellow */
+  --color-purple: #8b5cf6;    /* Vivid Purple */
+
+  /* ---------- Text ---------- */
+  --color-text: #111827;       /* Almost black */
+  --color-text-light: #374151; /* Dark gray */
+  --color-text-muted: #6b7280; /* Medium gray */
+
+  /* ---------- States (Feedback) ---------- */
+  --color-success: #22c55e;
+  --color-warning: #facc15;
+  --color-error: #ef4444;
+
+  /* ---------- Gradients ---------- */
+  --gradient-hero-from: #2563eb;   /* Blue */
+  --gradient-hero-to: #f97316;     /* Orange */
+
+  --gradient-accent-from: #22c55e; /* Green */
+  --gradient-accent-to: #facc15;   /* Yellow */
+
+  --gradient-spectrum-from: #2563eb;
+  --gradient-spectrum-via1: #f97316;
+  --gradient-spectrum-via2: #facc15;
+  --gradient-spectrum-via3: #22c55e;
+  --gradient-spectrum-to: #8b5cf6;
+
+  /* ---------- Shadows & Effects ---------- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.15);
+
+  /* ---------- Radii ---------- */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-full: 9999px;
+}
+
+
+@theme {
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-accent: var(--font-accent);
+
+  /* Map palette to Tailwind tokens */
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-border: var(--color-border);
+  --color-overlay: var(--color-overlay);
+
+  --color-primary: var(--color-primary);
+  --color-red: var(--color-red);
+  --color-yellow: var(--color-yellow);
+  --color-green: var(--color-green);
+  --color-purple: var(--color-purple);
+  --color-accent: var(--color-accent);
+
+  --color-text: var(--color-text);
+  --color-text-light: var(--color-text-light);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+
+  /* Gradients */
+  --color-gradient-hero-from: var(--gradient-hero-from);
+  --color-gradient-hero-to: var(--gradient-hero-to);
+
+  --color-gradient-accent-from: var(--gradient-accent-from);
+  --color-gradient-accent-to: var(--gradient-accent-to);
+
+  --color-gradient-spectrum-from: var(--gradient-spectrum-from);
+  --color-gradient-spectrum-via1: var(--gradient-spectrum-via1);
+  --color-gradient-spectrum-via2: var(--gradient-spectrum-via2);
+  --color-gradient-spectrum-via3: var(--gradient-spectrum-via3);
+  --color-gradient-spectrum-to: var(--gradient-spectrum-to);
+
+  /* Shadows */
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+
+  /* Radii */
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-full: var(--radius-full);
+}
+
+html {
+  scroll-behavior: smooth;
+}
