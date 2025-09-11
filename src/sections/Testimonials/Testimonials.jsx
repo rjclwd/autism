@@ -35,7 +35,7 @@ export default function Testimonials() {
         What Our Patients Say
       </h2>
 
-      <div className="relative max-w-4xl mx-auto px-10 overflow-hidden">
+      <div className="relative max-w-4xl mx-auto px-10 py-3 overflow-hidden">
         {/* Track */}
         <div
           className="flex transition-transform duration-700 ease-in-out"
