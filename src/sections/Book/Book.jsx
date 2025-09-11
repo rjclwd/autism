@@ -32,7 +32,7 @@ function Book() {
             <h3 className="text-xl md:text-4xl lg:text-5xl max-w-4xl text-center flex justify-self-center font-bold font-heading">Accepting & Understanding and
                 treating the innocent soul's mind</h3>
 
-            <section className="px-6 py-16 bg-white">
+            <section className=" py-16 bg-white">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
                     {/* Left: Author Info + Quote */}
@@ -51,39 +51,42 @@ function Book() {
                     </div>
 
                     {/* Right: Book Image + Availability + CTAs */}
-                    <div className="flex flex-col items-center  text-center md:text-left space-y-6">
+                    <div className="flex flex-col items-center space-y-2 bg-overlay border border-border p-4 rounded-2xl">
                         {/* Book Image */}
-                        <img
-                            src="/autbook.png" // replace with actual book cover image
-                            alt="Book cover"
-                            className="w-64 md:w-80 rounded-lg shadow-lg"
-                        />
+                        <div className="bg-surface w-full rounded-2xl overflow-hidden p-4">
+                            <img
+                                src="/autbook.png" // replace with actual book cover image
+                                alt="Book cover"
+                                className="w-64 md:w-80 drop-shadow-lg drop-shadow-blue-950 mx-auto"
+                            />
+                        </div>
 
                         {/* Availability */}
-                        <p className="text-gray-700 text-lg">
-                            📚 Available now on{" "}
-                            <span className="font-semibold text-primary">Amazon</span> /{" "}
-                            <span className="font-semibold text-secondary">Flipkart</span>
+                        <p className="text-gray-700 text-lg font-extrabold font-heading">
+                            Autism Care with Homeopathy {" "}
+                            <span className="font-semibold text-primary font-accent">Available Now!</span> {" "}
+                            <span className="font-semibold text-red-500 font-accent">Hurry up</span>
                         </p>
+                        <p className="text-text-muted text-sm max-w-sm text-left">Autism spectrum disorder (ASD) is a developmental disability caused by differences in the brain. Some people with ASD have a known difference, such as a genetic condition.</p>
 
                         {/* CTA Buttons */}
                         <div className="flex flex-wrap justify-center md:justify-start gap-4">
                             <a
-                                href="#"
+                                href="https://www.rajeevclinic.com/buy-autism-book"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block px-8 py-3 rounded-full bg-primary text-white text-lg font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300"
                             >
-                                🛒 Buy on Amazon
+                                🛒 Buy Now
                             </a>
-                            <a
+                            {/* <a
                                 href="#"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-block px-8 py-3 rounded-full bg-secondary text-white text-lg font-semibold shadow-md hover:bg-orange-700 hover:shadow-lg transition-all duration-300"
                             >
                                 🛍️ Buy on Flipkart
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>
