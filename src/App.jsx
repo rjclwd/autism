@@ -5,13 +5,15 @@ import YoutubeEm from './sections/YoutubeEm/YoutubeEm'
 import Book from './sections/Book/Book'
 import SuccessStory from './sections/SuccessStory/SuccessStory'
 import Footer from './components/Footer/Footer'
+import AppointmentFloat from './components/AppointmentFloat/AppointmentFloat'
 
 function App() {
   return (
-    <div className='bg-gradient-to-b from-primary/30 to-white min-h-screen'>
+    <div className='min-h-screen'>
       <header className=''>
         <Navbar />
       </header>
+      <AppointmentFloat />
       <Hero />
       <YoutubeEm />
       <Book />

@@ -2,7 +2,6 @@ import React from "react"
 import {
   Globe,
   Phone,
-  PhoneCall,
   Instagram,
   Facebook,
   Youtube,
@@ -10,7 +9,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-purple-800 to-purple-900 text-white py-12">
+    <footer className="bg-primary text-white py-12">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
         {/* Websites */}
         <div>
@@ -23,7 +22,7 @@ function Footer() {
                 href="http://www.rajeevclinic.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
+                className="hover:text-secondary transition"
               >
                 www.rajeevclinic.com
               </a>
@@ -33,7 +32,7 @@ function Footer() {
                 href="http://www.drrajeevswellness.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
+                className="hover:text-secondary transition"
               >
                 www.drrajeevswellness.com
               </a>
@@ -49,13 +48,13 @@ function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               For Any Query:{" "}
-              <a href="tel:9234400006" className="hover:text-purple-300">
+              <a href="tel:9234400006" className="hover:text-accent">
                 9234400006
               </a>
             </li>
             <li>
               Online Consultation:{" "}
-              <a href="tel:+919117520003" className="hover:text-purple-300">
+              <a href="tel:+919117520003" className="hover:text-accent">
                 +91 91175 20003
               </a>
             </li>
@@ -73,7 +72,7 @@ function Footer() {
                 href="https://www.instagram.com/drrajeevsclinic/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
+                className="hover:text-secondary transition"
               >
                 Dr. Rajeev Sir
               </a>
@@ -83,7 +82,7 @@ function Footer() {
                 href="https://www.instagram.com/drrajeevswellness/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
+                className="hover:text-secondary transition"
               >
                 Dr. Rajeev&apos;s Wellness
               </a>
@@ -97,86 +96,27 @@ function Footer() {
             <Facebook size={18} /> Facebook
           </h3>
           <ul className="space-y-2 text-sm">
-            <li>
-              <a
-                href="https://www.facebook.com/profile.php?id=61560423996522"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
-              >
-                Clinic Noida
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/AbhiHomeoRanchi/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
-              >
-                Abhi Homeo Ranchi
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/drrajeevshomoeopathicclinicgreaternoida/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
-              >
-                Greater Noida
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/drrajeevhomeopathy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
-              >
-                Main Clinic
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/DrRajeevshomeopathicclinicjagtauli/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
-              >
-                Jagtauli
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/drrajeevclinicpatna/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
-              >
-                Patna
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/drrajeevclinickolkata/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
-              >
-                Kolkata
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/drrajeevswellness/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-purple-300 transition"
-              >
-                Wellness
-              </a>
-            </li>
+            {[
+              { name: "Clinic Noida", url: "https://www.facebook.com/profile.php?id=61560423996522" },
+              { name: "Abhi Homeo Ranchi", url: "https://www.facebook.com/AbhiHomeoRanchi/" },
+              { name: "Greater Noida", url: "https://www.facebook.com/drrajeevshomoeopathicclinicgreaternoida/" },
+              { name: "Main Clinic", url: "https://www.facebook.com/drrajeevhomeopathy/" },
+              { name: "Jagtauli", url: "https://www.facebook.com/DrRajeevshomeopathicclinicjagtauli/" },
+              { name: "Patna", url: "https://www.facebook.com/drrajeevclinicpatna/" },
+              { name: "Kolkata", url: "https://www.facebook.com/drrajeevclinickolkata/" },
+              { name: "Wellness", url: "https://www.facebook.com/drrajeevswellness/" },
+            ].map((link, i) => (
+              <li key={i}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-secondary transition"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
 
           <h3 className="text-lg font-semibold mt-6 mb-3 flex items-center gap-2">
@@ -186,7 +126,7 @@ function Footer() {
             href="https://www.youtube.com/channel/UC42j8Oi53cP0aNLFmi5KKZg"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-300 transition text-sm"
+            className="hover:text-secondary transition text-sm"
           >
             Dr. Rajeev&apos;s Homeopathy Clinic
           </a>
@@ -194,7 +134,7 @@ function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/20 mt-10 pt-6 text-center text-sm text-gray-300">
+      <div className="border-t border-white/20 mt-10 pt-6 text-center text-sm text-gray-200">
         © {new Date().getFullYear()} Dr. Rajeev&apos;s Clinics. All rights reserved.
       </div>
     </footer>
