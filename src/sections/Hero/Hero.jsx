@@ -91,7 +91,7 @@ function Hero() {
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-3 justify-center mt-6">
                 <a
-                    href="#"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLScV_DZUlRX5eNqp1przBJrRELrIoY0ZlyBUNTE3MUYVyZKkfg/viewform"
                     className="flex items-center gap-2 px-6 py-3 md:text-lg rounded-full bg-purple-600 text-white font-semibold shadow-md hover:bg-purple-700 transition"
                 >
                     <HelpCircle size={20} />
@@ -109,7 +109,7 @@ function Hero() {
                 </a>
 
                 <a
-                    href="#"
+                    href="https://www.rajeevclinic.com/appointment"
                     className="flex items-center gap-2 px-6 py-3 md:text-lg rounded-full bg-green-600 text-white font-semibold shadow-md hover:bg-green-700 transition"
                 >
                     <CalendarCheck size={20} />

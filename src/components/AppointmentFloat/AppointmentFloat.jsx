@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { PhoneCall, CalendarDays } from "lucide-react"
+import { PhoneCall, CalendarDays, PenBox } from "lucide-react"
 
 const AppointmentFloat = () => {
   return (
@@ -26,6 +26,19 @@ const AppointmentFloat = () => {
       >
         <CalendarDays className="w-5 h-5" />
         Book Appointment
+      </motion.a>
+
+      {/* Autism form */}
+      <motion.a
+        href="https://docs.google.com/forms/d/e/1FAIpQLScV_DZUlRX5eNqp1przBJrRELrIoY0ZlyBUNTE3MUYVyZKkfg/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-24 md:bottom-6 left-6 bg-primary hover:bg-secondary flex items-center gap-x-2 z-50 text-white font-semibold px-5 py-3 rounded-full shadow-lg"
+        animate={{ y: [0, -4, 0] }}
+        transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+      >
+        <PenBox className="w-5 h-5" />
+        Fill the form
       </motion.a>
     </>
   )
