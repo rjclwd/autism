@@ -119,7 +119,7 @@ function Hero() {
           className="flex items-center gap-3 text-lg md:text-2xl font-extrabold uppercase tracking-wide animate-pulse hover:scale-105 transition-transform"
         >
           <PhoneCall className="w-9 h-9" />
-          Book Your Appointment Instantly – Click Now to Call!
+          Book Your Appointment Instantly – Click Now to Call! +91 91175 20003
         </a>
       </div>
     </section>
