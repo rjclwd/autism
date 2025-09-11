@@ -6,6 +6,7 @@ import Book from './sections/Book/Book'
 import SuccessStory from './sections/SuccessStory/SuccessStory'
 import Footer from './components/Footer/Footer'
 import AppointmentFloat from './components/AppointmentFloat/AppointmentFloat'
+import Testimonials from './sections/Testimonials/Testimonials'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <YoutubeEm />
       <Book />
       <SuccessStory />
+      <Testimonials />
       <Footer />
     </div>
   )
