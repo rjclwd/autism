@@ -19,7 +19,7 @@ function Book() {
                     <span className="flex items-baseline gap-4 mt-2">
                         {/* Location */}
                         <span className="text-lg md:text-2xl lg:text-4xl text-gray-700 font-medium tracking-wide">
-                             India for
+                            India for
                         </span>
                         {/* "Autism" Highlight */}
                         <span className="text-4xl md:text-7xl lg:text-9xl text-secondary drop-shadow-md">
@@ -32,45 +32,62 @@ function Book() {
             <h3 className="text-xl md:text-4xl lg:text-5xl max-w-4xl text-center flex justify-self-center font-bold font-heading">Accepting & Understanding and
                 treating the innocent soul's mind</h3>
 
-            {/* Author Info */}
-            <p className="mt-6 text-gray-600 text-lg max-w-2xl mx-auto font-body italic">
-                Written & Defined by <br />
-                <span className="font-bold text-gray-800">Dr. Rajeev Kumar</span>
-                <br />
-                <span className="text-sm text-gray-500">B.H.M.S, M.D (B.U)</span>
-            </p>
+            <section className="px-6 py-16 bg-white">
+                <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-            {/* Hindi Quote */}
-            <p className="mt-6 text-xl md:text-2xl font-accent text-gray-800 leading-relaxed">
-                “अगर आपका बच्चा आपसे बात करते वक्त नज़रें चुराता है, और आपकी बातों को अनसुना करता है”
-            </p>
+                    {/* Left: Author Info + Quote */}
+                    <div className="text-center md:text-left space-y-6">
+                        {/* Hindi Quote */}
+                        <p className="text-xl md:text-5xl font-accent text-gray-800 leading-relaxed">
+                            “अगर आपका बच्चा आपसे बात करते वक्त नज़रें चुराता है, और आपकी बातों को अनसुना करता है”
+                        </p>
+                        {/* Author Info */}
+                        <p className="text-gray-600 text-lg font-body italic">
+                            Written & Defined by <br />
+                            <span className="font-bold text-gray-800">Dr. Rajeev Kumar</span>
+                            <br />
+                            <span className="text-sm text-gray-500">B.H.M.S, M.D (B.U)</span>
+                        </p>
+                    </div>
 
-            {/* Availability */}
-            <p className="mt-4 text-gray-700 text-lg">
-                📚 Available now on{" "}
-                <span className="font-semibold text-primary">Amazon</span> /{" "}
-                <span className="font-semibold text-secondary">Flipkart</span>
-            </p>
+                    {/* Right: Book Image + Availability + CTAs */}
+                    <div className="flex flex-col items-center  text-center md:text-left space-y-6">
+                        {/* Book Image */}
+                        <img
+                            src="/autbook.png" // replace with actual book cover image
+                            alt="Book cover"
+                            className="w-64 md:w-80 rounded-lg shadow-lg"
+                        />
 
-            {/* CTA Buttons */}
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-8 py-3 rounded-full bg-primary text-white text-lg font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300"
-                >
-                    🛒 Buy on Amazon
-                </a>
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-8 py-3 rounded-full bg-secondary text-white text-lg font-semibold shadow-md hover:bg-green-700 hover:shadow-lg transition-all duration-300"
-                >
-                    🛍️ Buy on Flipkart
-                </a>
-            </div>
+                        {/* Availability */}
+                        <p className="text-gray-700 text-lg">
+                            📚 Available now on{" "}
+                            <span className="font-semibold text-primary">Amazon</span> /{" "}
+                            <span className="font-semibold text-secondary">Flipkart</span>
+                        </p>
+
+                        {/* CTA Buttons */}
+                        <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block px-8 py-3 rounded-full bg-primary text-white text-lg font-semibold shadow-md hover:bg-blue-700 hover:shadow-lg transition-all duration-300"
+                            >
+                                🛒 Buy on Amazon
+                            </a>
+                            <a
+                                href="#"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block px-8 py-3 rounded-full bg-secondary text-white text-lg font-semibold shadow-md hover:bg-orange-700 hover:shadow-lg transition-all duration-300"
+                            >
+                                🛍️ Buy on Flipkart
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     )
 }
