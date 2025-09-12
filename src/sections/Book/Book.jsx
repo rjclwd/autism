@@ -3,11 +3,13 @@ import React from "react"
 function Book() {
     return (
         <section className="px-6 py-16 text-center  ">
-            <img
-                src="/hsd.svg"
-                alt="Decorative divider"
-                className="mx-auto w-full max-w-xl scale-125 md:max-w-5xl h-auto"
-            />
+            <div className="overflow-hidden">
+                <img
+                    src="/hsd.svg"
+                    alt="Decorative divider"
+                    className="mx-auto w-full scale-125 md:max-w-5xl h-auto"
+                />
+            </div>
 
 
             <section className=" py-16 ">
