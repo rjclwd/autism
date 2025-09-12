@@ -50,7 +50,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-12 relative">
-      <h2 className="text-center text-2xl md:text-4xl font-heading font-extrabold text-primary mb-8">
+      <h2 className="text-center text-2xl md:text-4xl font-heading font-extrabold uppercase text-primary mb-8">
         What Our Patients Say
       </h2>
 

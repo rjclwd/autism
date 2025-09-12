@@ -59,7 +59,7 @@ function Hero() {
                 <div className="bg-gradient-to-r from-primary/20 to-secondary/20 px-6 py-4 rounded-2xl shadow-lg">
                     <SplitText
                         text="One of India’s Leading Homeopathic Clinic Networks"
-                        className="md:text-6xl text-2xl text-center font-heading font-extrabold text-primary drop-shadow-lg py-2"
+                        className="md:text-6xl text-2xl text-center font-heading uppercase font-extrabold text-primary drop-shadow-lg py-2"
                         delay={20}
                         duration={0.6}
                         ease="power3.out"
@@ -77,7 +77,7 @@ function Hero() {
             {/* 🔹 AUTISM LINE (secondary, calmer) */}
             <SplitText
                 text="Spreading Hope, Care, and Awareness for Every Child on the Autism Spectrum"
-                className="text-xl sm:text-2xl md:text-4xl text-center font-heading font-bold text-secondary max-w-6xl"
+                className="text-xl sm:text-2xl md:text-4xl text-center font-heading  font-bold text-secondary max-w-6xl"
                 delay={20}
                 duration={0.6}
                 ease="power3.out"

@@ -44,7 +44,7 @@ function SuccessStory() {
 
         {/* Text Content */}
         <div className="flex flex-col justify-center space-y-6 text-center md:text-left max-w-lg mx-auto">
-          <h2 className="text-4xl md:text-5xl font-heading font-extrabold text-primary leading-tight drop-shadow-sm">
+          <h2 className="text-4xl uppercase md:text-5xl font-heading font-extrabold text-primary leading-tight drop-shadow-sm">
             Their Own Words
           </h2>
           <h3 className="text-xl md:text-2xl font-semibold text-secondary">
