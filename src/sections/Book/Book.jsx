@@ -2,7 +2,7 @@ import React from "react"
 
 function Book() {
     return (
-        <section className="px-6 py-16 text-center  ">
+        <section className="px-6 text-center  ">
             <div className="overflow-hidden">
                 <img
                     src="/hsd.svg"
