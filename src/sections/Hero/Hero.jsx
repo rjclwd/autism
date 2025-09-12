@@ -53,7 +53,7 @@ function Carousel() {
 
 function Hero() {
     return (
-        <section className="px-4 py-12 w-full flex flex-col items-center justify-center gap-y-8 bg-white">
+        <section className="px-4 py-12 w-full flex flex-col items-center justify-center gap-y-8">
             {/* 🔹 PROMOTIONAL LINE (big + bold + highlighted) */}
             <div className="flex justify-center mb-10">
                 <div className="bg-gradient-to-r from-primary/20 to-secondary/20 px-6 py-4 rounded-2xl shadow-lg">

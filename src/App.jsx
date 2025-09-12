@@ -10,7 +10,7 @@ import Testimonials from './sections/Testimonials/Testimonials'
 
 function App() {
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen bg-background'>
       <header className=''>
         <Navbar />
       </header>

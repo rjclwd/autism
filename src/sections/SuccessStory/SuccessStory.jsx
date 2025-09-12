@@ -23,7 +23,7 @@ function SuccessStory() {
     : `${baseUrl}?autoplay=0&rel=0&showinfo=0`
 
   return (
-    <section className="px-6 py-20 bg-surface">
+    <section className="px-6 py-20">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         
         {/* YouTube Video */}

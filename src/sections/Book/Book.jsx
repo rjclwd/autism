@@ -2,43 +2,21 @@ import React from "react"
 
 function Book() {
     return (
-        <section className="px-6 py-16 text-center bg-white ">
-            <h2 className="font-heading font-extrabold flex gap-2 items-start justify-center text-center leading-tight">
-                {/* "1st" Highlight */}
-                <span className="text-7xl md:text-9xl lg:text-[12rem] text-primary drop-shadow-md">
-                    1<sup className="text-4xl md:text-5xl lg:text-7xl align-super">st</sup>
-                </span>
+        <section className="px-6 py-16 text-center  ">
+            <img
+                src="/hsd.svg"
+                alt="Decorative divider"
+                className="mx-auto w-full max-w-xl scale-125 md:max-w-5xl h-auto"
+            />
 
-                {/* Right-side content */}
-                <span className="flex flex-col items-start">
-                    {/* Subtitle */}
-                    <span className="text-xl md:text-3xl lg:text-6xl text-gray-700 font-medium tracking-wide">
-                        Homeopathic Book in
-                    </span>
 
-                    <span className="flex items-baseline gap-4 mt-2">
-                        {/* Location */}
-                        <span className="text-lg md:text-2xl lg:text-4xl text-gray-700 font-medium tracking-wide">
-                            India for
-                        </span>
-                        {/* "Autism" Highlight */}
-                        <span className="text-4xl md:text-7xl lg:text-9xl text-secondary drop-shadow-md">
-                            Autism
-                        </span>
-                    </span>
-                </span>
-            </h2>
-
-            <h3 className="text-xl md:text-4xl lg:text-5xl max-w-4xl text-center flex justify-self-center font-bold font-heading">Accepting & Understanding and
-                treating the innocent soul's mind</h3>
-
-            <section className=" py-16 bg-white">
+            <section className=" py-16 ">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
                     {/* Left: Author Info + Quote */}
                     <div className="text-center md:text-left space-y-6">
                         {/* Hindi Quote */}
-                        <p className="text-xl md:text-5xl font-accent text-gray-800 leading-relaxed">
+                        <p className="text-md md:text-5xl font-hindi font-extrabold text-gray-800 leading-relaxed">
                             “अगर आपका बच्चा आपसे बात करते वक्त नज़रें चुराता है, और आपकी बातों को अनसुना करता है”
                         </p>
                         {/* Author Info */}

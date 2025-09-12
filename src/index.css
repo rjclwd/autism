@@ -1,48 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Poppins:wght@600;700;800&family=Quicksand:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Poppins:wght@600;700;800&family=Quicksand:wght@400;600&family=Mukta:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Nunito', sans-serif;
   --font-accent: 'Quicksand', sans-serif;
+  --font-hindi: 'Mukta', sans-serif;
 
   /* ---------- Base ---------- */
-  --color-background: #fdfefe; /* very light, clean */
-  --color-surface: #ffffff; 
-  --color-border: #e5e7eb;
-  --color-overlay: #f9fafb;
+  --color-background: linear-gradient(135deg, #e0f2fe, #dbeafe, #eff6ff); 
+  /* soft blue gradient instead of white */
+  --color-surface: #f8fafc;   /* very light blue-gray card bg */
+  --color-border: #cbd5e1;
+  --color-overlay: #e2e8f0;
 
-  /* ---------- Trust + Hope Palette ---------- */
+  /* ---------- Blue Theme Palette ---------- */
   --color-primary: #2563eb;   /* Bright Blue → trust */
-  --color-secondary: #22c55e; /* Fresh Green → healing/hope */
-  --color-accent: #f97316;    /* Orange → warmth, friendliness */
-  --color-highlight: #8b5cf6; /* Purple → professionalism */
+  --color-secondary: #0ea5e9; /* Sky Blue → fresh, modern */
+  --color-accent: #f97316;    /* Coral Orange → CTA / warmth */
+  --color-highlight: #1e40af; /* Deep Blue → premium */
   --color-pink: #ec4899;      /* Compassion */
-  --color-yellow: #facc15;    /* Optimism */
+  --color-yellow: #fbbf24;    /* Optimism */
 
   /* ---------- Text ---------- */
-  --color-text: #111827;       /* Near black */
-  --color-text-light: #374151; /* Dark gray */
-  --color-text-muted: #6b7280; /* Medium gray */
-
-  /* ---------- States (Feedback) ---------- */
-  --color-success: #22c55e;
-  --color-warning: #f59e0b; /* warmer, less harsh yellow */
-  --color-error: #ef4444;
+  --color-text: #0f172a;       /* Navy/Slate */
+  --color-text-light: #334155;
+  --color-text-muted: #64748b;
 
   /* ---------- Gradients ---------- */
-  --gradient-hero: linear-gradient(135deg, #2563eb, #22c55e); /* Blue → Green */
-  --gradient-accent: linear-gradient(135deg, #f97316, #facc15); /* Orange → Yellow */
+  --gradient-hero: linear-gradient(135deg, #2563eb, #0ea5e9); /* Blue → Sky */
+  --gradient-accent: linear-gradient(135deg, #f97316, #fbbf24); /* Orange → Amber */
   --gradient-spectrum: linear-gradient(
     135deg,
     #2563eb,
-    #22c55e,
-    #facc15,
-    #f97316,
-    #8b5cf6
+    #0ea5e9,
+    #38bdf8,
+    #1e40af
   );
 
-  /* ---------- Shadows & Effects ---------- */
+  /* ---------- Shadows ---------- */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.12);
@@ -58,6 +54,7 @@
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   --font-accent: var(--font-accent);
+  --font-hindi: var(--font-hindi);
 
   /* Core Colors */
   --color-background: var(--color-background);
@@ -69,14 +66,12 @@
   --color-secondary: var(--color-secondary);
   --color-accent: var(--color-accent);
   --color-highlight: var(--color-highlight);
+  --color-pink: var(--color-pink);
+  --color-yellow: var(--color-yellow);
 
   --color-text: var(--color-text);
   --color-text-light: var(--color-text-light);
   --color-text-muted: var(--color-text-muted);
-
-  --color-success: var(--color-success);
-  --color-warning: var(--color-warning);
-  --color-error: var(--color-error);
 
   /* Gradients */
   --color-gradient-hero: var(--gradient-hero);
