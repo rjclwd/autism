@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout/Layout.jsx';
 import App from './App.jsx';
 import Autism from './pages/autism/Autism.jsx';
-// import other landing pages as needed
+import MensCare from './pages/menscare/MensCare.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Layout />}>
           <Route index element={<App />} />
           <Route path="autism" element={<Autism />} />
+          <Route path="menscare" element={<MensCare />} />
         </Route>
       </Routes>
     </BrowserRouter>

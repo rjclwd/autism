@@ -36,6 +36,7 @@ function Carousel() {
                 </AnimatePresence>
             </div>
 
+            {/* Dots Navigation */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
                 {images.map((_, i) => (
                     <button
@@ -53,6 +54,7 @@ function Carousel() {
 function Hero() {
     return (
         <section className="px-4 py-12 w-full flex flex-col items-center justify-center gap-y-8">
+            {/* 🔹 PROMOTIONAL LINE (big + bold + highlighted) */}
             <div className="flex justify-center mb-10">
                 <div className="bg-gradient-to-r from-primary/20 to-secondary/20 px-6 py-4 rounded-2xl shadow-lg">
                     <SplitText
@@ -72,6 +74,7 @@ function Hero() {
 
             <Carousel />
 
+            {/* 🔹 AUTISM LINE (secondary, calmer) */}
             <SplitText
                 text="Spreading Hope, Care, and Awareness for Every Child on the Autism Spectrum"
                 className="text-xl sm:text-2xl md:text-4xl text-center font-heading  font-bold text-secondary max-w-6xl"
@@ -85,6 +88,7 @@ function Hero() {
                 rootMargin="-100px"
             />
 
+            {/* Action Buttons */}
             <div className="flex flex-wrap gap-3 justify-center mt-6">
                 <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLScV_DZUlRX5eNqp1przBJrRELrIoY0ZlyBUNTE3MUYVyZKkfg/viewform"
@@ -113,6 +117,7 @@ function Hero() {
                 </a>
             </div>
 
+            {/* Call-to-Action Banner */}
             <div className="w-full bg-primary max-w-7xl hover:bg-accent text-white py-4 px-6 flex items-center justify-center shadow-lg rounded-lg mt-8">
                 <a
                     href="tel:+919117520003"
