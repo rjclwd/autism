@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import SplitText from "../../bits/SplitText/SplitText"
+import SplitText from "../../../bits/SplitText/SplitText"
 import { motion, AnimatePresence } from "framer-motion"
 import { CalendarCheck, HelpCircle, PhoneCall, Youtube } from "lucide-react"
 
