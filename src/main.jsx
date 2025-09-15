@@ -9,7 +9,7 @@ import MensCare from './pages/menscare/MensCare.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='awareness'>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<App />} />

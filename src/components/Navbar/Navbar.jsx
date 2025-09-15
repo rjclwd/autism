@@ -6,7 +6,7 @@ function Navbar() {
       {/* Left Logo */}
       <a href="/" className="flex items-center">
         <img
-          src="/logo.png"
+          src={import.meta.env.BASE_URL + "/logo.png"}
           alt="Dr. Rajeev Clinic Logo"
           className="h-16 w-auto object-contain"
         />
@@ -15,7 +15,7 @@ function Navbar() {
       {/* Right Section */}
       <div className="flex items-center gap-6">
         <img
-          src="/final-dr-wellness-final-logo.png"
+          src={import.meta.env.BASE_URL + "/final-dr-wellness-final-logo.png"}
           alt="Dr. Rajeev Wellness Logo"
           className="h-14 w-auto object-contain"
         />

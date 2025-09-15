@@ -25,7 +25,7 @@ function Carousel() {
                 <AnimatePresence mode="wait">
                     <motion.img
                         key={index}
-                        src={images[index]}
+                        src={import.meta.env.BASE_URL + images[index]}
                         alt={`carousel-${index}`}
                         className="absolute w-full h-full object-cover"
                         initial={{ opacity: 0, scale: 1.05 }}
