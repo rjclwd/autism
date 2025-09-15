@@ -23,20 +23,20 @@ function ProductCard({ product }) {
 
             <p className="text-primary font-bold text-lg mb-4">₹{product.price}</p>
 
-            <button className="mt-auto flex items-center justify-center gap-2 bg-primary text-white font-medium text-sm md:text-base py-2 px-4 rounded-full active:scale-95 transition cursor-pointer">
+            <a href={product.link} target="_blank" className="mt-auto flex items-center justify-center gap-2 bg-primary text-white font-medium text-sm md:text-base py-2 px-4 rounded-full active:scale-95 transition cursor-pointer">
                 <ShoppingCart size={16} />
                 Add to Cart
-            </button>
+            </a>
         </div>
     )
 }
 
 const products = [
-    { name: "Menscare Capsules", price: "770", image: "/menscare.png", badge: "Best Seller" },
-    { name: "RL-21", price: "180", image: "/RL-21.jpg", badge: "New" },
-    { name: "RL-60", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller" },
-    { name: "RL-64", price: "180", image: "/rl-64.webp", badge: "Best Seller" },
-    { name: "RL-77", price: "400", image: "/RL-77.jpg", badge: "Best Seller" },
+    { name: "Menscare Capsules", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
+    { name: "RL-21", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
+    { name: "RL-60", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
+    { name: "RL-64", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
+    { name: "RL-77", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
 ]
 
 export default function Products() {

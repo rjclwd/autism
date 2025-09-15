@@ -17,7 +17,7 @@ function SuccessStory() {
     }
   }, [])
 
-  const baseUrl = "https://www.youtube.com/embed/zwbWatORxAM"
+  const baseUrl = "https://www.youtube.com/embed/yZAMkqHAJFg"
   const videoUrl = isInView
     ? `${baseUrl}?autoplay=1&mute=1&rel=0&showinfo=0`
     : `${baseUrl}?autoplay=0&rel=0&showinfo=0`

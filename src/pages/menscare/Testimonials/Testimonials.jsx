@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight, Star } from "lucide-react"
+import { useState, useEffect } from "react"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 const testimonials = [
   {
@@ -32,7 +32,6 @@ const testimonials = [
 export default function Testimonials() {
   const [index, setIndex] = useState(0)
 
-  // Auto-advance every 5s
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext()
@@ -55,7 +54,6 @@ export default function Testimonials() {
       </h2>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-3 overflow-hidden">
-        {/* Track */}
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${index * 100}%)` }}
@@ -63,7 +61,6 @@ export default function Testimonials() {
           {testimonials.map((review, i) => (
             <div key={i} className="min-w-full flex justify-center">
               <div className="bg-white shadow-lg rounded-xl p-6 sm:p-8 w-full sm:max-w-xl md:max-w-3xl">
-                {/* Rating */}
                 <div className="flex items-center mb-3">
                   {[...Array(review.rating)].map((_, j) => (
                     <span key={j} className="text-yellow-500 text-lg sm:text-xl">
@@ -72,12 +69,10 @@ export default function Testimonials() {
                   ))}
                 </div>
 
-                {/* Review Text */}
                 <p className="text-base sm:text-lg md:text-2xl text-gray-700 leading-relaxed italic">
                   “{review.text}”
                 </p>
 
-                {/* Author */}
                 <p className="mt-4 sm:mt-6 font-semibold text-sm sm:text-base md:text-lg text-gray-900">
                   — {review.name}
                 </p>
@@ -86,7 +81,6 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Controls */}
         <button
           onClick={handlePrev}
           className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-primary/70 text-white p-2 sm:p-3 rounded-full shadow-md hover:opacity-90"
