@@ -5,7 +5,7 @@ function Book() {
         <section className="px-6 text-center  ">
             <div className="overflow-hidden">
                 <img
-                    src="/hsd.svg"
+                    src={import.meta.env.BASE_URL + "/hsd.svg"}
                     alt="Decorative divider"
                     className="mx-auto w-full scale-125 md:max-w-5xl h-auto"
                 />
@@ -35,7 +35,7 @@ function Book() {
                         {/* Book Image */}
                         <div className="bg-surface w-full rounded-2xl overflow-hidden p-4">
                             <img
-                                src="/autbook.png" // replace with actual book cover image
+                                src={import.meta.env.BASE_URL + "/autbook.png"} // replace with actual book cover image
                                 alt="Book cover"
                                 className="w-64 md:w-80 drop-shadow-lg drop-shadow-blue-950 mx-auto"
                             />
