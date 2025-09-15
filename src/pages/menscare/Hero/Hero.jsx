@@ -87,7 +87,7 @@ function Hero() {
                 threshold={0.1}
                 rootMargin="-100px"
             />
-
+            <img src={import.meta.env.BASE_URL + "/sexhelmen.png"} alt="" />
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-3 justify-center mt-6">
                 <a

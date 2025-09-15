@@ -6,17 +6,20 @@ import Layout from './components/Layout/Layout.jsx';
 import App from './App.jsx';
 import Autism from './pages/autism/Autism.jsx';
 import MensCare from './pages/menscare/MensCare.jsx';
+import ThemeProvider from './components/ThemeProvider/ThemeProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter basename='awareness'>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<App />} />
-          <Route path="autism" element={<Autism />} />
-          <Route path="menscare" element={<MensCare />} />
-        </Route>
-      </Routes>
+      <ThemeProvider>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<App />} />
+            <Route path="autism" element={<Autism />} />
+            <Route path="menscare" element={<MensCare />} />
+          </Route>
+        </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
 );

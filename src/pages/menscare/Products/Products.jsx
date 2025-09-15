@@ -4,7 +4,7 @@ function ProductCard({ product }) {
     return (
         <div className="relative bg-surface border border-border rounded-xl shadow-sm hover:shadow-lg hover:-translate-y-1 transition transform p-5 flex flex-col">
             {product.badge && (
-                <span className="absolute top-3 left-3 bg-primary text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
+                <span className="absolute top-3 left-3 bg-accent text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
                     {product.badge}
                 </span>
             )}
@@ -25,18 +25,18 @@ function ProductCard({ product }) {
 
             <a href={product.link} target="_blank" className="mt-auto flex items-center justify-center gap-2 bg-primary text-white font-medium text-sm md:text-base py-2 px-4 rounded-full active:scale-95 transition cursor-pointer">
                 <ShoppingCart size={16} />
-                Add to Cart
+                Buy Now
             </a>
         </div>
     )
 }
 
 const products = [
-    { name: "Menscare Capsules", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
-    { name: "RL-21", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
-    { name: "RL-60", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
-    { name: "RL-64", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
-    { name: "RL-77", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
+    { name: "Menscare Capsules", description: "", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
+    { name: "RL-21", description: "", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
+    { name: "RL-60", description: "", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
+    { name: "RL-64", description: "", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
+    { name: "RL-77", description: "", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
 ]
 
 export default function Products() {
