@@ -30,8 +30,8 @@ function Hero() {
 
             {/* 🔹 AUTISM LINE (secondary, calmer) */}
             <SplitText
-                text="Spreading Hope, Care, and Awareness for Every Child on the Autism Spectrum"
-                className="text-xl sm:text-2xl md:text-4xl text-center font-heading  font-bold text-secondary max-w-6xl"
+                text="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
+                className="text-xl sm:text-2xl md:text-4xl text-center font-heading py-1 font-bold text-secondary max-w-6xl"
                 delay={20}
                 duration={0.6}
                 ease="power3.out"
@@ -48,7 +48,7 @@ function Hero() {
                     className="flex items-center gap-2 px-6 py-3 md:text-lg rounded-full bg-purple-600 text-white font-semibold shadow-md hover:bg-purple-700 transition"
                 >
                     <HelpCircle size={20} />
-                    Autism Query
+                    Menscare Query
                 </a>
 
                 <a

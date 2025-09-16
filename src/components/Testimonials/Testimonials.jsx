@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-export default function Testimonials({testimonials}) {
+export default function Testimonials({ testimonials }) {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -10,6 +10,7 @@ export default function Testimonials({testimonials}) {
     }, 5000)
     return () => clearInterval(interval)
   }, [index])
+  
 
   const handlePrev = () => {
     setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1))
@@ -32,7 +33,7 @@ export default function Testimonials({testimonials}) {
         >
           {testimonials.map((review, i) => (
             <div key={i} className="min-w-full flex justify-center">
-              <div className="bg-white shadow-lg rounded-xl p-6 sm:p-8 w-full sm:max-w-xl md:max-w-3xl">
+              <div className="bg-white mx-1 shadow-lg rounded-xl p-6 sm:p-8 w-full sm:max-w-xl md:max-w-3xl">
                 <div className="flex items-center mb-3">
                   {[...Array(review.rating)].map((_, j) => (
                     <span key={j} className="text-yellow-500 text-lg sm:text-xl">
