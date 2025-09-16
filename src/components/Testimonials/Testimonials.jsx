@@ -25,7 +25,7 @@ export default function Testimonials({testimonials}) {
         What Our Patients Say
       </h2>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-3 overflow-hidden">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 py-6 overflow-hidden">
         <div
           className="flex transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${index * 100}%)` }}
