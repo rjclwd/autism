@@ -3,8 +3,36 @@ import AppointmentFloat from '../../components/AppointmentFloat/AppointmentFloat
 import Hero from './Hero/Hero'
 import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import SuccessStory from './SuccessStory/SuccessStory'
-import Testimonials from './Testimonials/Testimonials'
 import Book from './Book/Book'
+import Testimonials from '../../components/Testimonials/Testimonials'
+
+const testimonials = [
+  {
+    name: "Priya Sharma",
+    text: "Dr. Rajeev's treatment has been a blessing for my son. We noticed a huge improvement in his communication within 3 months.",
+    rating: 5,
+  },
+  {
+    name: "Ankit Verma",
+    text: "I was struggling to find proper guidance for autism care. The clinic not only gave us hope but also real results.",
+    rating: 4,
+  },
+  {
+    name: "Sneha Kapoor",
+    text: "The doctors are extremely professional and caring. My child is more attentive and responds better now. Highly recommended!",
+    rating: 5,
+  },
+  {
+    name: "Rahul Mehta",
+    text: "I had almost given up, but this treatment made a huge difference. My son is calmer and more responsive than before.",
+    rating: 5,
+  },
+  {
+    name: "Neha Gupta",
+    text: "Very compassionate approach. They listen carefully and provide practical solutions. Truly grateful!",
+    rating: 4,
+  },
+]
 
 export default function Autism() {
     return (
@@ -19,7 +47,7 @@ export default function Autism() {
             ]} />
             <Book />
             <SuccessStory />
-            <Testimonials />
+            <Testimonials testimonials={testimonials} />
         </div>
     )
 }

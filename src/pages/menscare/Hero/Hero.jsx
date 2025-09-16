@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { CalendarCheck, HelpCircle, PhoneCall, Youtube } from "lucide-react"
 
 function Carousel() {
-    const images = ["/autclinic.png", "/autws.png", "/autbook.png", "/authand.png", "/wad.png"]
+    const images = ["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]
     const [index, setIndex] = useState(0)
 
     useEffect(() => {
@@ -21,7 +21,7 @@ function Carousel() {
             transition={{ duration: 0.8 }}
             className="relative w-full max-w-5xl mx-auto overflow-hidden shadow-lg rounded-lg bg-white"
         >
-            <div className="aspect-[16/6] relative">
+            <div className="aspect-[16/10] relative">
                 <AnimatePresence mode="wait">
                     <motion.img
                         key={index}
@@ -87,7 +87,6 @@ function Hero() {
                 threshold={0.1}
                 rootMargin="-100px"
             />
-            <img src={import.meta.env.BASE_URL + "/sexhelmen.png"} alt="" />
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-3 justify-center mt-6">
                 <a
