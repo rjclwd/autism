@@ -7,6 +7,7 @@ function App() {
       <Link to={'/autism'}>Autism</Link>
       <Link to={'/menscare'}>MensCare</Link>
       <Link to={'/femalecare'}>FemaleCare</Link>
+      <Link to={'/skincare'}>SkinCare</Link>
     </div>
   )
 }

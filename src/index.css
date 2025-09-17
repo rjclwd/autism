@@ -55,7 +55,7 @@
 
   --color-primary: #db2777;    /* main bold pink */
   --color-secondary: #ec4899;  /* lighter pink secondary */
-  --color-accent: #f472b6;     /* accent highlight */
+  --color-accent: #f472b6;     /* accent highlight */ 
   --color-highlight: #9d174d;  /* deep magenta highlight */
   --color-pink: #f472b6;       /* reusable pink shade */
   --color-yellow: #facc15;     /* accent yellow (contrast pop) */
@@ -64,6 +64,26 @@
   --color-text-light: #374151; /* lighter gray for headings */
   --color-text-muted: #6b7280; /* muted gray for small text */
 }
+
+/* ---------- Orange-Pink Theme ---------- */
+.theme-orangepink {
+  --color-bgnd: #fff7f5;        /* soft peach background */
+  --color-surface: #fff1f2;     /* very light pink surface */
+  --color-border: #fed7aa;      /* warm light orange border */
+  --color-overlay: #ffe4e6;     /* light rose overlay */
+
+  --color-primary: #fb7185;     /* soft pinkish red */
+  --color-secondary: #f97316;   /* vivid orange */
+  --color-accent: #ec4899;      /* bright pink accent */
+  --color-highlight: #c2410c;   /* deep burnt orange for contrast */
+  --color-pink: #f472b6;        /* complementary soft pink */
+  --color-yellow: #facc15;      /* golden yellow highlight */
+
+  --color-text: #1f2937;        /* dark gray for readability */
+  --color-text-light: #374151;  /* slightly lighter gray */
+  --color-text-muted: #6b7280;  /* muted gray for subtitles */
+}
+
 
 /* ---------- Tailwind Theme Hook ---------- */
 @theme {

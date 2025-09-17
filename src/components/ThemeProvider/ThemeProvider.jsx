@@ -17,6 +17,8 @@ export default function ThemeProvider({ children }) {
       html.classList.add("theme-blue");
     } else if (location.pathname.startsWith("/femalecare")) {
       html.classList.add("theme-pink")
+    } else if (location.pathname.startsWith("/skincare")) {
+      html.classList.add("theme-orangepink")
     } else {
       // fallback theme (optional)
       html.classList.add("theme-blue");
