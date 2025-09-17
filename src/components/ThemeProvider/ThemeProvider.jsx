@@ -15,6 +15,8 @@ export default function ThemeProvider({ children }) {
       html.classList.add("theme-green");
     } else if (location.pathname.startsWith("/autism")) {
       html.classList.add("theme-blue");
+    } else if (location.pathname.startsWith("/femalecare")) {
+      html.classList.add("theme-pink")
     } else {
       // fallback theme (optional)
       html.classList.add("theme-blue");

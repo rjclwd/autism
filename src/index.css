@@ -46,6 +46,24 @@
   --color-text-light: #334155;
   --color-text-muted: #64748b;
 }
+/* ---------- Pink Theme ---------- */
+.theme-pink {
+  --color-bgnd: #fdf2f8;       /* very light blush background */
+  --color-surface: #fff1f2;    /* soft pink surface */
+  --color-border: #f9a8d4;     /* medium pink border */
+  --color-overlay: #fbcfe8;    /* overlay card bg */
+
+  --color-primary: #db2777;    /* main bold pink */
+  --color-secondary: #ec4899;  /* lighter pink secondary */
+  --color-accent: #f472b6;     /* accent highlight */
+  --color-highlight: #9d174d;  /* deep magenta highlight */
+  --color-pink: #f472b6;       /* reusable pink shade */
+  --color-yellow: #facc15;     /* accent yellow (contrast pop) */
+
+  --color-text: #1f2937;       /* dark gray for readability */
+  --color-text-light: #374151; /* lighter gray for headings */
+  --color-text-muted: #6b7280; /* muted gray for small text */
+}
 
 /* ---------- Tailwind Theme Hook ---------- */
 @theme {

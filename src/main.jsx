@@ -7,6 +7,7 @@ import App from './App.jsx';
 import Autism from './pages/autism/Autism.jsx';
 import MensCare from './pages/menscare/MensCare.jsx';
 import ThemeProvider from './components/ThemeProvider/ThemeProvider.jsx';
+import FemaleCare from './pages/femalecare/FemaleCare.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')).render(
             <Route index element={<App />} />
             <Route path="autism" element={<Autism />} />
             <Route path="menscare" element={<MensCare />} />
+            <Route path="femalecare" element={<FemaleCare />} />
           </Route>
         </Routes>
       </ThemeProvider>
