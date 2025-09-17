@@ -2,8 +2,8 @@ import AppointmentFloat from '../../components/AppointmentFloat/AppointmentFloat
 import Hero from './Hero/Hero'
 import SuccessStory from './SuccessStory/SuccessStory'
 import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
-import Products from './Products/Products'
 import Testimonials from '../../components/Testimonials/Testimonials'
+import Products from '../../components/Products/Products'
 
 const testimonials = [
     {
@@ -33,6 +33,14 @@ const testimonials = [
     },
 ]
 
+const products = [
+    { name: "Menscare Capsules", description: "", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
+    { name: "RL-21", description: "", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
+    { name: "RL-60", description: "", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
+    { name: "RL-64", description: "", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
+    { name: "RL-77", description: "", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
+]
+
 
 export default function MensCare() {
     return (
@@ -40,7 +48,7 @@ export default function MensCare() {
             <AppointmentFloat />
             <Hero />
             <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
-            <Products />
+            <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />
         </div>

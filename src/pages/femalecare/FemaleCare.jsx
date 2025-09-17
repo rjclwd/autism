@@ -2,8 +2,8 @@ import AppointmentFloat from '../../components/AppointmentFloat/AppointmentFloat
 import Hero from './Hero/Hero'
 import SuccessStory from './SuccessStory/SuccessStory'
 import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
-import Products from './Products/Products'
 import Testimonials from '../../components/Testimonials/Testimonials'
+import Products from '../../components/Products/Products'
 
 const testimonials = [
     {
@@ -33,6 +33,15 @@ const testimonials = [
     },
 ]
 
+const products = [
+    { name: "Femacare Syrup Utrine Tonic", description: "Two teaspoonful twice daily or as directed by the Physician.", price: "400", image: "/femsyp450.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/femacare-syrup-utrine-tonic/" },
+    { name: "Ovary Drops, For Ovary Trouble", description: "15-20 Drops 3 times daily with 1/2 cup of water or as directed by the Physician.", price: "180", image: "/overydrop30.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/ovary-drops-for-ovary-trouble//" },
+    { name: "Female Care Capsules", description: "60 Capsules", price: "670", image: "/femcrcap.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/female-care-capsules/" },
+    { name: "RL-37 For Leucorrhoea All Types Female Problems Syrup", description: "Two teaspoonful twice daily or as directed by the Physician.", price: "400", image: "/RL-37.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-37-for-leucorrhoea-all-types-female-problems-syrup/" },
+    { name: "RL-5 Leucorrhoea & All Female Problems", description: "15 - 20 drops 3 times daily with 1/2 cup of water or as directed by the Physician", price: "180", image: "/RL-5.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-5-leucorrhoea-all-female-problems/" },
+    { name: "RL-61 Female Drops", description: "10 - 15 Drops should e diluted in water and taken 3times a day or as directed by the Physician.", price: "180", image: "/RL-61-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-61-female-drops/" },
+]
+
 
 export default function FemaleCare() {
     return (
@@ -40,7 +49,7 @@ export default function FemaleCare() {
             <AppointmentFloat />
             <Hero />
             <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
-            <Products />
+            <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />
         </div>
