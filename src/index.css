@@ -9,80 +9,229 @@
   --font-hindi: 'Mukta', sans-serif;
 }
 
-/* ---------- Blue Theme ---------- */
-.theme-blue {
-  --color-bgnd: #dfeefb;
-  --color-surface: #f8fafc;
-  --color-border: #cbd5e1;
-  --color-overlay: #e2e8f0;
+/* ---------- Autism Care (Calm Blue) ---------- */
+.theme-autism {
+  --color-bgnd: #e0f2fe;       
+  --color-surface: #f0f9ff;    
+  --color-border: #bae6fd;     
+  --color-overlay: #cffafe;    
 
-  --color-primary: #2563eb;
-  --color-secondary: #0ea5e9;
-  --color-accent: #f97316;
-  --color-highlight: #1e40af;
-  --color-pink: #ec4899;
-  --color-yellow: #fbbf24;
+  --color-primary: #2563eb;    
+  --color-secondary: #0ea5e9;  
+  --color-accent: #38bdf8;     
+  --color-highlight: #1e3a8a;  
 
   --color-text: #0f172a;
   --color-text-light: #334155;
   --color-text-muted: #64748b;
 }
 
-/* ---------- Green Theme ---------- */
-.theme-green {
-  --color-bgnd: #e6f7f1;
-  --color-surface: #f8fafc;
-  --color-border: #bbf7d0;
-  --color-overlay: #dcfce7;
+/* ---------- Mens Care (Strong Green) ---------- */
+.theme-mens {
+  --color-bgnd: #ecfdf5;       
+  --color-surface: #f0fdfa;    
+  --color-border: #bbf7d0;     
+  --color-overlay: #dcfce7;    
 
-  --color-primary: #16a34a;
-  --color-secondary: #22c55e;
-  --color-accent: #65a30d;
-  --color-highlight: #166534;
-  --color-pink: #ec4899;
-  --color-yellow: #fbbf24;
+  --color-primary: #16a34a;    
+  --color-secondary: #22c55e;  
+  --color-accent: #84cc16;     
+  --color-highlight: #166534;  
 
   --color-text: #0f172a;
   --color-text-light: #334155;
   --color-text-muted: #64748b;
 }
-/* ---------- Pink Theme ---------- */
-.theme-pink {
-  --color-bgnd: #fdf2f8;       /* very light blush background */
-  --color-surface: #fff1f2;    /* soft pink surface */
-  --color-border: #f9a8d4;     /* medium pink border */
-  --color-overlay: #fbcfe8;    /* overlay card bg */
 
-  --color-primary: #db2777;    /* main bold pink */
-  --color-secondary: #ec4899;  /* lighter pink secondary */
-  --color-accent: #f472b6;     /* accent highlight */ 
-  --color-highlight: #9d174d;  /* deep magenta highlight */
-  --color-pink: #f472b6;       /* reusable pink shade */
-  --color-yellow: #facc15;     /* accent yellow (contrast pop) */
+/* ---------- Female Care (Soft Pink) ---------- */
+.theme-female {
+  --color-bgnd: #fdf2f8;       
+  --color-surface: #fff1f2;    
+  --color-border: #f9a8d4;     
+  --color-overlay: #fbcfe8;    
 
-  --color-text: #1f2937;       /* dark gray for readability */
-  --color-text-light: #374151; /* lighter gray for headings */
-  --color-text-muted: #6b7280; /* muted gray for small text */
+  --color-primary: #db2777;    
+  --color-secondary: #ec4899;  
+  --color-accent: #f472b6;     
+  --color-highlight: #9d174d;  
+
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
 }
 
-/* ---------- Orange-Pink Theme ---------- */
-.theme-orangepink {
-  --color-bgnd: #fff7f5;        /* soft peach background */
-  --color-surface: #fff1f2;     /* very light pink surface */
-  --color-border: #fed7aa;      /* warm light orange border */
-  --color-overlay: #ffe4e6;     /* light rose overlay */
+/* ---------- Skin Care (Peach Orange-Pink) ---------- */
+.theme-skin {
+  --color-bgnd: #fff7f5;       
+  --color-surface: #fff1f2;    
+  --color-border: #fed7aa;     
+  --color-overlay: #ffe4e6;    
 
-  --color-primary: #fb7185;     /* soft pinkish red */
-  --color-secondary: #f97316;   /* vivid orange */
-  --color-accent: #ec4899;      /* bright pink accent */
-  --color-highlight: #c2410c;   /* deep burnt orange for contrast */
-  --color-pink: #f472b6;        /* complementary soft pink */
-  --color-yellow: #facc15;      /* golden yellow highlight */
+  --color-primary: #fb7185;    
+  --color-secondary: #f97316;  
+  --color-accent: #f472b6;     
+  --color-highlight: #c2410c;  
 
-  --color-text: #1f2937;        /* dark gray for readability */
-  --color-text-light: #374151;  /* slightly lighter gray */
-  --color-text-muted: #6b7280;  /* muted gray for subtitles */
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
 }
+
+/* ---------- Digestive Care (Yellow-Lime) ---------- */
+.theme-digestive {
+  --color-bgnd: #fefce8;       
+  --color-surface: #fef9c3;    
+  --color-border: #d9f99d;     
+  --color-overlay: #fef08a;    
+
+  --color-primary: #ca8a04;    
+  --color-secondary: #65a30d;  
+  --color-accent: #84cc16;     
+  --color-highlight: #854d0e;  
+
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
+}
+
+/* ---------- Nervous & Mind Care (Lavender) ---------- */
+.theme-mind {
+  --color-bgnd: #f5f3ff;       
+  --color-surface: #faf5ff;    
+  --color-border: #ddd6fe;     
+  --color-overlay: #ede9fe;    
+
+  --color-primary: #7c3aed;    
+  --color-secondary: #a855f7;  
+  --color-accent: #9333ea;     
+  --color-highlight: #4c1d95;  
+
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
+}
+
+/* ---------- Urology Care (Teal Aqua) ---------- */
+.theme-urology {
+  --color-bgnd: #f0fdfa;       
+  --color-surface: #ecfdf5;    
+  --color-border: #99f6e4;     
+  --color-overlay: #ccfbf1;    
+
+  --color-primary: #0d9488;    
+  --color-secondary: #14b8a6;  
+  --color-accent: #06b6d4;     
+  --color-highlight: #134e4a;  
+
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
+}
+
+/* ---------- Autoimmune Care (Deep Indigo) ---------- */
+.theme-autoimmune {
+  --color-bgnd: #eef2ff;       
+  --color-surface: #f5f3ff;    
+  --color-border: #c7d2fe;     
+  --color-overlay: #e0e7ff;    
+
+  --color-primary: #4338ca;    
+  --color-secondary: #6366f1;  
+  --color-accent: #3b82f6;     
+  --color-highlight: #1e3a8a;  
+
+  --color-text: #1e293b;
+  --color-text-light: #334155;
+  --color-text-muted: #64748b;
+}
+
+/* ---------- ENT Care (Coral-Red) ---------- */
+.theme-ent {
+  --color-bgnd: #fff5f5;       
+  --color-surface: #ffe4e6;    
+  --color-border: #fecaca;     
+  --color-overlay: #fed7d7;    
+
+  --color-primary: #e11d48;    
+  --color-secondary: #f43f5e;  
+  --color-accent: #fb7185;     
+  --color-highlight: #7f1d1d;  
+
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
+}
+
+/* ---------- Hair & Beauty Care (Rose-Gold) ---------- */
+.theme-hair {
+  --color-bgnd: #fff5f7;       
+  --color-surface: #fff1f2;    
+  --color-border: #fecdd3;     
+  --color-overlay: #ffe4e6;    
+
+  --color-primary: #be185d;    
+  --color-secondary: #db2777;  
+  --color-accent: #f472b6;     
+  --color-highlight: #831843;  
+
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
+}
+
+/* ---------- Child Care (Playful Mint) ---------- */
+.theme-child {
+  --color-bgnd: #f0fdf4;       
+  --color-surface: #ecfdf5;    
+  --color-border: #a7f3d0;     
+  --color-overlay: #d1fae5;    
+
+  --color-primary: #10b981;    
+  --color-secondary: #34d399;  
+  --color-accent: #22d3ee;     
+  --color-highlight: #065f46;  
+
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
+}
+
+/* ---------- Ortho Care (Earthy Clay) ---------- */
+.theme-ortho {
+  --color-bgnd: #fef2f2;       
+  --color-surface: #fdfdea;    
+  --color-border: #fcd34d;     
+  --color-overlay: #fde68a;    
+
+  --color-primary: #b45309;    
+  --color-secondary: #d97706;  
+  --color-accent: #92400e;     
+  --color-highlight: #78350f;  
+
+  --color-text: #1f2937;
+  --color-text-light: #374151;
+  --color-text-muted: #6b7280;
+}
+
+/* ---------- Respiratory Care (Fresh Aqua-Green) ---------- */
+.theme-respiratory {
+  --color-bgnd: #ecfeff;       
+  --color-surface: #f0fdfa;    
+  --color-border: #a7f3d0;     
+  --color-overlay: #ccfbf1;    
+
+  --color-primary: #0891b2;    
+  --color-secondary: #0ea5e9;  
+  --color-accent: #14b8a6;     
+  --color-highlight: #164e63;  
+
+  --color-text: #0f172a;
+  --color-text-light: #334155;
+  --color-text-muted: #64748b;
+}
+
+
+
 
 
 /* ---------- Tailwind Theme Hook ---------- */

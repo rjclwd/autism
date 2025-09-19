@@ -2,8 +2,8 @@ import AppointmentFloat from '../../components/AppointmentFloat/AppointmentFloat
 import Hero from './Hero/Hero'
 import SuccessStory from './SuccessStory/SuccessStory'
 import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
-import Products from '../../components/Products/Products'
 import Testimonials from '../../components/Testimonials/Testimonials'
+import Products from '../../components/Products/Products'
 
 const testimonials = [
     {
@@ -34,22 +34,21 @@ const testimonials = [
 ]
 
 const products = [
-    { name: "RL-22 For Eczema & Skin Disease Drops", description: "15 - 20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.", price: "180", image: "/RL-22.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-22-for-eczema-skin-disease-drops/" },
-    { name: "RL-30 For Warts & Corn Mole Drops", description: "15 - 20 drop 3 times Daily with 1/2 cup of water or as directed by the Physician.", price: "180", image: "/RL-30.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-30-for-warts-corn-mole-drops/" },
-    { name: "RL-48 For Psoriasis Drops", description: "15 - 20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.", price: "180", image: "/RL-481.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-48-for-psoriasis-drops/" },
-    { name: "RL-69 Skin Drops", description: "10 - 15 Drops should e diluted in water and taken 3 times a day or as directed by the Physician.", price: "180", image: "/RL-69-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-69-skin-drops/" },
-    { name: "RL-75 Reactivating Drops", description: "10 - 15 Drops should e diluted in water and taken 3 times a day or as directed by the Physician", price: "180", image: "/RL-751.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-75-reactivating-drops/" },
+    { name: "Menscare Capsules", description: "", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
+    { name: "RL-21", description: "", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
+    { name: "RL-60", description: "", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
+    { name: "RL-64", description: "", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
+    { name: "RL-77", description: "", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
 ]
 
 
-
-export default function SkinCare() {
+export default function EntCare() {
     return (
         <div>
             <AppointmentFloat />
             <Hero />
             <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
-            <Products products={products}/>
+            <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />
         </div>
