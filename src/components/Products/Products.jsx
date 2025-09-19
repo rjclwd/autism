@@ -1,79 +1,158 @@
-import { ShoppingCart } from "lucide-react"
+import { useMemo, useState } from "react";
+import { ShoppingCart, Star } from "lucide-react";
 
+/* ---------- Helpers ---------- */
+
+const formatINR = (value) =>
+  new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(Number(value || 0));
+
+function Stars({ rating = 0, size = 16 }) {
+  // Supports decimals like 3.7 via a partial overlay fill
+  const full = Math.floor(rating);
+  const frac = Math.max(0, Math.min(1, rating - full));
+  return (
+    <div className="relative inline-flex items-center">
+      {/* Base (empty) */}
+      <div className="flex gap-0.5 text-gray-300">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Star key={`empty-${i}`} size={size} className="stroke-current" />
+        ))}
+      </div>
+      {/* Filled overlay */}
+      <div
+        className="absolute inset-0 overflow-hidden text-yellow-500"
+        style={{ width: `${Math.min(5, full + frac) / 5 * 100}%` }}
+        aria-hidden="true"
+      >
+        <div className="flex gap-0.5">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star key={`full-${i}`} size={size} className="fill-current stroke-current" />
+          ))}
+        </div>
+      </div>
+      <span className="sr-only">{`Rated ${rating} out of 5`}</span>
+    </div>
+  );
+}
+
+/* ---------- Card ---------- */
 
 function ProductCard({ product }) {
+  const {
+    name,
+    description,
+    price,
+    rating,
+    image,
+    link,
+    badge,
+    inStock = true,
+  } = product || {};
+
+  const [imgSrc, setImgSrc] = useState(import.meta.env.BASE_URL + image);
+  const priceLabel = useMemo(() => formatINR(price), [price]);
+
   return (
-    <div className="relative bg-surface border border-border rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6 flex flex-col">
+    <article
+      className="relative bg-surface border border-border rounded-2xl shadow-md p-6 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1 focus-within:shadow-xl focus-within:-translate-y-1"
+      aria-label={name}
+    >
       {/* Badge */}
-      {product.badge && (
-        <span className="absolute z-10 top-4 left-4 bg-gradient-to-r from-primary to-accent text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
-          {product.badge}
+      {badge && (
+        <span
+          className="absolute z-10 top-4 left-4 bg-gradient-to-r from-primary to-accent text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg"
+          aria-label={`Badge: ${badge}`}
+        >
+          {badge}
         </span>
       )}
 
       {/* Product Image */}
       <div className="w-full h-48 bg-white rounded-xl overflow-hidden flex items-center justify-center mb-5">
         <img
-          src={import.meta.env.BASE_URL + product.image}
-          alt={product.name}
+          src={imgSrc}
+          alt={name || "Product image"}
           className="object-contain h-full w-auto transition-transform duration-300 hover:scale-105"
+          loading="lazy"
+          decoding="async"
+          onError={() => setImgSrc(import.meta.env.BASE_URL + "placeholder.png")}
         />
       </div>
 
-      {/* Product Title */}
+      {/* Title */}
       <h3 className="font-heading text-lg md:text-xl text-foreground font-bold leading-snug line-clamp-2 mb-2">
-        {product.name}
+        {name}
       </h3>
 
-      {/* Price + Rating Row */}
+      {/* Price + Rating */}
       <div className="flex items-center justify-between mb-3">
-        <p className="text-primary font-bold text-xl">₹{product.price}</p>
-        {product.rating && (
-          <div className="flex items-center gap-1 text-yellow-500 text-sm">
-            {Array.from({ length: 5 }, (_, i) => (
-              <Star
-                key={i}
-                size={16}
-                className={i < product.rating ? "fill-yellow-400" : "stroke-gray-300"}
-              />
-            ))}
+        <p className="text-primary font-bold text-xl">{priceLabel}</p>
+        {Number.isFinite(rating) && (
+          <div className="flex items-center gap-2">
+            <Stars rating={rating} />
+            <span className="text-xs text-text-muted">{rating.toFixed(1)}</span>
           </div>
         )}
       </div>
 
       {/* Description */}
-      <p className="text-sm text-text-muted leading-relaxed mb-5 line-clamp-3">
-        {product.description}
-      </p>
+      {description && (
+        <p className="text-sm text-text-muted leading-relaxed mb-5 line-clamp-3">
+          {description}
+        </p>
+      )}
 
       {/* CTA */}
       <a
-        href={product.link}
+        href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-accent text-white font-semibold text-sm md:text-base py-3 px-6 rounded-full active:scale-95 hover:shadow-lg transition-all duration-300"
+        aria-label={`Buy ${name} for ${priceLabel}`}
+        className={`mt-auto inline-flex items-center justify-center gap-2 font-semibold text-sm md:text-base py-3 px-6 rounded-full active:scale-95 transition-all duration-300
+        ${inStock
+            ? "bg-gradient-to-r from-primary to-accent text-white hover:shadow-lg"
+            : "bg-gray-200 text-gray-500 cursor-not-allowed"}`}
+        tabIndex={inStock ? 0 : -1}
+        onClick={(e) => {
+          if (!inStock) e.preventDefault();
+        }}
       >
         <ShoppingCart size={18} />
-        Buy Now
+        {inStock ? "Buy Now" : "Out of Stock"}
       </a>
-    </div>
-  )
+    </article>
+  );
 }
 
+/* ---------- List ---------- */
 
+export default function Products({ products = [] }) {
+  if (!products.length) return null;
 
-export default function Products({products}) {
-    return (
-        <section className="py-11">
-            <h2 className="text-center text-3xl md:text-4xl font-primary font-heading font-extrabold text-primary">
-                Recommended Medicine
-            </h2>
-            <p className="text-center py-4 italic text-text-muted">Consume only on the advice of a registered medical practitioner.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
-                {products.map((p, i) => (
-                    <ProductCard key={i} product={p} />
-                ))}
-            </div>
-        </section>
-    )
+  return (
+    <section className="py-11">
+      <h2 className="text-center text-3xl md:text-4xl font-primary font-heading font-extrabold text-primary">
+        Recommended Medicine
+      </h2>
+      <p className="text-center py-4 italic text-text-muted">
+        Consume only on the advice of a registered medical practitioner.
+      </p>
+
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6"
+        role="list"
+        aria-label="Product recommendations"
+      >
+        {products.map((p, i) => (
+          <div role="listitem" key={p?.id ?? i}>
+            <ProductCard product={p} />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

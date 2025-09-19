@@ -4,6 +4,7 @@ import SuccessStory from './SuccessStory/SuccessStory'
 import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Products from '../../components/Products/Products'
+import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
 
 const testimonials = [
     {
@@ -46,7 +47,48 @@ export default function MensCare() {
     return (
         <div>
             <AppointmentFloat />
-            <Hero />
+            {/* <Hero /> */}
+            <HeroUniversal
+                promoTitle="One of India’s Leading Homeopathic Clinic Networks"
+                subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
+                images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
+                phone="+919117520003"
+                trust={[
+                    { icon: "shield", label: "20+ Years of Care" },
+                    { icon: "award", label: "1L+ Consultations" },
+                    { icon: "star", label: "4.8/5 Patient Rating" },
+                ]}
+                ctas={[
+                    {
+                        label: "Menscare Query",
+                        href: "https://docs.google.com/forms/d/e/1FAIpQLScV_DZUlRX5eNqp1przBJrRELrIoY0ZlyBUNTE3MUYVyZKkfg/viewform",
+                        icon: "help",
+                        variant: "neutral",
+                    },
+                    {
+                        label: "YouTube",
+                        href: "https://www.youtube.com/channel/UC42j8Oi53cP0aNLFmi5KKZg",
+                        icon: "youtube",
+                        target: "_blank",
+                        variant: "danger",
+                    },
+                    {
+                        label: "Appointment Booking",
+                        href: "https://www.rajeevclinic.com/appointment",
+                        icon: "calendar",
+                        variant: "primary",
+                    },
+                ]}
+                options={{
+                    aspect: "aspect-[16/9]",
+                    interval: 4500,
+                    showArrows: true,
+                    showDots: true,
+                    rounded: "rounded-2xl",
+                    showAccents: true,
+                }}
+            />
+
             <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
             <Products products={products} />
             <SuccessStory />
