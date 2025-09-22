@@ -34,20 +34,64 @@ const testimonials = [
 ]
 
 const products = [
-    { name: "Menscare Capsules", description: "", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
-    { name: "RL-21", description: "", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
-    { name: "RL-60", description: "", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
-    { name: "RL-64", description: "", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
-    { name: "RL-77", description: "", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
+  {
+    name: "Baby Drops",
+    description: "15–20 Drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/baby-drops.jpg",
+    badge: "Child Care",
+    link: "https://www.drrajeevswellness.com/product/baby-drops/"
+  },
+  {
+    name: "Babylex Tonic with Iron & Calcium",
+    description: "Infantile: 1/2 teaspoonful with milk or fruit juice twice daily. Children: 1 teaspoonful with milk or fruit juice twice daily or as directed by the Physician.",
+    price: "400",
+    image: "/babylex-tonic-for-health-tonic-with-iron-calcium.jpg",
+    badge: "Child Care",
+    link: "https://www.drrajeevswellness.com/product/babylex-tonic-for-health-tonic-with-iron-calcium/"
+  },
+  {
+    name: "RL-33 Baby & Calcium Tonic",
+    description: "Adults: 1 to 2 teaspoonful thrice daily. Children: 1/2 to 1 teaspoonful thrice or as directed by the Physician.",
+    price: "400",
+    image: "/rl-33-for-baby-calcium-tonic.jpg",
+    badge: "Autism Care, Child Care",
+    link: "https://www.drrajeevswellness.com/product/rl-33-for-baby-calcium-tonic/"
+  },
+  {
+    name: "RL-45 Height Drops",
+    description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-45-height-drops.jpg",
+    badge: "Child Care",
+    link: "https://www.drrajeevswellness.com/product/rl-45-height-drops/"
+  },
+  {
+    name: "RL-52 Worms Drops",
+    description: "For all types of worms. Dosage as directed by the Physician.",
+    price: "180",
+    image: "/rl-52-for-all-types-of-worms.webp",
+    badge: "Child Care",
+    link: "https://www.drrajeevswellness.com/product/rl-52-for-all-types-of-worms/"
+  },
+  {
+    name: "Super Seven Health Tonic for Family",
+    description: "Adult: 2 teaspoonful thrice daily. Children: 1/2 or 1 teaspoonful thrice daily or as directed by the Physician.",
+    price: "390",
+    image: "/super-seven-health-tonic-for-family.jpg",
+    badge: "Autoimmune Disease, Child Care",
+    link: "https://www.drrajeevswellness.com/product/super-seven-health-tonic-for-family/"
+  }
 ]
 
+const yt = ["zzfTKWwZpPU", "HoPfEBixTCY", "delrgWp4Dqs", "9iBhj7UgcPA", "4eTQkhpUegc", "Fi80m1Y-Aig"]
 
 export default function ChildCare() {
     return (
         <div>
             <AppointmentFloat />
             <Hero />
-            <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
+            <YoutubeCarousel videos={yt} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

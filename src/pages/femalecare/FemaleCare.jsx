@@ -42,13 +42,14 @@ const products = [
     { name: "RL-61 Female Drops", description: "10 - 15 Drops should e diluted in water and taken 3times a day or as directed by the Physician.", price: "180", image: "/RL-61-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-61-female-drops/" },
 ]
 
+const yt = ["HFZgu3RniDA", "XBkVt_2m9kE", "9LFl7Tl6l9g", "g2057MVA6vc", "bxkOMphkaw8", "T4kgB41Rkr0", "MvVSVqOR-j8"];
 
 export default function FemaleCare() {
     return (
         <div>
             <AppointmentFloat />
             <Hero />
-            <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
+            <YoutubeCarousel videos={yt} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

@@ -34,20 +34,70 @@ const testimonials = [
 ]
 
 const products = [
-    { name: "Menscare Capsules", description: "", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
-    { name: "RL-21", description: "", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
-    { name: "RL-60", description: "", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
-    { name: "RL-64", description: "", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
-    { name: "RL-77", description: "", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
+  {
+    name: "Cerolin Drops Effective for Brain",
+    description:
+      "20 drops from bottle C diluted with one tablespoon of water twice a day or as directed by the Physician.",
+    price: "1200",
+    image: "/cerolin-drops-effective-for-brain.jpg",
+    badge: "Autism & Mind Care",
+    link: "https://www.drrajeevswellness.com/product/cerolin-drops-effective-for-brain/",
+  },
+  {
+    name: "Neuroplus",
+    description:
+      "20 drops from bottle C diluted with one tablespoon of water twice a day or as directed by the Physician.",
+    price: "1200",
+    image: "/neuroplus.jpg",
+    badge: "Autism & Mind Care",
+    link: "https://www.drrajeevswellness.com/product/neuroplus/",
+  },
+  {
+    name: "RL-43 IQ Memory Concentration Drops",
+    description:
+      "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-43-for-iq-memory-concentration-drops.jpg",
+    badge: "Mind Care",
+    link: "https://www.drrajeevswellness.com/product/rl-43-for-iq-memory-concentration-drops/",
+  },
+  {
+    name: "RL-47 Sleep, Tension & Stress Drops",
+    description:
+      "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-47-for-sleep-tension-stress-drops.jpg",
+    badge: "Mind Care",
+    link: "https://www.drrajeevswellness.com/product/rl-47-for-sleep-tension-stress-drops/",
+  },
+  {
+    name: "RL-66 Circulation Drops",
+    description:
+      "10–15 drops diluted in water, taken 3 times a day or as directed by the Physician.",
+    price: "180",
+    image: "/rl-66-circulation-drops.jpg",
+    badge: "Mind Care",
+    link: "https://www.drrajeevswellness.com/product/rl-66-circulation-drops/",
+  },
+  {
+    name: "RL-73 Vertigo Drops",
+    description:
+      "10–15 drops diluted in water, taken 3 times a day or as directed by the Physician.",
+    price: "180",
+    image: "/rl-73-vertigo-drops.jpg",
+    badge: "Mind Care",
+    link: "https://www.drrajeevswellness.com/product/rl-73-vertigo-drops/",
+  },
 ]
 
+const yt = ["1-cBBo0wLYc", "eKXMAVi3bbc", "2o4muZeKphk"];
 
 export default function NervmindCare() {
     return (
         <div>
             <AppointmentFloat />
             <Hero />
-            <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
+            <YoutubeCarousel videos={yt} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

@@ -34,20 +34,112 @@ const testimonials = [
 ]
 
 const products = [
-    { name: "Menscare Capsules", description: "", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
-    { name: "RL-21", description: "", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
-    { name: "RL-60", description: "", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
-    { name: "RL-64", description: "", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
-    { name: "RL-77", description: "", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
+  {
+    name: "Joint Care Capsules",
+    description: "60 Capsules",
+    price: "770",
+    image: "/joint-care-capsules.png",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/joint-care-capsules/"
+  },
+  {
+    name: "Rheum Drops",
+    description: "15–20 Drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rheum-drops-for-rheumatic-pain.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rheum-drops-for-rheumatic-pain/"
+  },
+  {
+    name: "Rheum Plus Drops",
+    description: "10–15 Drops should be diluted in water and taken 3 times a day or as directed by the Physician.",
+    price: "180",
+    image: "/rheum-plus-for-rheumatic-muscles-pain-drops.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rheum-plus-for-rheumatic-muscles-pain-drops/"
+  },
+  {
+    name: "Rheum Plus Syrup",
+    description: "One teaspoonful thrice daily or as directed by the Physician.",
+    price: "400",
+    image: "/rheum-plus-syrup-for-all-types-of-rheumatic-sciatica-muscles-pain.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rheum-plus-syrup-for-all-types-of-rheumatic-sciatica-muscles-pain/"
+  },
+  {
+    name: "Rheumadex Tonic",
+    description: "2 to 3 teaspoonful with a little water twice daily or as directed by the physician.",
+    price: "400",
+    image: "/rheumadex-tonic.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rheumadex-tonic/"
+  },
+  {
+    name: "RL-15 Nerve, Low Back & Sciatica Pain Drops",
+    description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-15-for-nerve-legsarms-low-back-sciatica-pain-drops.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rl-15-for-nerve-legsarms-low-back-sciatica-pain-drops/"
+  },
+  {
+    name: "RL-23 Uric Acid & Heel Pain Drops",
+    description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-23-for-uric-acid-joints-pain-heel-pains-drops.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rl-23-for-uric-acid-joints-pain-heel-pains-drops/"
+  },
+  {
+    name: "RL-3 Rheumatic Joint Pain Drops",
+    description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-3-rheumathic-muscles-joint-pain-drops.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rl-3-rheumathic-muscles-joint-pain-drops/"
+  },
+  {
+    name: "RL-35 Rheumatic Joint & Muscle Pain Syrup",
+    description: "One teaspoon thrice daily or as directed by the Physician.",
+    price: "400",
+    image: "/rl-35-rheumatic-joint-muscle-pain-joint-pain-nerve-pain-syrup.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rl-35-rheumatic-joint-muscle-pain-joint-pain-nerve-pain-syrup/"
+  },
+  {
+    name: "RL-55 Inflammation Drops",
+    description: "10–15 Drops should be diluted in water and taken 3 times a day or as directed by the Physician.",
+    price: "180",
+    image: "/rl-55-inflammation-drop.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rl-55-inflammation-drop/"
+  },
+  {
+    name: "RL-8 Spondylitis Drops",
+    description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-8-spondylitis-neck-spine-shoulder-pain-drops.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/rl-8-spondylitis-neck-spine-shoulder-pain-drops/"
+  },
+  {
+    name: "Spondylax Drops",
+    description: "10–15 Drops should be diluted in water and taken 3 times a day or as directed by the Physician.",
+    price: "180",
+    image: "/spondylax-drops-neck-pain-vertigo-relief.jpg",
+    badge: "Ortho Care",
+    link: "https://www.drrajeevswellness.com/product/spondylax-drops-neck-pain-vertigo-relief/"
+  }
 ]
 
+const yt = ["KZLddWxHUJU", "qzUI3BAavEU", "_OYn-QBb4wc", "0-Ud9hEljuY"]
 
 export default function OrthoCare() {
     return (
         <div>
             <AppointmentFloat />
             <Hero />
-            <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
+            <YoutubeCarousel videos={yt} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

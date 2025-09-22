@@ -36,7 +36,7 @@ export default function ThemeProvider({ children }) {
       html.classList.add("theme-skin");       // Skin Care
     } else if (location.pathname.startsWith("/digestivecare")) {
       html.classList.add("theme-digestive");        // Digestive Care
-    } else if (location.pathname.startsWith("/mindcare")) {
+    } else if (location.pathname.startsWith("/nervmindcare")) {
       html.classList.add("theme-mind");             // Nervous & Mind Care
     } else if (location.pathname.startsWith("/urologycare")) {
       html.classList.add("theme-urology");          // Urology Care

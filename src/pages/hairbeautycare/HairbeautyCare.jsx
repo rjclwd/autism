@@ -34,20 +34,49 @@ const testimonials = [
 ]
 
 const products = [
-    { name: "Menscare Capsules", description: "", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
-    { name: "RL-21", description: "", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
-    { name: "RL-60", description: "", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
-    { name: "RL-64", description: "", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
-    { name: "RL-77", description: "", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
+  {
+    name: "Hairlax Drops for Grow & Healthy Hair",
+    description: "Adult: 20 drops in a tablespoon of water, 1/2 an hour before eating, 3 to 5 times daily. Children: Half the adult dose or as directed by the Physician.",
+    price: "180",
+    image: "/hairlax-drops-for-grow-healthy-hair.jpg",
+    badge: "Hair & Beauty Care",
+    link: "https://www.drrajeevswellness.com/product/hairlax-drops-for-grow-healthy-hair/"
+  },
+  {
+    name: "RL-2 Acne, Pimple & Skin Dark Drops",
+    description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-2-acne-pimple-skin-dark-drops.jpg",
+    badge: "Hair & Beauty Care",
+    link: "https://www.drrajeevswellness.com/product/rl-2-acne-pimple-skin-dark-drops/"
+  },
+  {
+    name: "RL-20 Face Black Spots, Wrinkles & Pigmentation Drops",
+    description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-20-for-face-black-spots-wrinkles-pigmentation-drops.jpg",
+    badge: "Hair & Beauty Care",
+    link: "https://www.drrajeevswellness.com/product/rl-20-face-black-spots-wrinkles-pigmentation-drops/"
+  },
+  {
+    name: "RL-4 Premature Hair Loss, Grey & Thinning of Hair",
+    description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+    price: "180",
+    image: "/rl-4-premature-hair-loss-grey-thinning-of-hair.jpg",
+    badge: "Hair & Beauty Care",
+    link: "https://www.drrajeevswellness.com/product/rl-4-premature-hair-loss-grey-thinning-of-hair/"
+  }
 ]
 
+
+const yt = ["M9RfHVJjiRw", "wIQIUGBD69M", "EvPhJMvE7ZQ", "wFjZfdqI8Xg", "MvVSVqOR-j8", "6xk5yqtxnLg", "P-REURwsk"]
 
 export default function HairbeautyCare() {
     return (
         <div>
             <AppointmentFloat />
             <Hero />
-            <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
+            <YoutubeCarousel videos={yt} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

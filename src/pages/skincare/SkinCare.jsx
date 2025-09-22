@@ -41,14 +41,14 @@ const products = [
     { name: "RL-75 Reactivating Drops", description: "10 - 15 Drops should e diluted in water and taken 3 times a day or as directed by the Physician", price: "180", image: "/RL-751.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-75-reactivating-drops/" },
 ]
 
-
+const yt = ["iyfhPVuzreI", "rOp23WT7Dng", "EvPhJMvE7ZQ", "Zj5pC0qRE9I", "pFBx17AkW8s"];
 
 export default function SkinCare() {
     return (
         <div>
             <AppointmentFloat />
             <Hero />
-            <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
+            <YoutubeCarousel videos={yt} />
             <Products products={products}/>
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

@@ -30,7 +30,7 @@ function Hero() {
 
             {/* 🔹 AUTISM LINE (secondary, calmer) */}
             <SplitText
-                text="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
+                text="Holistic homeopathic solutions designed to restore female’s health, strength, and vitality."
                 className="text-xl sm:text-2xl md:text-4xl text-center font-heading py-1 font-bold text-secondary max-w-6xl"
                 delay={20}
                 duration={0.6}

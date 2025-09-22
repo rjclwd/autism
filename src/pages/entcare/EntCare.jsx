@@ -34,20 +34,104 @@ const testimonials = [
 ]
 
 const products = [
-    { name: "Menscare Capsules", description: "", price: "770", image: "/menscare.png", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/menscare-capsules/" },
-    { name: "RL-21", description: "", price: "180", image: "/RL-21.jpg", badge: "New", link: "https://www.drrajeevswellness.com/product/rl-21-for-prostate-drops/" },
-    { name: "RL-60", description: "", price: "180", image: "/RL-60-Drop.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-60-male-drops/" },
-    { name: "RL-64", description: "", price: "180", image: "/rl-64.webp", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-64-hyper-hydrosis-drops/" },
-    { name: "RL-77", description: "", price: "400", image: "/RL-77.jpg", badge: "Best Seller", link: "https://www.drrajeevswellness.com/product/rl-77-vigour-vitality-tonic-for-men/" },
+    {
+        name: "Allertone Drops for Allergy",
+        description: "10–15 drops should be diluted in water and taken 3 times a day or as directed by the Physician.",
+        price: "180",
+        image: "/allertone-drops-for-allergy.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/allertone-drops-for-allergy/"
+    },
+    {
+        name: "Fiebrisom for Throat Infection",
+        description: "Adult: 20 drops in a tablespoon of water, 1/2 an hour before eating, 3 to 5 times daily. Children: Half the adult dose or as directed by the Physician.",
+        price: "180",
+        image: "/fiebrisom-for-throat-infection.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/fiebrisom-throat-infection/"
+    },
+    {
+        name: "Migratax Drops for Headache & Migraine",
+        description: "10–15 drops should be diluted in water and taken 3 times a day or as directed by the Physician.",
+        price: "180",
+        image: "/migratax-drops-for-headache-migraine.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/migratax-headache-migraine/"
+    },
+    {
+        name: "RL-1 Allergy, Nasal Congestion Drops",
+        description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+        price: "180",
+        image: "/rl-1-allergy-nasal-congestion-drops.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/rl-1-allergy-nasal-congestion-drops/"
+    },
+    {
+        name: "RL-14 Sinusitis & Nasal Polypus Drops",
+        description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+        price: "180",
+        image: "/rl-14-for-sinusitis-nasal-polypus-drops.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/rl-14-sinusitis-nasal-polypus-drops/"
+    },
+    {
+        name: "RL-28 Tonsil & Throat Infection Drops",
+        description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+        price: "180",
+        image: "/rl-28-for-tonsil-throat-infection-drops.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/rl-28-tonsil-throat-infection-drops/"
+    },
+    {
+        name: "RL-46 Cataract, Glaucoma & Eye Vision Drops",
+        description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+        price: "180",
+        image: "/rl-46-for-cataract-glaucoma-eye-vision-drop.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/rl-46-cataract-glaucoma-eye-vision-drops/"
+    },
+    {
+        name: "RL-6 Migraine & Headache Drops",
+        description: "15–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+        price: "180",
+        image: "/rl-6-migraine-headache-drops.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/rl-6-migraine-headache-drops/"
+    },
+    {
+        name: "RL-68 Teeth Drops",
+        description: "10–15 drops should be diluted in water and taken 3 times a day or as directed by the Physician.",
+        price: "180",
+        image: "/rl-68-teeth-drops.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/rl-68-teeth-drops/"
+    },
+    {
+        name: "RL-9 Thyroid Problem Drops",
+        description: "5–20 drops 3 times daily with 1/2 cup of water or as directed by the Physician.",
+        price: "180",
+        image: "/rl-9-thyroid-problem-drops.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/rl-9-thyroid-problem-drops/"
+    },
+    {
+        name: "Sinolax Drops for Sinus & Nasal Polypus",
+        description: "15–20 drops should be diluted in water and taken 3 times a day or as directed by the Physician.",
+        price: "180",
+        image: "/sinolax-drops-for-sinus-nasal-polypus.jpg",
+        badge: "ENT Care",
+        link: "https://www.drrajeevswellness.com/product/sinolax-drops-sinus-nasal-polypus/"
+    }
 ]
 
+const yt = ["ZQQGpjJEx6w", "vkykraw1Zmg", "NmQBT3LTv9E", "NmQBT3LTv9E", "r3NKpPFpL98"]
 
 export default function EntCare() {
     return (
         <div>
             <AppointmentFloat />
             <Hero />
-            <YoutubeCarousel videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]} />
+            <YoutubeCarousel videos={yt} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />
