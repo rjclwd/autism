@@ -5,12 +5,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export default function Carousel({
   images = [],
   interval = 4000,
-  aspect = "aspect-[16/9]",
+  // 21:9 perfect for 2520×1080
+  aspect = "aspect-[21/9]",
+  responsiveAspect = false, // optional: 4/5 → 16/9 → 21/9
   autoPlay = true,
   pauseOnHover = true,
   showArrows = true,
   showDots = true,
   rounded = "rounded-xl",
+  fullWidth = true,
+  objectPosition = "center",
+  // ✅ NEW: show full image on mobile (letterboxed), cover on larger screens
+  containOnMobile = true,
 }) {
   const [index, setIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
@@ -32,7 +38,6 @@ export default function Carousel({
     [autoPlay, isHovering, inView, prefersReducedMotion]
   );
 
-  // Progress loop
   useEffect(() => {
     if (isPaused) return;
     setProgress(0);
@@ -61,14 +66,12 @@ export default function Carousel({
     };
   }, [index, isPaused, interval]);
 
-  // Pause on tab hidden
   useEffect(() => {
     const onVis = () => setInView(!document.hidden);
     document.addEventListener("visibilitychange", onVis);
     return () => document.removeEventListener("visibilitychange", onVis);
   }, []);
 
-  // Pause when out of viewport
   useEffect(() => {
     if (!containerRef.current) return;
     const obs = new IntersectionObserver(
@@ -79,7 +82,6 @@ export default function Carousel({
     return () => obs.disconnect();
   }, []);
 
-  // Keyboard nav
   useEffect(() => {
     const onKey = (e) => {
       const el = containerRef.current;
@@ -94,7 +96,7 @@ export default function Carousel({
     return () => window.removeEventListener("keydown", onKey);
   }, [index, len]);
 
-  // Touch swipe
+  // touch swipe
   const touchStartX = useRef(0);
   const touchDeltaX = useRef(0);
   const onTouchStart = (e) => {
@@ -110,7 +112,7 @@ export default function Carousel({
     else if (touchDeltaX.current < -THRESHOLD) next();
   };
 
-  // Preload adjacent
+  // preload adjacent
   useEffect(() => {
     const preload = (src) => {
       if (!src) return;
@@ -124,90 +126,109 @@ export default function Carousel({
 
   if (!images.length) return null;
 
+  const outerWrapClass = fullWidth
+    ? "relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw]"
+    : "relative w-full max-w-6xl mx-auto";
+
+  const aspectClass = responsiveAspect
+    ? "aspect-[4/5] sm:aspect-[16/9] xl:aspect-[21/9]"
+    : aspect;
+
+  const roundedClass = fullWidth ? "rounded-none" : rounded;
+
+  // ✅ contain on mobile, cover on >=sm
+  const fitClasses = containOnMobile
+    ? "object-contain sm:object-cover"
+    : "object-cover";
+
   return (
-    <motion.div
-      ref={containerRef}
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.6 }}
-      className={`relative w-full max-w-6xl mx-auto overflow-hidden ${rounded} bg-white border border-black/10`}
-      onMouseEnter={() => pauseOnHover && setIsHovering(true)}
-      onMouseLeave={() => pauseOnHover && setIsHovering(false)}
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
-      role="region"
-      aria-roledescription="carousel"
-      aria-label="Image Carousel"
-      tabIndex={0}
-    >
-      <div className={`${aspect} relative`}>
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.img
-            key={index}
-            src={import.meta.env.BASE_URL + images[index]}
-            alt={`Slide ${index + 1} of ${len}`}
-            className="absolute inset-0 w-full h-full object-cover"
-            initial={{ opacity: 0, scale: prefersReducedMotion ? 1 : 1.04 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: prefersReducedMotion ? 0.2 : 0.7, ease: "easeOut" }}
-            loading="eager"
-            draggable={false}
-          />
-        </AnimatePresence>
-      </div>
-
-      {autoPlay && (
-        <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-black/10">
-          <div
-            className="h-full bg-black/60 transition-[width] duration-100 ease-linear"
-            style={{ width: `${Math.min(progress * 100, 100)}%` }}
-            aria-hidden
-          />
+    <div className={`mt-6 ${outerWrapClass}`}>
+      <motion.div
+        ref={containerRef}
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6 }}
+        className={`relative overflow-hidden ${roundedClass} bg-black`}
+        onMouseEnter={() => pauseOnHover && setIsHovering(true)}
+        onMouseLeave={() => pauseOnHover && setIsHovering(false)}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Image Carousel"
+        tabIndex={0}
+      >
+        <div className={`${aspectClass} relative`}>
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.img
+              key={index}
+              src={import.meta.env.BASE_URL + images[index]}
+              alt={`Slide ${index + 1} of ${len}`}
+              className={`absolute inset-0 w-full h-full ${fitClasses}`}
+              style={{ objectPosition }}
+              initial={{ opacity: 0, scale: prefersReducedMotion ? 1 : 1.02 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: prefersReducedMotion ? 0.25 : 0.6, ease: "easeOut" }}
+              loading="eager"
+              sizes={fullWidth ? "100vw" : "(max-width: 1024px) 100vw, 1024px"}
+              draggable={false}
+            />
+          </AnimatePresence>
         </div>
-      )}
 
-      {showArrows && (
-        <>
-          <button
-            type="button"
-            onClick={prev}
-            aria-label="Previous slide"
-            className="group absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black shadow p-2 rounded-full border border-black/10 backdrop-blur"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            type="button"
-            onClick={next}
-            aria-label="Next slide"
-            className="group absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black shadow p-2 rounded-full border border-black/10 backdrop-blur"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </>
-      )}
+        {autoPlay && (
+          <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-white/15">
+            <div
+              className="h-full bg-white/70 transition-[width] duration-100 ease-linear"
+              style={{ width: `${Math.min(progress * 100, 100)}%` }}
+              aria-hidden
+            />
+          </div>
+        )}
 
-      {showDots && (
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
-          {images.map((_, i) => {
-            const active = i === index;
-            return (
-              <button
-                key={i}
-                onClick={() => goTo(i)}
-                aria-label={`Go to slide ${i + 1}`}
-                aria-current={active ? "true" : "false"}
-                className={`h-2.5 rounded-full transition-all ${
-                  active ? "w-6 bg-black" : "w-2.5 bg-black/40 hover:bg-black/70"
-                }`}
-              />
-            );
-          })}
-        </div>
-      )}
-    </motion.div>
+        {showArrows && (
+          <>
+            <button
+              type="button"
+              onClick={prev}
+              aria-label="Previous slide"
+              className="group absolute left-3 top-1/2 -translate-y-1/2 bg-white/85 hover:bg-white text-black shadow p-2 rounded-full border border-black/10 backdrop-blur"
+            >
+              <ChevronLeft className="w-5 h-5" />
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              aria-label="Next slide"
+              className="group absolute right-3 top-1/2 -translate-y-1/2 bg-white/85 hover:bg-white text-black shadow p-2 rounded-full border border-black/10 backdrop-blur"
+            >
+              <ChevronRight className="w-5 h-5" />
+            </button>
+          </>
+        )}
+
+        {showDots && (
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2">
+            {images.map((_, i) => {
+              const active = i === index;
+              return (
+                <button
+                  key={i}
+                  onClick={() => goTo(i)}
+                  aria-label={`Go to slide ${i + 1}`}
+                  aria-current={active ? "true" : "false"}
+                  className={`h-2.5 rounded-full transition-all ${
+                    active ? "w-6 bg-white" : "w-2.5 bg-white/50 hover:bg-white/80"
+                  }`}
+                />
+              );
+            })}
+          </div>
+        )}
+      </motion.div>
+    </div>
   );
 }

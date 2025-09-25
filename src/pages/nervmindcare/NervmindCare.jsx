@@ -98,8 +98,8 @@ export default function NervmindCare() {
             <AppointmentFloat />
             <HeroUniversal
                 promoTitle="One of India’s Leading Homeopathic Clinic Networks"
-                subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
-                images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
+                subtitle="Holistic homeopathic solutions designed to cure all your nerve and mind related problem."
+                images={["/nervmindcarebanner.png"]}
                 phone="+919117520003"
                 trust={[
                     { icon: "shield", label: "20+ Years of Care" },

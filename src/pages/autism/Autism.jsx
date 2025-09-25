@@ -42,7 +42,7 @@ export default function Autism() {
       <HeroUniversal
         promoTitle="One of India’s Leading Homeopathic Clinic Networks"
         subtitle="Spreading Hope, Care, and Awareness for Every Child on the Autism Spectrum"
-        images={["/autclinic.png", "/autws.png", "/autbook.png", "/authand.png", "/wad.png"]}
+        images={["autismbanner.png", "/autclinic.png", "/autws.png", "/autbook.png", "/authand.png", "/wad.png"]}
         phone="+919117520003"
         trust={[
           { icon: "shield", label: "20+ Years of Care" },

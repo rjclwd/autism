@@ -139,11 +139,10 @@ export default function HeroUniversal({
           <div className="mt-8">
             <Carousel
               images={images}
-              aspect={aspect}
-              interval={interval}
-              showArrows={showArrows}
-              showDots={showDots}
-              rounded={rounded}
+              fullWidth
+              aspect="aspect-[21/9]"
+              containOnMobile   // 👈 important
+              objectPosition="50% 45%" // optional focal point
             />
           </div>
         )}

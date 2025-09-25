@@ -78,7 +78,7 @@ export default function HairbeautyCare() {
             <HeroUniversal
                 promoTitle="One of India’s Leading Homeopathic Clinic Networks"
                 subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
-                images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
+                images={["/hairbeautycarebanner.png"]}
                 phone="+919117520003"
                 trust={[
                     { icon: "shield", label: "20+ Years of Care" },
