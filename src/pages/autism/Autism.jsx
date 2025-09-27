@@ -6,6 +6,7 @@ import SuccessStory from './SuccessStory/SuccessStory'
 import Book from './Book/Book'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import Products from '../../components/Products/Products'
 
 const testimonials = [
   {
@@ -34,6 +35,36 @@ const testimonials = [
     rating: 4,
   },
 ]
+
+const products = [
+  {
+    name: "Cerolin Drops Effective for Brain",
+    description:
+      "20 Drops from bottle C diluted with one tablespoon of water twice a day or as directed by the physician.",
+    price: "1200",
+    image: "/cerolin-drops-effective-for-brain.jpg",
+    badge: "Autism Care, Nervous & Mind Care",
+    link: "https://www.drrajeevswellness.com/product/cerolin-drops-effective-for-brain/"
+  },
+  {
+    name: "Neuroplus",
+    description:
+      "20 Drops from bottle C diluted with one tablespoon of water twice a day or as directed by the physician.",
+    price: "1200",
+    image: "/neuroplus.jpg",
+    badge: "Autism Care, Nervous & Mind Care",
+    link: "https://www.drrajeevswellness.com/product/neuroplus/"
+  },
+  {
+    name: "RL-33 For Baby & Calcium Tonic",
+    description:
+      "Adults: 1 to 2 teaspoonful thrice daily. Children: 1/2 to 1 teaspoonful thrice or as directed by the Physician.",
+    price: "400",
+    image: "/rl-33-for-baby-calcium-tonic.jpg",
+    badge: "Autism Care, Child Care",
+    link: "https://www.drrajeevswellness.com/product/rl-33-for-baby-calcium-tonic/"
+  }
+];
 
 export default function Autism() {
   return (
@@ -86,6 +117,7 @@ export default function Autism() {
         "fS3oH1arS5k",
         "UInG0w-Rl20",
       ]} />
+      <Products products={products} />
       <Book />
       <SuccessStory />
       <Testimonials testimonials={testimonials} />
