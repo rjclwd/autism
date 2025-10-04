@@ -181,7 +181,7 @@ export default function FemaleCare() {
             <AppointmentFloat />
             <HeroUniversal
                 promoTitle="One of India’s Leading Homeopathic Clinic Networks"
-                subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
+                subtitle="Gentle, natural therapies that nurture women’s health across every stage of life."
                 images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
                 phone="+919117520003"
                 trust={[

@@ -264,7 +264,7 @@ export default function OrthoCare() {
             <AppointmentFloat />
             <HeroUniversal
                 promoTitle="One of India’s Leading Homeopathic Clinic Networks"
-                subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
+                subtitle="Targeted relief for joint, muscle, and bone health with natural remedies."
                 images={["/orthocarebanner.png"]}
                 phone="+919117520003"
                 trust={[

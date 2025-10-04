@@ -11,18 +11,15 @@ const formatINR = (value) =>
   }).format(Number(value || 0));
 
 function Stars({ rating = 0, size = 16 }) {
-  // Supports decimals like 3.7 via a partial overlay fill
   const full = Math.floor(rating);
   const frac = Math.max(0, Math.min(1, rating - full));
   return (
     <div className="relative inline-flex items-center">
-      {/* Base (empty) */}
       <div className="flex gap-0.5 text-gray-300">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star key={`empty-${i}`} size={size} className="stroke-current" />
         ))}
       </div>
-      {/* Filled overlay */}
       <div
         className="absolute inset-0 overflow-hidden text-yellow-500"
         style={{ width: `${Math.min(5, full + frac) / 5 * 100}%` }}
@@ -53,7 +50,7 @@ function ProductCard({ product }) {
     inStock = true,
   } = product || {};
 
-  const [imgSrc, setImgSrc] = useState(import.meta.env.BASE_URL + image);
+  const [imgSrc, setImgSrc] = useState(image);
   const priceLabel = useMemo(() => formatINR(price), [price]);
 
   return (
@@ -61,7 +58,6 @@ function ProductCard({ product }) {
       className="relative bg-surface border border-border rounded-2xl shadow-md p-6 flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-1 focus-within:shadow-xl focus-within:-translate-y-1"
       aria-label={name}
     >
-      {/* Badge */}
       {badge && (
         <span
           className="absolute z-10 top-4 left-4 bg-gradient-to-r from-primary to-accent text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg"
@@ -71,7 +67,6 @@ function ProductCard({ product }) {
         </span>
       )}
 
-      {/* Product Image */}
       <div className="w-full h-48 bg-white rounded-xl overflow-hidden flex items-center justify-center mb-5">
         <img
           src={imgSrc}
@@ -83,12 +78,10 @@ function ProductCard({ product }) {
         />
       </div>
 
-      {/* Title */}
       <h3 className="font-heading text-lg md:text-xl text-foreground font-bold leading-snug line-clamp-2 mb-2">
         {name}
       </h3>
 
-      {/* Price + Rating */}
       <div className="flex items-center justify-between mb-3">
         <p className="text-primary font-bold text-xl">{priceLabel}</p>
         {Number.isFinite(rating) && (
@@ -99,14 +92,12 @@ function ProductCard({ product }) {
         )}
       </div>
 
-      {/* Description */}
       {description && (
         <p className="text-sm text-text-muted leading-relaxed mb-5 line-clamp-3">
           {description}
         </p>
       )}
 
-      {/* CTA */}
       <a
         href={link}
         target="_blank"
@@ -128,10 +119,14 @@ function ProductCard({ product }) {
   );
 }
 
-/* ---------- List ---------- */
+/* ---------- List with Load More ---------- */
 
 export default function Products({ products = [] }) {
+  const [visibleCount, setVisibleCount] = useState(9);
+
   if (!products.length) return null;
+
+  const visibleProducts = products.slice(0, visibleCount);
 
   return (
     <section className="py-11">
@@ -147,12 +142,23 @@ export default function Products({ products = [] }) {
         role="list"
         aria-label="Product recommendations"
       >
-        {products.map((p, i) => (
+        {visibleProducts.map((p, i) => (
           <div role="listitem" key={p?.id ?? i}>
             <ProductCard product={p} />
           </div>
         ))}
       </div>
+
+      {visibleCount < products.length && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setVisibleCount((prev) => prev + 9)}
+            className="px-6 py-3 rounded-full bg-primary text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300 active:scale-95"
+          >
+            Load More
+          </button>
+        </div>
+      )}
     </section>
   );
 }

@@ -306,7 +306,7 @@ export default function AutoimuneCare() {
       <AppointmentFloat />
       <HeroUniversal
         promoTitle="One of India’s Leading Homeopathic Clinic Networks"
-        subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
+        subtitle="Restoring balance and resilience in autoimmune conditions with natural homeopathy."
         images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
         phone="+919117520003"
         trust={[

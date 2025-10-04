@@ -132,7 +132,7 @@ export default function EntCare() {
             <AppointmentFloat />
             <HeroUniversal
                 promoTitle="One of India’s Leading Homeopathic Clinic Networks"
-                subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
+                subtitle="Gentle, natural care for ear, nose, and throat health using homeopathy."
                 images={["/entbanner.png"]}
                 phone="+919117520003"
                 trust={[

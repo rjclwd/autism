@@ -230,7 +230,7 @@ export default function UrologyCare() {
             <AppointmentFloat />
             <HeroUniversal
                 promoTitle="One of India’s Leading Homeopathic Clinic Networks"
-                subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
+                subtitle="Homeopathic support for healthy kidneys, bladder, and urinary function."
                 images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
                 phone="+919117520003"
                 trust={[
