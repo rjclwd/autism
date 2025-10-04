@@ -4,6 +4,7 @@ import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Products from '../../components/Products/Products'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import DiseaseTypes from '../../components/DiseaseTypes/DiseaseTypes'
 
 const testimonials = [
     {
@@ -43,6 +44,136 @@ const products = [
 ]
 
 const yt = ["HFZgu3RniDA", "XBkVt_2m9kE", "9LFl7Tl6l9g", "g2057MVA6vc", "bxkOMphkaw8", "T4kgB41Rkr0", "MvVSVqOR-j8"];
+
+const diseaseData = [
+  {
+    id: "pcos",
+    name: "Polycystic Ovary Syndrome (PCOS)",
+    description:
+      "A hormonal disorder causing enlarged ovaries with small cysts, affecting fertility and menstrual cycles.",
+    symptoms: [
+      "Irregular periods",
+      "Excess hair growth (hirsutism)",
+      "Acne",
+      "Weight gain",
+      "Difficulty conceiving",
+    ],
+  },
+  {
+    id: "endometriosis",
+    name: "Endometriosis",
+    description:
+      "A condition where tissue similar to the lining of the uterus grows outside the uterus, causing pain and fertility problems.",
+    symptoms: [
+      "Severe menstrual cramps",
+      "Pelvic pain",
+      "Pain during intercourse",
+      "Heavy periods",
+      "Infertility",
+    ],
+  },
+  {
+    id: "fibroids",
+    name: "Uterine Fibroids",
+    description:
+      "Noncancerous growths in the uterus that often appear during childbearing years.",
+    symptoms: [
+      "Heavy menstrual bleeding",
+      "Pelvic pressure or pain",
+      "Frequent urination",
+      "Constipation",
+      "Backache or leg pain",
+    ],
+  },
+  {
+    id: "pms",
+    name: "Premenstrual Syndrome (PMS)",
+    description:
+      "A group of symptoms that occur before menstruation, affecting mood and physical health.",
+    symptoms: [
+      "Mood swings",
+      "Bloating",
+      "Breast tenderness",
+      "Fatigue",
+      "Irritability",
+    ],
+  },
+  {
+    id: "menopause",
+    name: "Menopause",
+    description:
+      "A natural biological process marking the end of menstrual cycles, usually after age 45.",
+    symptoms: [
+      "Hot flashes",
+      "Night sweats",
+      "Mood changes",
+      "Vaginal dryness",
+      "Sleep disturbances",
+    ],
+  },
+  {
+    id: "cervical_cancer",
+    name: "Cervical Cancer",
+    description:
+      "A type of cancer that occurs in the cells of the cervix, often caused by HPV infection.",
+    symptoms: [
+      "Abnormal vaginal bleeding",
+      "Pelvic pain",
+      "Pain during intercourse",
+      "Unusual vaginal discharge",
+    ],
+  },
+  {
+    id: "breast_cancer",
+    name: "Breast Cancer",
+    description:
+      "A common cancer in women that forms in the cells of the breast.",
+    symptoms: [
+      "Lump in the breast",
+      "Change in breast shape",
+      "Nipple discharge",
+      "Skin dimpling",
+    ],
+  },
+  {
+    id: "pelvic_inflammatory_disease",
+    name: "Pelvic Inflammatory Disease (PID)",
+    description:
+      "An infection of the female reproductive organs, usually caused by sexually transmitted bacteria.",
+    symptoms: [
+      "Pelvic pain",
+      "Pain during urination",
+      "Abnormal vaginal discharge",
+      "Fever",
+      "Pain during intercourse",
+    ],
+  },
+  {
+    id: "osteoporosis",
+    name: "Osteoporosis",
+    description:
+      "A condition where bones become weak and brittle, more common in postmenopausal women.",
+    symptoms: [
+      "Bone fractures",
+      "Back pain",
+      "Loss of height over time",
+      "Stooped posture",
+    ],
+  },
+  {
+    id: "urinary_incontinence",
+    name: "Urinary Incontinence",
+    description:
+      "Loss of bladder control, common in women after childbirth or menopause.",
+    symptoms: [
+      "Leakage of urine when coughing or sneezing",
+      "Sudden urge to urinate",
+      "Frequent urination",
+      "Nighttime urination",
+    ],
+  },
+];
+
 
 export default function FemaleCare() {
     return (
@@ -89,6 +220,7 @@ export default function FemaleCare() {
                 }}
             />
             <YoutubeCarousel videos={yt} />
+            <DiseaseTypes diseaseData={diseaseData} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

@@ -4,6 +4,7 @@ import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Products from '../../components/Products/Products'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import DiseaseTypes from '../../components/DiseaseTypes/DiseaseTypes'
 
 const testimonials = [
     {
@@ -101,6 +102,128 @@ const products = [
 
 const yt = ["4t5mXCJdymo", "NeaDb_UNyYY", "cBm6k9uNFrc"]
 
+const diseaseData = [
+  {
+    id: "uti",
+    name: "Urinary Tract Infection (UTI)",
+    description:
+      "An infection in any part of the urinary system, most often the bladder and urethra.",
+    symptoms: [
+      "Burning sensation while urinating",
+      "Frequent urge to urinate",
+      "Cloudy or strong-smelling urine",
+      "Pelvic pain",
+    ],
+  },
+  {
+    id: "kidney_stones",
+    name: "Kidney Stones",
+    description:
+      "Hard deposits of minerals and salts that form inside the kidneys and cause severe pain when passing.",
+    symptoms: [
+      "Severe back or side pain",
+      "Pain during urination",
+      "Blood in urine",
+      "Nausea and vomiting",
+    ],
+  },
+  {
+    id: "bph",
+    name: "Benign Prostatic Hyperplasia (BPH)",
+    description:
+      "Noncancerous enlargement of the prostate gland that can block urine flow in older men.",
+    symptoms: [
+      "Frequent urination (especially at night)",
+      "Weak urine stream",
+      "Difficulty starting urination",
+      "Incomplete bladder emptying",
+    ],
+  },
+  {
+    id: "prostate_cancer",
+    name: "Prostate Cancer",
+    description:
+      "A cancer that occurs in the prostate gland, common in older men.",
+    symptoms: [
+      "Difficulty urinating",
+      "Weak or interrupted flow",
+      "Blood in urine or semen",
+      "Pelvic or back pain",
+    ],
+  },
+  {
+    id: "bladder_cancer",
+    name: "Bladder Cancer",
+    description:
+      "A type of cancer that begins in the cells of the bladder lining.",
+    symptoms: [
+      "Blood in urine",
+      "Painful urination",
+      "Frequent urination",
+      "Pelvic pain",
+    ],
+  },
+  {
+    id: "erectile_dysfunction",
+    name: "Erectile Dysfunction (ED)",
+    description:
+      "Inability to achieve or maintain an erection sufficient for sexual intercourse.",
+    symptoms: [
+      "Difficulty getting an erection",
+      "Trouble maintaining erection",
+      "Reduced sexual desire",
+    ],
+  },
+  {
+    id: "incontinence",
+    name: "Urinary Incontinence",
+    description:
+      "Loss of bladder control, leading to involuntary urine leakage.",
+    symptoms: [
+      "Leakage during coughing/sneezing",
+      "Urgent need to urinate",
+      "Frequent urination",
+      "Nighttime urination",
+    ],
+  },
+  {
+    id: "interstitial_cystitis",
+    name: "Interstitial Cystitis",
+    description:
+      "A chronic bladder condition causing bladder pressure, bladder pain, and sometimes pelvic pain.",
+    symptoms: [
+      "Chronic pelvic pain",
+      "Frequent urination",
+      "Urgency to urinate",
+      "Discomfort during sex",
+    ],
+  },
+  {
+    id: "renal_failure",
+    name: "Chronic Kidney Disease (CKD)",
+    description:
+      "A gradual loss of kidney function over time, which may progress to kidney failure.",
+    symptoms: [
+      "Swelling in legs or ankles",
+      "Fatigue",
+      "Frequent urination at night",
+      "High blood pressure",
+      "Nausea",
+    ],
+  },
+  {
+    id: "hydrocele",
+    name: "Hydrocele",
+    description:
+      "A fluid-filled sac around a testicle causing swelling in the scrotum, common in infants but also in adults.",
+    symptoms: [
+      "Scrotal swelling",
+      "Heaviness in scrotum",
+      "Discomfort during movement",
+    ],
+  },
+];
+
 export default function UrologyCare() {
     return (
         <div>
@@ -146,6 +269,7 @@ export default function UrologyCare() {
                 }}
             />
             <YoutubeCarousel videos={yt} />
+            <DiseaseTypes diseaseData={diseaseData} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

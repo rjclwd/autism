@@ -4,6 +4,7 @@ import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Products from '../../components/Products/Products'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import DiseaseTypes from '../../components/DiseaseTypes/DiseaseTypes'
 
 const testimonials = [
     {
@@ -134,6 +135,129 @@ const products = [
 
 const yt = ["KZLddWxHUJU", "qzUI3BAavEU", "_OYn-QBb4wc", "0-Ud9hEljuY"]
 
+const diseaseData = [
+  {
+    id: "osteoarthritis",
+    name: "Osteoarthritis",
+    description:
+      "A degenerative joint disease where cartilage wears down over time, causing pain and stiffness.",
+    symptoms: [
+      "Joint pain",
+      "Stiffness after rest",
+      "Swelling",
+      "Reduced flexibility",
+    ],
+  },
+  {
+    id: "rheumatoid_arthritis",
+    name: "Rheumatoid Arthritis",
+    description:
+      "An autoimmune condition where the immune system attacks joints, leading to inflammation and deformity.",
+    symptoms: [
+      "Joint swelling",
+      "Morning stiffness",
+      "Pain in multiple joints",
+      "Fatigue",
+    ],
+  },
+  {
+    id: "osteoporosis",
+    name: "Osteoporosis",
+    description:
+      "A condition where bones become weak and brittle, increasing the risk of fractures.",
+    symptoms: [
+      "Frequent fractures",
+      "Back pain",
+      "Loss of height over time",
+      "Stooped posture",
+    ],
+  },
+  {
+    id: "slip_disc",
+    name: "Slip Disc (Herniated Disc)",
+    description:
+      "A condition where the soft cushion between spinal vertebrae bulges or ruptures, pressing on nerves.",
+    symptoms: [
+      "Back pain",
+      "Leg pain (sciatica)",
+      "Numbness or tingling",
+      "Muscle weakness",
+    ],
+  },
+  {
+    id: "sciatica",
+    name: "Sciatica",
+    description:
+      "Pain that radiates along the sciatic nerve, usually caused by a herniated disc or bone spur.",
+    symptoms: [
+      "Lower back pain",
+      "Pain radiating to legs",
+      "Tingling or numbness",
+      "Weakness in affected leg",
+    ],
+  },
+  {
+    id: "spondylosis",
+    name: "Spondylosis",
+    description:
+      "Age-related wear and tear of the spinal discs and joints, often leading to stiffness and pain.",
+    symptoms: [
+      "Neck or back pain",
+      "Stiffness",
+      "Muscle spasms",
+      "Limited mobility",
+    ],
+  },
+  {
+    id: "frozen_shoulder",
+    name: "Frozen Shoulder (Adhesive Capsulitis)",
+    description:
+      "A condition characterized by stiffness and pain in the shoulder joint, limiting movement.",
+    symptoms: [
+      "Shoulder stiffness",
+      "Pain worsening at night",
+      "Limited arm movement",
+      "Gradual loss of flexibility",
+    ],
+  },
+  {
+    id: "gout",
+    name: "Gout",
+    description:
+      "A type of arthritis caused by uric acid crystal buildup in joints, leading to sudden severe pain.",
+    symptoms: [
+      "Sudden joint pain (often in big toe)",
+      "Swelling and redness",
+      "Warmth in affected joint",
+      "Recurring flare-ups",
+    ],
+  },
+  {
+    id: "ligament_injury",
+    name: "Ligament Injury (ACL/MCL Tears)",
+    description:
+      "Tears or sprains in ligaments, often caused by sports injuries or accidents.",
+    symptoms: [
+      "Joint instability",
+      "Swelling",
+      "Sudden pain",
+      "Difficulty bearing weight",
+    ],
+  },
+  {
+    id: "carpal_tunnel",
+    name: "Carpal Tunnel Syndrome",
+    description:
+      "A condition where the median nerve in the wrist is compressed, leading to hand and finger symptoms.",
+    symptoms: [
+      "Numbness in hand",
+      "Tingling in fingers",
+      "Weak grip strength",
+      "Hand pain at night",
+    ],
+  },
+];
+
 export default function OrthoCare() {
     return (
         <div>
@@ -179,6 +303,7 @@ export default function OrthoCare() {
                 }}
             />
             <YoutubeCarousel videos={yt} />
+            <DiseaseTypes diseaseData={diseaseData} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

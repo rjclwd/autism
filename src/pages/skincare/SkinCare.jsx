@@ -4,6 +4,7 @@ import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Products from '../../components/Products/Products'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import DiseaseTypes from '../../components/DiseaseTypes/DiseaseTypes'
 
 const testimonials = [
     {
@@ -43,6 +44,127 @@ const products = [
 
 const yt = ["iyfhPVuzreI", "rOp23WT7Dng", "EvPhJMvE7ZQ", "Zj5pC0qRE9I", "pFBx17AkW8s"];
 
+const diseaseData = [
+  {
+    id: "acne",
+    name: "Acne",
+    description:
+      "A skin condition where hair follicles become clogged with oil and dead skin cells, leading to pimples, blackheads, and cysts.",
+    symptoms: [
+      "Pimples",
+      "Blackheads/whiteheads",
+      "Cystic lesions",
+      "Scarring or dark spots",
+    ],
+  },
+  {
+    id: "eczema",
+    name: "Eczema (Atopic Dermatitis)",
+    description:
+      "A chronic skin condition that causes inflammation, itching, redness, and dryness.",
+    symptoms: [
+      "Dry, itchy skin",
+      "Red patches",
+      "Thickened or cracked skin",
+      "Recurring flare-ups",
+    ],
+  },
+  {
+    id: "psoriasis",
+    name: "Psoriasis",
+    description:
+      "An autoimmune disease that causes rapid buildup of skin cells, leading to scaling and inflammation.",
+    symptoms: [
+      "Red patches of skin",
+      "Silvery-white scales",
+      "Itchy or painful skin",
+      "Cracks that may bleed",
+    ],
+  },
+  {
+    id: "fungal_infections",
+    name: "Fungal Infections",
+    description:
+      "Skin infections caused by fungi, such as ringworm, athlete’s foot, or yeast infections.",
+    symptoms: [
+      "Itchy rash",
+      "Red circular patches",
+      "Scaling skin",
+      "Blisters in some cases",
+    ],
+  },
+  {
+    id: "urticaria",
+    name: "Hives (Urticaria)",
+    description:
+      "A skin reaction causing itchy welts, often triggered by allergens, stress, or medications.",
+    symptoms: [
+      "Raised, red bumps",
+      "Itching",
+      "Swelling of skin",
+      "Burning or stinging sensation",
+    ],
+  },
+  {
+    id: "rosacea",
+    name: "Rosacea",
+    description:
+      "A chronic skin condition that causes facial redness, swelling, and visible blood vessels.",
+    symptoms: [
+      "Facial redness",
+      "Swollen red bumps",
+      "Eye irritation",
+      "Visible blood vessels",
+    ],
+  },
+  {
+    id: "vitiligo",
+    name: "Vitiligo",
+    description:
+      "A condition where the skin loses pigment cells, leading to white patches on different parts of the body.",
+    symptoms: [
+      "White patches on skin",
+      "Premature greying of hair",
+      "Change in color inside mouth/nose",
+    ],
+  },
+  {
+    id: "melasma",
+    name: "Melasma",
+    description:
+      "A skin condition that causes brown or gray-brown patches, usually on the face, often triggered by sun or hormones.",
+    symptoms: [
+      "Dark facial patches",
+      "Uneven skin tone",
+      "Worsening with sun exposure",
+    ],
+  },
+  {
+    id: "skin_allergies",
+    name: "Skin Allergies",
+    description:
+      "Irritations triggered by allergens, chemicals, or food reactions.",
+    symptoms: [
+      "Itchy red rash",
+      "Swelling",
+      "Burning or stinging",
+      "Peeling or blistering skin",
+    ],
+  },
+  {
+    id: "skin_cancer",
+    name: "Skin Cancer",
+    description:
+      "Abnormal growth of skin cells, often caused by sun damage or UV exposure.",
+    symptoms: [
+      "New unusual growths",
+      "Changes in existing moles",
+      "Sores that don’t heal",
+      "Bleeding or crusting skin spots",
+    ],
+  },
+];
+
 export default function SkinCare() {
     return (
         <div>
@@ -50,7 +172,7 @@ export default function SkinCare() {
             <HeroUniversal
                 promoTitle="One of India’s Leading Homeopathic Clinic Networks"
                 subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
-                images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
+                images={["/skinbanner.png"]}
                 phone="+919117520003"
                 trust={[
                     { icon: "shield", label: "20+ Years of Care" },
@@ -88,6 +210,7 @@ export default function SkinCare() {
                 }}
             />
             <YoutubeCarousel videos={yt} />
+            <DiseaseTypes diseaseData={diseaseData} />
             <Products products={products}/>
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

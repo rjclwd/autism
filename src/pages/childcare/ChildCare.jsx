@@ -4,6 +4,7 @@ import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Products from '../../components/Products/Products'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import DiseaseTypes from '../../components/DiseaseTypes/DiseaseTypes'
 
 const testimonials = [
     {
@@ -85,6 +86,79 @@ const products = [
 ]
 
 const yt = ["zzfTKWwZpPU", "HoPfEBixTCY", "delrgWp4Dqs", "9iBhj7UgcPA", "4eTQkhpUegc", "Fi80m1Y-Aig"]
+const diseaseData = [
+  {
+    id: "chickenpox",
+    name: "Chickenpox",
+    description:
+      "A highly contagious viral infection causing an itchy rash and red spots or blisters all over the body.",
+    symptoms: ["Itchy rash", "Fever", "Fatigue", "Loss of appetite"],
+  },
+  {
+    id: "measles",
+    name: "Measles",
+    description:
+      "A viral infection that causes a total-body skin rash and flu-like symptoms.",
+    symptoms: ["Fever", "Cough", "Runny nose", "Red eyes", "Rash"],
+  },
+  {
+    id: "mumps",
+    name: "Mumps",
+    description:
+      "A contagious viral infection affecting the salivary glands, causing swelling in the face and neck.",
+    symptoms: ["Swollen salivary glands", "Fever", "Headache", "Muscle aches"],
+  },
+  {
+    id: "whooping_cough",
+    name: "Whooping Cough (Pertussis)",
+    description:
+      "A bacterial infection causing severe coughing spells and a 'whooping' sound when inhaling.",
+    symptoms: ["Severe coughing", "Vomiting after cough", "Fatigue", "Runny nose"],
+  },
+  {
+    id: "ear_infection",
+    name: "Ear Infection",
+    description:
+      "An infection in the middle ear common in children, often caused by bacteria or viruses.",
+    symptoms: ["Ear pain", "Difficulty hearing", "Fever", "Fluid drainage from ear"],
+  },
+  {
+    id: "asthma",
+    name: "Asthma",
+    description:
+      "A chronic condition where a child’s airways become inflamed, causing difficulty in breathing.",
+    symptoms: ["Coughing", "Wheezing", "Shortness of breath", "Chest tightness"],
+  },
+  {
+    id: "diarrhea",
+    name: "Diarrhea",
+    description:
+      "Frequent loose or watery bowel movements, often caused by infections, diet, or other health issues.",
+    symptoms: ["Loose stools", "Dehydration", "Stomach pain", "Fever"],
+  },
+  {
+    id: "hand_foot_mouth",
+    name: "Hand, Foot, and Mouth Disease",
+    description:
+      "A contagious viral illness causing sores in the mouth and a rash on hands and feet.",
+    symptoms: ["Fever", "Sores in mouth", "Rash on hands and feet", "Loss of appetite"],
+  },
+  {
+    id: "conjunctivitis",
+    name: "Conjunctivitis (Pink Eye)",
+    description:
+      "An inflammation or infection of the outer membrane of the eyeball and inner eyelid.",
+    symptoms: ["Red eyes", "Itching or burning", "Tearing", "Discharge from eyes"],
+  },
+  {
+    id: "rickets",
+    name: "Rickets",
+    description:
+      "A condition in children caused by vitamin D deficiency, leading to weak or soft bones.",
+    symptoms: ["Bone pain or tenderness", "Delayed growth", "Skeletal deformities", "Weak muscles"],
+  },
+];
+
 
 export default function ChildCare() {
     return (
@@ -131,6 +205,7 @@ export default function ChildCare() {
                 }}
             />
             <YoutubeCarousel videos={yt} />
+            <DiseaseTypes diseaseData={diseaseData} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

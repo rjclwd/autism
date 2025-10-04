@@ -4,6 +4,7 @@ import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Products from '../../components/Products/Products'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import DiseaseTypes from '../../components/DiseaseTypes/DiseaseTypes'
 
 const testimonials = [
     {
@@ -71,6 +72,125 @@ const products = [
 
 const yt = ["M9RfHVJjiRw", "wIQIUGBD69M", "EvPhJMvE7ZQ", "wFjZfdqI8Xg", "MvVSVqOR-j8", "6xk5yqtxnLg", "P-REURwsk"]
 
+const diseaseData = [
+  {
+    id: "hair_loss",
+    name: "Hair Loss (Alopecia)",
+    description:
+      "A common condition where hair falls out from the scalp or body, which may be temporary or permanent.",
+    symptoms: [
+      "Thinning hair",
+      "Receding hairline",
+      "Patchy bald spots",
+      "Excess hair shedding",
+    ],
+  },
+  {
+    id: "dandruff",
+    name: "Dandruff",
+    description:
+      "A scalp condition that causes flaking and sometimes mild itching due to excess oil or fungal overgrowth.",
+    symptoms: [
+      "White or yellow scalp flakes",
+      "Itchy scalp",
+      "Oily patches on scalp",
+      "Scalp irritation",
+    ],
+  },
+  {
+    id: "acne",
+    name: "Acne",
+    description:
+      "A skin condition where hair follicles become clogged with oil and dead skin cells, leading to pimples, blackheads, and cysts.",
+    symptoms: [
+      "Pimples",
+      "Blackheads/whiteheads",
+      "Cystic lesions",
+      "Scarring or dark spots",
+    ],
+  },
+  {
+    id: "hyperpigmentation",
+    name: "Hyperpigmentation",
+    description:
+      "A common condition where patches of skin become darker than surrounding areas due to excess melanin.",
+    symptoms: [
+      "Dark patches on skin",
+      "Uneven skin tone",
+      "Sun spots or age spots",
+    ],
+  },
+  {
+    id: "psoriasis",
+    name: "Psoriasis (Scalp/skin)",
+    description:
+      "An autoimmune condition that causes rapid skin cell turnover, leading to scaling and inflammation.",
+    symptoms: [
+      "Red patches of skin",
+      "Silvery scales",
+      "Itchy or painful lesions",
+      "Flaking on scalp",
+    ],
+  },
+  {
+    id: "eczema",
+    name: "Eczema (Atopic Dermatitis)",
+    description:
+      "A skin condition causing inflammation, itching, and dryness, often triggered by allergens or irritants.",
+    symptoms: [
+      "Dry, sensitive skin",
+      "Itching",
+      "Red or inflamed patches",
+      "Thickened or cracked skin",
+    ],
+  },
+  {
+    id: "premature_greying",
+    name: "Premature Greying",
+    description:
+      "Loss of natural hair pigment before the age of 30, often influenced by genetics, stress, or deficiencies.",
+    symptoms: [
+      "Grey or white strands at young age",
+      "Dry or brittle hair",
+      "Gradual loss of natural hair color",
+    ],
+  },
+  {
+    id: "dark_circles",
+    name: "Dark Circles",
+    description:
+      "Discoloration under the eyes caused by genetics, stress, lack of sleep, or skin thinning.",
+    symptoms: [
+      "Dark or bluish under-eye patches",
+      "Tired appearance",
+      "Eye puffiness",
+    ],
+  },
+  {
+    id: "pigmentation_melasma",
+    name: "Melasma",
+    description:
+      "A skin condition that causes brown or gray-brown patches, often on the face, commonly in women.",
+    symptoms: [
+      "Dark patches on cheeks, forehead, or upper lip",
+      "Worsening with sun exposure",
+      "Uneven skin tone",
+    ],
+  },
+  {
+    id: "nail_disorders",
+    name: "Nail Disorders",
+    description:
+      "Conditions that affect nail health, including fungal infections, brittle nails, or ridges.",
+    symptoms: [
+      "Discolored nails",
+      "Brittle or splitting nails",
+      "Thickened nails",
+      "Pain or swelling around nails",
+    ],
+  },
+];
+
 export default function HairbeautyCare() {
     return (
         <div>
@@ -116,6 +236,7 @@ export default function HairbeautyCare() {
                 }}
             />
             <YoutubeCarousel videos={yt} />
+            <DiseaseTypes diseaseData={diseaseData} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

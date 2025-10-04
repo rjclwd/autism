@@ -1,12 +1,13 @@
-import React from 'react'
-import AppointmentFloat from '../../components/AppointmentFloat/AppointmentFloat'
-import Hero from './Hero/Hero'
-import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
-import SuccessStory from './SuccessStory/SuccessStory'
-import Book from './Book/Book'
-import Testimonials from '../../components/Testimonials/Testimonials'
-import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
-import Products from '../../components/Products/Products'
+import React from "react";
+import AppointmentFloat from "../../components/AppointmentFloat/AppointmentFloat";
+import Hero from "./Hero/Hero";
+import YoutubeCarousel from "../../components/YoutubeEm/YoutubeEm";
+import SuccessStory from "./SuccessStory/SuccessStory";
+import Book from "./Book/Book";
+import Testimonials from "../../components/Testimonials/Testimonials";
+import HeroUniversal from "../../components/HeroUniversal/HeroUniversal";
+import Products from "../../components/Products/Products";
+import DiseaseTypes from "../../components/DiseaseTypes/DiseaseTypes";
 
 const testimonials = [
   {
@@ -34,7 +35,7 @@ const testimonials = [
     text: "Very compassionate approach. They listen carefully and provide practical solutions. Truly grateful!",
     rating: 4,
   },
-]
+];
 
 const products = [
   {
@@ -44,7 +45,7 @@ const products = [
     price: "1200",
     image: "/cerolin-drops-effective-for-brain.jpg",
     badge: "Autism Care, Nervous & Mind Care",
-    link: "https://www.drrajeevswellness.com/product/cerolin-drops-effective-for-brain/"
+    link: "https://www.drrajeevswellness.com/product/cerolin-drops-effective-for-brain/",
   },
   {
     name: "Neuroplus",
@@ -53,7 +54,7 @@ const products = [
     price: "1200",
     image: "/neuroplus.jpg",
     badge: "Autism Care, Nervous & Mind Care",
-    link: "https://www.drrajeevswellness.com/product/neuroplus/"
+    link: "https://www.drrajeevswellness.com/product/neuroplus/",
   },
   {
     name: "RL-33 For Baby & Calcium Tonic",
@@ -62,9 +63,74 @@ const products = [
     price: "400",
     image: "/rl-33-for-baby-calcium-tonic.jpg",
     badge: "Autism Care, Child Care",
-    link: "https://www.drrajeevswellness.com/product/rl-33-for-baby-calcium-tonic/"
-  }
+    link: "https://www.drrajeevswellness.com/product/rl-33-for-baby-calcium-tonic/",
+  },
 ];
+
+const diseaseData = [
+  {
+    id: "autism_spectrum_disorder",
+    name: "Autism Spectrum Disorder (ASD)",
+    description:
+      "A developmental disorder that affects communication, behavior, and social interaction. Symptoms and severity vary widely among individuals.",
+    symptoms: [
+      "Difficulty with social interaction",
+      "Delayed speech or language development",
+      "Repetitive behaviors",
+      "Intense focus on specific interests",
+      "Sensitivity to sounds, lights, or textures",
+    ],
+  },
+  {
+    id: "asperger_syndrome",
+    name: "Asperger’s Syndrome",
+    description:
+      "A condition on the autism spectrum that affects social interactions and communication but usually does not affect language or intellectual development.",
+    symptoms: [
+      "Difficulty making eye contact",
+      "Trouble understanding social cues",
+      "Repetitive routines or behaviors",
+      "Focused interests in specific topics",
+    ],
+  },
+  {
+    id: "childhood_disintegrative_disorder",
+    name: "Childhood Disintegrative Disorder",
+    description:
+      "A rare condition where children develop normally for at least two years but then lose previously acquired skills such as language, motor, or social abilities.",
+    symptoms: [
+      "Loss of speech or vocabulary",
+      "Decline in social skills",
+      "Loss of motor skills",
+      "Difficulty with bowel or bladder control",
+    ],
+  },
+  {
+    id: "rett_syndrome",
+    name: "Rett Syndrome",
+    description:
+      "A rare genetic neurological disorder that mostly affects girls, leading to severe cognitive and physical impairments.",
+    symptoms: [
+      "Loss of purposeful hand skills",
+      "Slowed growth",
+      "Seizures",
+      "Difficulty with walking or coordination",
+    ],
+  },
+  {
+    id: "pervasive_developmental_disorder",
+    name: "Pervasive Developmental Disorder (PDD-NOS)",
+    description:
+      "A term previously used for children who show some symptoms of autism but do not meet the full criteria for ASD.",
+    symptoms: [
+      "Delayed speech and language skills",
+      "Difficulty with social interactions",
+      "Repetitive behaviors",
+      "Learning difficulties",
+    ],
+  },
+];
+
 
 export default function Autism() {
   return (
@@ -73,7 +139,14 @@ export default function Autism() {
       <HeroUniversal
         promoTitle="One of India’s Leading Homeopathic Clinic Networks"
         subtitle="Spreading Hope, Care, and Awareness for Every Child on the Autism Spectrum"
-        images={["autismbanner.png", "/autclinic.png", "/autws.png", "/autbook.png", "/authand.png", "/wad.png"]}
+        images={[
+          "autismbanner.png",
+          "/autclinic.png",
+          "/autws.png",
+          "/autbook.png",
+          "/authand.png",
+          "/wad.png",
+        ]}
         phone="+919117520003"
         trust={[
           { icon: "shield", label: "20+ Years of Care" },
@@ -111,16 +184,14 @@ export default function Autism() {
         }}
       />
       {/* <Hero /> */}
-      <YoutubeCarousel videos={[
-        "uJV_SWpW9gY",
-        "zwbWatORxAM",
-        "fS3oH1arS5k",
-        "UInG0w-Rl20",
-      ]} />
+      <YoutubeCarousel
+        videos={["uJV_SWpW9gY", "zwbWatORxAM", "fS3oH1arS5k", "UInG0w-Rl20"]}
+      />
+      <DiseaseTypes diseaseData={diseaseData} />
       <Products products={products} />
       <Book />
       <SuccessStory />
       <Testimonials testimonials={testimonials} />
     </div>
-  )
+  );
 }

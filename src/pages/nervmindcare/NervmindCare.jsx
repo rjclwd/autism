@@ -4,6 +4,7 @@ import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Products from '../../components/Products/Products'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import DiseaseTypes from '../../components/DiseaseTypes/DiseaseTypes'
 
 const testimonials = [
     {
@@ -91,6 +92,133 @@ const products = [
 ]
 
 const yt = ["1-cBBo0wLYc", "eKXMAVi3bbc", "2o4muZeKphk"];
+const diseaseData = [
+  {
+    id: "anxiety_disorder",
+    name: "Anxiety Disorders",
+    description:
+      "A group of mental health conditions characterized by excessive fear, worry, or nervousness that interferes with daily activities.",
+    symptoms: [
+      "Restlessness",
+      "Rapid heartbeat",
+      "Excessive worrying",
+      "Sleep problems",
+      "Difficulty concentrating",
+    ],
+  },
+  {
+    id: "depression",
+    name: "Depression",
+    description:
+      "A mood disorder that causes persistent sadness and loss of interest in activities, affecting how you feel and function.",
+    symptoms: [
+      "Persistent sadness",
+      "Loss of interest in activities",
+      "Fatigue",
+      "Sleep disturbances",
+      "Feelings of hopelessness",
+    ],
+  },
+  {
+    id: "schizophrenia",
+    name: "Schizophrenia",
+    description:
+      "A serious mental disorder affecting how a person thinks, feels, and behaves, often involving delusions and hallucinations.",
+    symptoms: [
+      "Hallucinations",
+      "Delusions",
+      "Disorganized speech",
+      "Reduced social engagement",
+      "Difficulty concentrating",
+    ],
+  },
+  {
+    id: "bipolar_disorder",
+    name: "Bipolar Disorder",
+    description:
+      "A mental health condition causing extreme mood swings including emotional highs (mania) and lows (depression).",
+    symptoms: [
+      "Manic episodes (increased energy, euphoria)",
+      "Depressive episodes (sadness, fatigue)",
+      "Impulsive behavior",
+      "Sleep disturbances",
+    ],
+  },
+  {
+    id: "epilepsy",
+    name: "Epilepsy",
+    description:
+      "A neurological disorder marked by recurrent, unprovoked seizures due to abnormal brain activity.",
+    symptoms: [
+      "Seizures",
+      "Loss of awareness",
+      "Confusion",
+      "Uncontrolled movements",
+    ],
+  },
+  {
+    id: "parkinsons_disease",
+    name: "Parkinson’s Disease",
+    description:
+      "A progressive nervous system disorder that affects movement and coordination.",
+    symptoms: [
+      "Tremors",
+      "Slow movement (bradykinesia)",
+      "Muscle stiffness",
+      "Impaired balance",
+    ],
+  },
+  {
+    id: "alzheimers_disease",
+    name: "Alzheimer’s Disease",
+    description:
+      "A progressive brain disorder leading to memory loss, confusion, and impaired thinking.",
+    symptoms: [
+      "Memory loss",
+      "Difficulty planning or problem-solving",
+      "Confusion with time/place",
+      "Personality changes",
+    ],
+  },
+  {
+    id: "stroke",
+    name: "Stroke",
+    description:
+      "A condition caused by reduced blood flow to the brain, leading to cell death and neurological damage.",
+    symptoms: [
+      "Sudden numbness or weakness",
+      "Trouble speaking",
+      "Loss of vision",
+      "Dizziness or loss of balance",
+      "Severe headache",
+    ],
+  },
+  {
+    id: "migraine",
+    name: "Migraine",
+    description:
+      "A type of headache disorder characterized by severe, throbbing pain often accompanied by other symptoms.",
+    symptoms: [
+      "Severe headache",
+      "Sensitivity to light and sound",
+      "Nausea or vomiting",
+      "Visual disturbances (aura)",
+    ],
+  },
+  {
+    id: "multiple_sclerosis",
+    name: "Multiple Sclerosis (MS)",
+    description:
+      "An autoimmune disease where the immune system attacks nerve coverings, disrupting communication between brain and body.",
+    symptoms: [
+      "Numbness or weakness",
+      "Vision problems",
+      "Tremors or lack of coordination",
+      "Fatigue",
+      "Cognitive difficulties",
+    ],
+  },
+];
 
 export default function NervmindCare() {
     return (
@@ -137,6 +265,7 @@ export default function NervmindCare() {
                 }}
             />
             <YoutubeCarousel videos={yt} />
+            <DiseaseTypes diseaseData={diseaseData} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />

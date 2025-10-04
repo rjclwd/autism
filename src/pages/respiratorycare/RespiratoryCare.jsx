@@ -4,6 +4,7 @@ import YoutubeCarousel from '../../components/YoutubeEm/YoutubeEm'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Products from '../../components/Products/Products'
 import HeroUniversal from '../../components/HeroUniversal/HeroUniversal'
+import DiseaseTypes from '../../components/DiseaseTypes/DiseaseTypes'
 
 const testimonials = [
     {
@@ -102,6 +103,133 @@ const products = [
 
 const yt = ["ptcolnjOltk", "A_7C6_ackQY", "8QL79s2WcCU", "OJhnWQl1eyQ"]
 
+const diseaseData = [
+  {
+    id: "asthma",
+    name: "Asthma",
+    description:
+      "A chronic condition in which airways become inflamed and narrowed, making breathing difficult.",
+    symptoms: [
+      "Wheezing",
+      "Shortness of breath",
+      "Chest tightness",
+      "Coughing (especially at night or early morning)",
+    ],
+  },
+  {
+    id: "copd",
+    name: "Chronic Obstructive Pulmonary Disease (COPD)",
+    description:
+      "A group of progressive lung diseases including emphysema and chronic bronchitis that cause airflow blockage.",
+    symptoms: [
+      "Chronic cough",
+      "Frequent respiratory infections",
+      "Shortness of breath",
+      "Fatigue",
+    ],
+  },
+  {
+    id: "pneumonia",
+    name: "Pneumonia",
+    description:
+      "An infection that inflames the air sacs in one or both lungs, which may fill with fluid.",
+    symptoms: [
+      "Chest pain when breathing",
+      "Cough with phlegm",
+      "Fever and chills",
+      "Shortness of breath",
+    ],
+  },
+  {
+    id: "tuberculosis",
+    name: "Tuberculosis (TB)",
+    description:
+      "A bacterial infection that primarily affects the lungs but can spread to other organs.",
+    symptoms: [
+      "Persistent cough (lasting more than 3 weeks)",
+      "Coughing up blood",
+      "Night sweats",
+      "Weight loss",
+      "Fatigue",
+    ],
+  },
+  {
+    id: "bronchitis",
+    name: "Bronchitis",
+    description:
+      "Inflammation of the bronchial tubes that carry air to and from the lungs.",
+    symptoms: [
+      "Persistent cough with mucus",
+      "Chest discomfort",
+      "Shortness of breath",
+      "Fatigue",
+    ],
+  },
+  {
+    id: "pulmonary_fibrosis",
+    name: "Pulmonary Fibrosis",
+    description:
+      "A lung disease that occurs when lung tissue becomes damaged and scarred, making it hard to breathe.",
+    symptoms: [
+      "Shortness of breath",
+      "Dry cough",
+      "Fatigue",
+      "Unexplained weight loss",
+      "Clubbing of fingers/toes",
+    ],
+  },
+  {
+    id: "sleep_apnea",
+    name: "Sleep Apnea",
+    description:
+      "A sleep disorder in which breathing repeatedly stops and starts due to airway obstruction or brain signal issues.",
+    symptoms: [
+      "Loud snoring",
+      "Interrupted breathing during sleep",
+      "Daytime sleepiness",
+      "Morning headaches",
+    ],
+  },
+  {
+    id: "allergic_rhinitis",
+    name: "Allergic Rhinitis",
+    description:
+      "An allergic reaction that causes sneezing, congestion, and runny nose when exposed to allergens.",
+    symptoms: [
+      "Runny or stuffy nose",
+      "Sneezing",
+      "Itchy eyes, nose, or throat",
+      "Watery eyes",
+    ],
+  },
+  {
+    id: "lung_cancer",
+    name: "Lung Cancer",
+    description:
+      "A type of cancer that begins in the lungs, often associated with smoking but can occur in non-smokers too.",
+    symptoms: [
+      "Persistent cough",
+      "Coughing up blood",
+      "Chest pain",
+      "Hoarseness",
+      "Unexplained weight loss",
+    ],
+  },
+  {
+    id: "covid19",
+    name: "COVID-19 (Coronavirus Infection)",
+    description:
+      "A viral infection that primarily affects the respiratory system and can range from mild symptoms to severe pneumonia.",
+    symptoms: [
+      "Fever",
+      "Cough",
+      "Loss of taste or smell",
+      "Difficulty breathing",
+      "Fatigue",
+    ],
+  },
+];
+
 export default function RespiratoryCare() {
     return (
         <div>
@@ -147,6 +275,7 @@ export default function RespiratoryCare() {
                 }}
             />
             <YoutubeCarousel videos={yt} />
+            <DiseaseTypes diseaseData={diseaseData} />
             <Products products={products} />
             <SuccessStory />
             <Testimonials testimonials={testimonials} />
