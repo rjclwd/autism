@@ -50,7 +50,13 @@ function ProductCard({ product }) {
     inStock = true,
   } = product || {};
 
-  const [imgSrc, setImgSrc] = useState(image);
+  const prepareImage = (src) => {
+    if (!src) return import.meta.env.BASE_URL + "placeholder.png";
+    if (src.startsWith("http://") || src.startsWith("https://")) return src;
+    return import.meta.env.BASE_URL + src.replace(/^\//, "");
+  }
+
+  const [imgSrc, setImgSrc] = useState(prepareImage(image));
   const priceLabel = useMemo(() => formatINR(price), [price]);
 
   return (
