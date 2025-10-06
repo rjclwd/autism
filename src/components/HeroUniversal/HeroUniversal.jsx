@@ -1,6 +1,6 @@
-import SplitText from "../../bits/SplitText/SplitText"
-import Carousel from "../Carousel/Carousel"
-import { motion } from "framer-motion"
+import SplitText from "../../bits/SplitText/SplitText";
+import Carousel from "../Carousel/Carousel";
+import { motion } from "framer-motion";
 import {
   CalendarCheck,
   HelpCircle,
@@ -9,7 +9,8 @@ import {
   ShieldCheck,
   Award,
   Star,
-} from "lucide-react"
+} from "lucide-react";
+import NarrowBanner from "../NarrowBanner/NarrowBanner";
 
 /**
  * Reusable, theme-aware hero for disease pages
@@ -37,6 +38,9 @@ import {
 export default function HeroUniversal({
   promoTitle = "One of India’s Leading Homeopathic Clinic Networks",
   subtitle = "Holistic solutions tailored to your care.",
+  bannerText = "First Pathy Homeopathy",
+  bannerSubtext = "Expert homeopathic solutions tailored for your wellness.",
+  bannerImage = "./banner.png",
   images = [],
   phone = "+919117520003",
   ctas = [],
@@ -53,14 +57,14 @@ export default function HeroUniversal({
     showAccents = true,
     splitTypePromo = "chars",
     splitTypeSubtitle = "words",
-  } = options
+  } = options;
 
   // fallback icons for CTAs
   const iconMap = {
     help: <HelpCircle className="h-5 w-5" />,
     youtube: <Youtube className="h-5 w-5" />,
     calendar: <CalendarCheck className="h-5 w-5" />,
-  }
+  };
 
   // CTA variant → classes (theme friendly)
   const variantMap = {
@@ -71,16 +75,16 @@ export default function HeroUniversal({
     danger:
       "bg-red-600 text-white hover:bg-red-700 hover:shadow-md transition hover:-translate-y-0.5",
     custom: "", // allow full control if you pass custom classes in href? keep simple here
-  }
+  };
 
   // trust icon fallback
   const trustIconMap = {
     shield: <ShieldCheck className="h-4 w-4 text-secondary" />,
     award: <Award className="h-4 w-4 text-primary" />,
     star: <Star className="h-4 w-4 text-yellow-500" />,
-  }
+  };
 
-  const telHref = `tel:${phone.replace(/\s+/g, "")}`
+  const telHref = `tel:${phone.replace(/\s+/g, "")}`;
 
   return (
     <section className="relative overflow-hidden">
@@ -102,7 +106,7 @@ export default function HeroUniversal({
         >
           <div className="relative rounded-2xl border border-border bg-surface/90 shadow-lg ring-1 ring-black/5">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary/10 via-accent/5 to-secondary/10" />
-            <div className="relative px-5 sm:px-7 py-5">
+            <div className="relative px-5 sm:px-7 py-5 text-center">
               <SplitText
                 text={promoTitle}
                 className="text-center font-heading font-extrabold uppercase text-primary drop-shadow-sm
@@ -117,6 +121,9 @@ export default function HeroUniversal({
                 rootMargin="-80px"
               />
 
+              <p className="text-lg md:text-2xl font-bold italic font-accent text-text-muted">
+                #FirstPathyHomeopathy
+              </p>
               {!!trust.length && (
                 <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-sm text-text-muted">
                   {trust.map((t, i) => (
@@ -134,7 +141,7 @@ export default function HeroUniversal({
           </div>
         </motion.div>
 
-        {/* Carousel */}
+        {/* Carousel
         {!!images.length && (
           <div className="mt-8">
             <Carousel
@@ -145,7 +152,17 @@ export default function HeroUniversal({
               objectPosition="50% 45%" // optional focal point
             />
           </div>
-        )}
+        )} */}
+
+        <div className="mt-8">
+          <NarrowBanner
+            image={bannerImage}
+            title={bannerText}
+            subtitle={bannerSubtext}
+            align="center"
+            overlayOpacity={0.8}
+          />
+        </div>
 
         {/* Subtitle */}
         {subtitle && (
@@ -174,10 +191,16 @@ export default function HeroUniversal({
                 <a
                   key={i}
                   href={c.href}
-                  target={c.target || (c.icon === "youtube" ? "_blank" : "_self")}
-                  rel={c.target === "_blank" ? "noopener noreferrer" : undefined}
+                  target={
+                    c.target || (c.icon === "youtube" ? "_blank" : "_self")
+                  }
+                  rel={
+                    c.target === "_blank" ? "noopener noreferrer" : undefined
+                  }
                   className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3
-                              text-sm sm:text-base font-semibold shadow-sm ${variantMap[c.variant || "neutral"]}`}
+                              text-sm sm:text-base font-semibold shadow-sm ${
+                                variantMap[c.variant || "neutral"]
+                              }`}
                 >
                   {c.iconEl || iconMap[c.icon || "help"]}
                   {c.label}
@@ -210,14 +233,14 @@ export default function HeroUniversal({
         {extraBelow}
       </div>
     </section>
-  )
+  );
 }
 
 function formatPhone(p) {
   // simple pretty format for +91 numbers like +91 91175 20003
-  const digits = p.replace(/[^\d+]/g, "")
+  const digits = p.replace(/[^\d+]/g, "");
   if (digits.startsWith("+91") && digits.length >= 13) {
-    return `+91 ${digits.slice(3, 8)} ${digits.slice(8, 13)}`
+    return `+91 ${digits.slice(3, 8)} ${digits.slice(8, 13)}`;
   }
-  return p
+  return p;
 }

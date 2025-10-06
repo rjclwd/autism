@@ -1,4 +1,4 @@
-import BlurText from "../../bits/BlurText/BlurText"
+import BlurText from "../../bits/BlurText/BlurText";
 
 function Navbar() {
   return (
@@ -12,15 +12,12 @@ function Navbar() {
         />
       </a>
 
-      {/* Center Text */}
-      <BlurText
-        text="First Pathy Homeopathy"
-        delay={150}
-        animateBy="words"
-        direction="top"
-        // onAnimationComplete={handleAnimationComplete}
-        className="text-lg md:text-4xl text-primary font-bold font-heading"
-      />
+      <h1 className="text-lg md:text-4xl text-primary font-bold font-heading flex items-center gap-2 flex-col md:flex-row">
+        Dr Rajeev's Clinic{" "}
+        <span className="text-sm md:text-2xl text-accent font-semibold font-heading">
+          | Ranchi | Kolkata | Patna | Delhi
+        </span>
+      </h1>
 
       {/* Right Section */}
       <div className="flex items-center gap-6">
@@ -31,7 +28,7 @@ function Navbar() {
         />
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

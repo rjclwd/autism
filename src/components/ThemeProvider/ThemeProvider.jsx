@@ -62,7 +62,7 @@ export default function ThemeProvider({ children }) {
       html.classList.add("theme-respiratory"); // Respiratory Care
     } else {
       // Fallback
-      html.classList.add("theme-blue");
+      html.classList.add("theme-autism");
     }
   }, [location.pathname]);
 
