@@ -2,7 +2,7 @@ import BlurText from "../../bits/BlurText/BlurText";
 
 function Navbar() {
   return (
-    <nav className="h-20 flex items-center justify-between w-full px-4 md:px-12 bg-white shadow-md">
+    <nav className="h-20 flex items-center justify-between w-full px-1 md:px-12 bg-white shadow-md">
       {/* Left Logo */}
       <a href="/" className="flex items-center">
         <img
@@ -12,12 +12,13 @@ function Navbar() {
         />
       </a>
 
-      <h1 className="text-lg md:text-4xl text-primary font-bold font-heading flex items-center gap-2 flex-col md:flex-row">
-        Dr Rajeev's Clinic{" "}
-        <span className="text-sm md:text-2xl text-accent font-semibold font-heading">
-          | Ranchi | Kolkata | Patna | Delhi
-        </span>
-      </h1>
+      <div className="flex items-center gap-6">
+        <img
+          src={import.meta.env.BASE_URL + "/biglogo.png"}
+          alt="Dr. Rajeev Wellness Logo"
+          className="h-9 md:h-14 w-auto object-contain"
+        />
+      </div>
 
       {/* Right Section */}
       <div className="flex items-center gap-6">

@@ -11,219 +11,228 @@
 
 /* ---------- Autism Care (Calm Blue) ---------- */
 .theme-autism {
-  --color-bgnd: #e0f2fe;       
-  --color-surface: #f0f9ff;    
-  --color-border: #bae6fd;     
-  --color-overlay: #cffafe;    
+  --color-bgnd: #fdfbff;
+  --color-surface: #ffffff;
+  --color-border: #e0d7ff;
+  --color-overlay: #f3f7ff;
 
-  --color-primary: #2563eb;    
-  --color-secondary: #0ea5e9;  
-  --color-accent: #38bdf8;     
-  --color-highlight: #1e3a8a;  
+  --color-primary: #2563eb;   /* vivid blue */
+  --color-secondary: #f59e0b; /* yellow */
+  --color-accent: #10b981;    /* green */
+  --color-highlight: #ef4444; /* red */
 
   --color-text: #0f172a;
   --color-text-light: #334155;
   --color-text-muted: #64748b;
+
+  /* gradient combos from ribbon spectrum */
+  --gradient-ribbon: linear-gradient(
+    90deg,
+    #2563eb,
+    #f59e0b,
+    #10b981,
+    #ef4444
+  );
 }
 
-/* ---------- Mens Care (Strong Green) ---------- */
+/* ---------- Mens Care (Confident Teal + Emerald) ---------- */
 .theme-mens {
-  --color-bgnd: #ecfdf5;       
-  --color-surface: #f0fdfa;    
-  --color-border: #bbf7d0;     
-  --color-overlay: #dcfce7;    
+  --color-bgnd: #eefcf7;       /* soft mint wash */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #b6f0d2;     /* gentle green border */
+  --color-overlay: #e6fff3;    /* subtle overlay */
 
-  --color-primary: #16a34a;    
-  --color-secondary: #22c55e;  
-  --color-accent: #84cc16;     
-  --color-highlight: #166534;  
+  --color-primary: #0f766e;    /* teal 700 (strong/masculine) */
+  --color-secondary: #14b8a6;  /* teal 500 */
+  --color-accent: #22c55e;     /* emerald 500 */
+  --color-highlight: #065f46;  /* deep teal 800 */
 
   --color-text: #0f172a;
   --color-text-light: #334155;
   --color-text-muted: #64748b;
 }
 
-/* ---------- Female Care (Soft Pink) ---------- */
+/* ---------- Female Care (Soft Rose + Magenta) ---------- */
 .theme-female {
-  --color-bgnd: #fdf2f8;       
-  --color-surface: #fff1f2;    
-  --color-border: #f9a8d4;     
-  --color-overlay: #fbcfe8;    
+  --color-bgnd: #fff1f5;       /* rose 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #fbcfe8;     /* soft pink border */
+  --color-overlay: #ffe4ef;    /* light rose overlay */
 
-  --color-primary: #db2777;    
-  --color-secondary: #ec4899;  
-  --color-accent: #f472b6;     
-  --color-highlight: #9d174d;  
+  --color-primary: #db2777;    /* rose 600 */
+  --color-secondary: #f472b6;  /* pink 400 */
+  --color-accent: #ec4899;     /* pink 500 */
+  --color-highlight: #9d174d;  /* deep magenta 800 */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Skin Care (Peach Orange-Pink) ---------- */
+/* ---------- Skin Care (Peach + Coral + Honey) ---------- */
 .theme-skin {
-  --color-bgnd: #fff7f5;       
-  --color-surface: #fff1f2;    
-  --color-border: #fed7aa;     
-  --color-overlay: #ffe4e6;    
+  --color-bgnd: #fff7ed;       /* peach/amber 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #fed7aa;     /* peach border */
+  --color-overlay: #fff1f2;    /* soft rose overlay */
 
-  --color-primary: #fb7185;    
-  --color-secondary: #f97316;  
-  --color-accent: #f472b6;     
-  --color-highlight: #c2410c;  
+  --color-primary: #f97316;    /* amber/coral 500 */
+  --color-secondary: #fb7185;  /* rose 400 */
+  --color-accent: #f59e0b;     /* amber 500 */
+  --color-highlight: #9a3412;  /* deep amber 800 */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Digestive Care (Yellow-Lime) ---------- */
+/* ---------- Digestive Care (Sunshine + Herbal) ---------- */
 .theme-digestive {
-  --color-bgnd: #fefce8;       
-  --color-surface: #fef9c3;    
-  --color-border: #d9f99d;     
-  --color-overlay: #fef08a;    
+  --color-bgnd: #fffbeb;       /* amber 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #fde68a;     /* amber 200 */
+  --color-overlay: #fef3c7;    /* amber 100 */
 
-  --color-primary: #ca8a04;    
-  --color-secondary: #65a30d;  
-  --color-accent: #84cc16;     
-  --color-highlight: #854d0e;  
+  --color-primary: #ca8a04;    /* amber 600 */
+  --color-secondary: #22c55e;  /* green 500 */
+  --color-accent: #84cc16;     /* lime 500 */
+  --color-highlight: #854d0e;  /* amber 800 */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Nervous & Mind Care (Lavender) ---------- */
+/* ---------- Nervous & Mind Care (Calming Lavender) ---------- */
 .theme-mind {
-  --color-bgnd: #f5f3ff;       
-  --color-surface: #faf5ff;    
-  --color-border: #ddd6fe;     
-  --color-overlay: #ede9fe;    
+  --color-bgnd: #f5f3ff;       /* indigo/lavender 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #ddd6fe;     /* indigo 200 */
+  --color-overlay: #ede9fe;    /* indigo 100 */
 
-  --color-primary: #7c3aed;    
-  --color-secondary: #a855f7;  
-  --color-accent: #9333ea;     
-  --color-highlight: #4c1d95;  
+  --color-primary: #7c3aed;    /* violet 600 */
+  --color-secondary: #6366f1;  /* indigo 500 */
+  --color-accent: #a78bfa;     /* violet 400 */
+  --color-highlight: #4c1d95;  /* violet 900 */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Urology Care (Teal Aqua) ---------- */
+/* ---------- Urology Care (Clinical Teal + Cyan) ---------- */
 .theme-urology {
-  --color-bgnd: #f0fdfa;       
-  --color-surface: #ecfdf5;    
-  --color-border: #99f6e4;     
-  --color-overlay: #ccfbf1;    
+  --color-bgnd: #f0fdfa;       /* teal 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #99f6e4;     /* teal 200 */
+  --color-overlay: #ccfbf1;    /* teal 100 */
 
-  --color-primary: #0d9488;    
-  --color-secondary: #14b8a6;  
-  --color-accent: #06b6d4;     
-  --color-highlight: #134e4a;  
+  --color-primary: #0d9488;    /* teal 600 */
+  --color-secondary: #06b6d4;  /* cyan 500 */
+  --color-accent: #14b8a6;     /* teal 500 */
+  --color-highlight: #0f766e;  /* deep teal 700 */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Autoimmune Care (Deep Indigo) ---------- */
+/* ---------- Autoimmune Care (Assured Indigo + Blue) ---------- */
 .theme-autoimmune {
-  --color-bgnd: #eef2ff;       
-  --color-surface: #f5f3ff;    
-  --color-border: #c7d2fe;     
-  --color-overlay: #e0e7ff;    
+  --color-bgnd: #eef2ff;       /* indigo 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #c7d2fe;     /* indigo 200 */
+  --color-overlay: #e0e7ff;    /* indigo 100 */
 
-  --color-primary: #4338ca;    
-  --color-secondary: #6366f1;  
-  --color-accent: #3b82f6;     
-  --color-highlight: #1e3a8a;  
+  --color-primary: #4338ca;    /* indigo 700 */
+  --color-secondary: #2563eb;  /* blue 600 */
+  --color-accent: #6366f1;     /* indigo 500 */
+  --color-highlight: #1e3a8a;  /* indigo 900 */
 
   --color-text: #1e293b;
   --color-text-light: #334155;
   --color-text-muted: #64748b;
 }
 
-/* ---------- ENT Care (Coral-Red) ---------- */
+/* ---------- ENT Care (Warm Coral + Rose) ---------- */
 .theme-ent {
-  --color-bgnd: #fff5f5;       
-  --color-surface: #ffe4e6;    
-  --color-border: #fecaca;     
-  --color-overlay: #fed7d7;    
+  --color-bgnd: #fff1f2;       /* rose 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #fecaca;     /* rose 200 */
+  --color-overlay: #ffe4e6;    /* rose 100 */
 
-  --color-primary: #e11d48;    
-  --color-secondary: #f43f5e;  
-  --color-accent: #fb7185;     
-  --color-highlight: #7f1d1d;  
+  --color-primary: #e11d48;    /* rose 600 */
+  --color-secondary: #fb7185;  /* rose 400 */
+  --color-accent: #f43f5e;     /* rose 500 */
+  --color-highlight: #7f1d1d;  /* deep warm red/brown */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Hair & Beauty Care (Rose-Gold) ---------- */
+/* ---------- Hair & Beauty Care (Rose-Gold Glam) ---------- */
 .theme-hair {
-  --color-bgnd: #fff5f7;       
-  --color-surface: #fff1f2;    
-  --color-border: #fecdd3;     
-  --color-overlay: #ffe4e6;    
+  --color-bgnd: #fff5f7;       /* rose 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #fecdd3;     /* rose 200 */
+  --color-overlay: #ffe4e6;    /* rose 100 */
 
-  --color-primary: #be185d;    
-  --color-secondary: #db2777;  
-  --color-accent: #f472b6;     
-  --color-highlight: #831843;  
+  --color-primary: #be185d;    /* rose 700 */
+  --color-secondary: #db2777;  /* rose 600 */
+  --color-accent: #f9a8d4;     /* pink 300 */
+  --color-highlight: #831843;  /* rose 900 */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Child Care (Playful Mint) ---------- */
+/* ---------- Child Care (Playful Mint + Sky) ---------- */
 .theme-child {
-  --color-bgnd: #f0fdf4;       
-  --color-surface: #ecfdf5;    
-  --color-border: #a7f3d0;     
-  --color-overlay: #d1fae5;    
+  --color-bgnd: #f0fdf4;       /* emerald 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #a7f3d0;     /* emerald 200 */
+  --color-overlay: #d1fae5;    /* emerald 100 */
 
-  --color-primary: #10b981;    
-  --color-secondary: #34d399;  
-  --color-accent: #22d3ee;     
-  --color-highlight: #065f46;  
+  --color-primary: #10b981;    /* emerald 500 */
+  --color-secondary: #22d3ee;  /* cyan 400 */
+  --color-accent: #34d399;     /* emerald 400 */
+  --color-highlight: #065f46;  /* emerald 900 */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Ortho Care (Earthy Clay) ---------- */
+/* ---------- Ortho Care (Grounded Amber + Clay) ---------- */
 .theme-ortho {
-  --color-bgnd: #fef2f2;       
-  --color-surface: #fdfdea;    
-  --color-border: #fcd34d;     
-  --color-overlay: #fde68a;    
+  --color-bgnd: #fffbeb;       /* amber 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #fcd34d;     /* amber 300 */
+  --color-overlay: #fde68a;    /* amber 200 */
 
-  --color-primary: #b45309;    
-  --color-secondary: #d97706;  
-  --color-accent: #92400e;     
-  --color-highlight: #78350f;  
+  --color-primary: #b45309;    /* amber/brown 700 */
+  --color-secondary: #d97706;  /* amber 600 */
+  --color-accent: #92400e;     /* amber 800 */
+  --color-highlight: #78350f;  /* amber 900 */
 
   --color-text: #1f2937;
   --color-text-light: #374151;
   --color-text-muted: #6b7280;
 }
 
-/* ---------- Respiratory Care (Fresh Aqua-Green) ---------- */
+/* ---------- Respiratory Care (Fresh Aqua + Sky) ---------- */
 .theme-respiratory {
-  --color-bgnd: #ecfeff;       
-  --color-surface: #f0fdfa;    
-  --color-border: #a7f3d0;     
-  --color-overlay: #ccfbf1;    
+  --color-bgnd: #ecfeff;       /* cyan 50 */
+  --color-surface: #ffffff;    /* clean card */
+  --color-border: #a7f3d0;     /* mint 200 */
+  --color-overlay: #ccfbf1;    /* teal 100 */
 
-  --color-primary: #0891b2;    
-  --color-secondary: #0ea5e9;  
-  --color-accent: #14b8a6;     
-  --color-highlight: #164e63;  
+  --color-primary: #0ea5e9;    /* sky 500 */
+  --color-secondary: #14b8a6;  /* teal 500 */
+  --color-accent: #22d3ee;     /* cyan 400 */
+  --color-highlight: #164e63;  /* cyan 900 */
 
   --color-text: #0f172a;
   --color-text-light: #334155;

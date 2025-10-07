@@ -34,7 +34,7 @@ export default function NarrowBanner({
   return (
     <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-[100vw] overflow-hidden">
       {/* Banner container with responsive height */}
-      <div className="relative w-full h-[100px] sm:h-[280px] md:h-[120px] lg:h-[160px] xl:h-[200px]">
+      <div className="relative w-full md:h-[200px] ">
         {/* Background Image */}
         <img
           src={image}
@@ -57,7 +57,7 @@ export default function NarrowBanner({
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-bgnd font-heading font-bold text-2xl sm:text-5xl md:text-7xl drop-shadow-md"
+            className="text-bgnd uppercase font-heading font-bold text-2xl sm:text-5xl md:text-7xl drop-shadow-md"
           >
             {title}
           </motion.h2>
@@ -66,7 +66,7 @@ export default function NarrowBanner({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 }}
-              className="text-accent mt-2 text-sm sm:text-base md:text-lg max-w-2xl"
+              className="text-accent uppercase mt-2 text-sm sm:text-base md:text-lg max-w-2xl"
             >
               {subtitle}
             </motion.p>

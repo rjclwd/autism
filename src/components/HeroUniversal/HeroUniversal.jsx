@@ -95,7 +95,15 @@ export default function HeroUniversal({
           <div className="absolute -bottom-28 -right-20 h-80 w-80 rounded-full bg-secondary/10 blur-3xl" />
         </div>
       )}
-
+      <div className="mt-2">
+          <NarrowBanner
+            image={bannerImage}
+            title={bannerText}
+            subtitle={bannerSubtext}
+            align="center"
+            overlayOpacity={0.8}
+          />
+        </div>
       <div className="px-4 py-10 sm:py-14 md:py-16 max-w-7xl mx-auto">
         {/* Promo strip */}
         <motion.div
@@ -154,16 +162,6 @@ export default function HeroUniversal({
           </div>
         )} */}
 
-        <div className="mt-8">
-          <NarrowBanner
-            image={bannerImage}
-            title={bannerText}
-            subtitle={bannerSubtext}
-            align="center"
-            overlayOpacity={0.8}
-          />
-        </div>
-
         {/* Subtitle */}
         {subtitle && (
           <div className="mt-8 sm:mt-10 flex items-center justify-center">
@@ -197,7 +195,7 @@ export default function HeroUniversal({
                   rel={
                     c.target === "_blank" ? "noopener noreferrer" : undefined
                   }
-                  className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3
+                  className={`inline-flex items-center justify-center gap-2 uppercase rounded-full px-5 py-3
                               text-sm sm:text-base font-semibold shadow-sm ${
                                 variantMap[c.variant || "neutral"]
                               }`}
@@ -221,7 +219,7 @@ export default function HeroUniversal({
               <span className="absolute inset-0 opacity-20 bg-[radial-gradient(transparent,rgba(255,255,255,0.25)_40%,transparent_70%)]" />
               <span className="inline-flex items-center gap-3 text-lg sm:text-xl md:text-2xl font-extrabold uppercase tracking-wide">
                 <PhoneCall className="h-7 w-7 md:h-8 md:w-8 animate-pulse" />
-                Book Your Appointment Instantly – Call {formatPhone(phone)}
+                Book Your Appointment Instantly – Call @ <br /> {formatPhone(phone)}
               </span>
             </a>
             <p className="mt-3 text-center text-sm text-text-muted">
