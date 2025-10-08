@@ -80,122 +80,212 @@ Indications:
   },
 ];
 
-
-
 const diseaseData = [
   {
-    id: "adhd",
-    name: "ADHD (Attention-Deficit / Hyperactivity Disorder)",
+    id: "balanitis",
+    name: "Balanitis",
     description:
-      "A condition marked by inattention, hyperactivity, and impulsivity affecting daily life.",
-    link: "https://www.rajeevclinic.com/disease/mind-533/adult-attention-deficit-hyperactivity-disorder-adhd--20875.html",
-  },
-  {
-    id: "anxiety_disorders",
-    name: "Anxiety Disorders",
-    description:
-      "A group of disorders causing excessive worry, fear, or avoidance behaviors.",
-    link: "https://www.rajeevclinic.com/disease/mind-533/social-phobia-586.html",
-  },
-  {
-    id: "depression_mood_disorders",
-    name: "Depression or Mood Disorders",
-    description:
-      "Emotional conditions causing persistent sadness, low energy, or loss of interest.",
-    link: "https://www.rajeevclinic.com/disease/mind-533/mood-disorder-20849.html",
-  },
-  {
-    id: "epilepsy",
-    name: "Epilepsy / Seizure Disorders",
-    description:
-      "A neurological condition with recurrent seizures due to abnormal brain activity.",
-    link: "https://www.rajeevclinic.com/disease/nervous-system-7/epilepsy-seizures-35.html",
-  },
-  {
-    id: "sleep_disorders",
-    name: "Sleep Disorders",
-    description:
-      "Conditions disrupting sleep quality, duration, or regular cycles like insomnia.",
-    link: "https://www.rajeevclinic.com/disease/other-disease-110/sleep-disorders-31875.html",
-  },
-  {
-    id: "sensory_processing_disorder",
-    name: "Sensory Processing Disorder (SPD)",
-    description:
-      "Difficulty managing sensory input, leading to over- or under-sensitivity.",
+      "Inflammation of the glans penis causing redness, irritation, and discomfort.",
     link: "https://www.rajeevclinic.com/disease-terms.html",
   },
   {
-    id: "ocd",
-    name: "Obsessive-Compulsive Disorder (OCD)",
+    id: "prostate_enlargement",
+    name: "Prostate Enlargement (BPH)",
     description:
-      "A disorder involving intrusive thoughts and repetitive, anxiety-driven behaviors.",
-    link: "https://www.rajeevclinic.com/disease/children-disease-542/ocd-546.html",
+      "Non-cancerous enlargement of the prostate leading to urinary difficulties.",
+    link: "https://www.rajeevclinic.com/disease/male-disorders-29/benign-prostatic-hyperplasia-bph-168.html",
   },
   {
-    id: "gastrointestinal_disorders",
-    name: "Gastrointestinal Disorders",
+    id: "gonorrhea",
+    name: "Gonorrhea",
     description:
-      "Digestive issues like IBS, constipation, or reflux often linked with neurodiversity.",
-    link: "https://www.rajeevclinic.com/disease/other-disease-110/gastrointestinal-viral-infection-31939.html",
+      "Sexually transmitted infection causing urethral discharge, burning, and pelvic pain.",
+    link: "https://www.rajeevclinic.com/disease/male-disorders-29/sexually-transmitted-diseases-189.html",
   },
   {
-    id: "language_speech_disorders",
-    name: "Language and Speech Disorders",
+    id: "hydrocele",
+    name: "Hydrocele",
     description:
-      "Difficulties in speech, articulation, or understanding language effectively.",
-    link: "https://www.rajeevclinic.com/disease/other-disease-110/speech-and-language-disability-31653.html",
+      "Fluid collection around the testicle leading to painless scrotal swelling.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
   },
   {
-    id: "motor_coordination_disorders",
-    name: "Motor Coordination Disorders (Dyspraxia)",
+    id: "hypogonadism",
+    name: "Hypogonadism (Low Testosterone)",
     description:
-      "Problems planning and coordinating movement, affecting daily physical tasks.",
-    link: "https://www.rajeevclinic.com/disease/other-disease-110/locomotor-disability-31654.html",
+      "Reduced testosterone production causing fatigue, low libido, and muscle loss.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
   },
   {
-    id: "learning_disabilities",
-    name: "Learning Disabilities",
+    id: "obesity_male",
+    name: "Obesity (Male)",
     description:
-      "Specific challenges in reading, writing, or math despite normal intelligence.",
-    link: "https://www.rajeevclinic.com/disease/other-disease-110/specific-learning-disabilities-31662.html ",
+      "Excess body fat associated with metabolic risks and reduced vitality.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/obesity-330.html",
   },
   {
-    id: "intellectual_disability",
-    name: "Intellectual Disability",
+    id: "male_diabetes",
+    name: "Diabetes (Male Metabolic Syndrome)",
     description:
-      "Significant limitations in intellectual functioning and adaptive behavior.",
-    link: "https://www.rajeevclinic.com/disease/other-disease-110/intellectual-disability-31661.html",
+      "Metabolic imbalance with insulin resistance raising cardiometabolic risk.",
+    link: "https://www.rajeevclinic.com/disease/endocrine-system-9/diabetes-mellitus-107.html",
   },
   {
-    id: "autism_spectrum_disorder",
-    name: "Autism Spectrum Disorder (ASD)",
+    id: "genital_warts",
+    name: "Genital Warts",
     description:
-      "A developmental condition affecting communication, behavior, and social skills.",
-    link: "https://www.rajeevclinic.com/disease/other-disease-110/autism-spectrum-disorder-31660.html",
+      "HPV-related wart growth on genital skin, often painless but contagious.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
   },
   {
-    id: "asperger_syndrome",
-    name: "Asperger’s Syndrome",
+    id: "penile_shortening",
+    name: "Penile Shrinking/Shortening",
     description:
-      "A form of autism with normal intelligence but social and behavioral challenges.",
-    link: "https://www.rajeevclinic.com/disease/nervous-system-7/asperger%E2%80%99s-syndrome-646.html",
+      "Perceived or actual reduction in penile size due to hormonal or scarring factors.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
   },
   {
-    id: "childhood_disintegrative_disorder",
-    name: "Childhood Disintegrative Disorder",
+    id: "spermatorrhea",
+    name: "Ejaculation of Semen with Urine (Spermatorrhea)",
     description:
-      "A rare condition where children lose language and social abilities after normal growth.",
-    link: "https://www.rajeevclinic.com/disease/children-disease-542/autism-74.html",
+      "Involuntary seminal discharge commonly linked with weakness or inflammation.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
   },
   {
-    id: "pdd_nos",
-    name: "PDD-NOS (Pervasive Developmental Disorder)",
+    id: "depression_male",
+    name: "Depression (Male Mental Health)",
     description:
-      "A historical term for mild autism traits not meeting full diagnostic criteria.",
-    link: "https://www.rajeevclinic.com/disease/children-disease-542/autism-74.html",
+      "Persistent low mood, loss of interest, and reduced motivation affecting life.",
+    link: "https://www.rajeevclinic.com/disease/mind-533/mood-disorder-20849.html",
+  },
+  {
+    id: "anxiety_male",
+    name: "Anxiety Disorders (Male)",
+    description:
+      "Excessive worry, fear, or restlessness often affecting work and relationships.",
+    link: "https://www.rajeevclinic.com/disease/mind-533/social-phobia-586.html",
+  },
+  {
+    id: "stress_fatigue",
+    name: "Stress & Fatigue",
+    description:
+      "Chronic mental and physical exhaustion with low energy and poor focus.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "gout",
+    name: "Gout",
+    description:
+      "Uric acid crystal arthritis causing sudden painful joint swelling, often in feet.",
+    link: "https://www.rajeevclinic.com/disease/joints-15/gout-240.html",
+  },
+  {
+    id: "androgenetic_alopecia",
+    name: "Hair Loss (Androgenetic Alopecia)",
+    description:
+      "Male-pattern baldness due to genetics and hormonal sensitivity of hair follicles.",
+    link: "https://www.rajeevclinic.com/disease/skin-4/alopecia-200.html",
+  },
+  {
+    id: "sexual_weakness_overexertion",
+    name: "Sexual Weakness due to Overexertion",
+    description:
+      "Loss of vigor and poor performance linked to strain, stress, or overuse.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "nocturnal_emission",
+    name: "Nocturnal Emission",
+    description:
+      "Involuntary ejaculation during sleep commonly seen in adolescents or stress.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "std_infections",
+    name: "Sexually Transmitted Infections (STIs)",
+    description:
+      "Infections acquired through sexual contact causing discharge, sores, or pain.",
+    link: "https://www.rajeevclinic.com/disease/male-disorders-29/sexually-transmitted-diseases-189.html",
+  },
+  {
+    id: "prostatitis",
+    name: "Prostatitis",
+    description:
+      "Inflammation of the prostate causing pelvic pain and urinary symptoms.",
+    link: "https://www.rajeevclinic.com/disease/male-disorders-29/prostatitis-169.html",
+  },
+  {
+    id: "prostate_cancer",
+    name: "Prostate Cancer",
+    description:
+      "Malignant growth of the prostate gland requiring timely evaluation and care.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "erectile_dysfunction",
+    name: "Erectile Dysfunction (Impotence)",
+    description:
+      "Persistent difficulty achieving or maintaining an erection for intercourse.",
+    link: "https://www.rajeevclinic.com/disease/male-disorders-29/erectile-dysfunction-impotence-176.html",
+  },
+  {
+    id: "premature_ejaculation",
+    name: "Premature Ejaculation",
+    description:
+      "Ejaculation occurring earlier than desired with minimal stimulation.",
+    link: "https://www.rajeevclinic.com/disease/male-disorders-29/premature-ejaculation-181.html",
+  },
+  {
+    id: "low_sperm_count",
+    name: "Low Sperm Count (Oligospermia)",
+    description:
+      "Reduced sperm concentration impairing fertility and conception chances.",
+    link: "https://www.rajeevclinic.com/disease/male-disorders-29/oligospermia-175.html",
+  },
+  {
+    id: "male_infertility",
+    name: "Infertility (Male)",
+    description:
+      "Impaired ability to conceive due to sperm quality, count, or function issues.",
+    link: "https://www.rajeevclinic.com/disease/male-disorders-29/infertility-male-180.html",
+  },
+  {
+    id: "loss_of_libido",
+    name: "Loss of Libido",
+    description:
+      "Decreased sexual desire linked to stress, hormones, or relationship factors.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "uti_male",
+    name: "Urinary Tract Infection (UTI)",
+    description:
+      "Infection of the urinary system causing burning, urgency, and frequency.",
+    link: "https://www.rajeevclinic.com/disease/urinary-system-8/urinary-tract-infection-uti-422.html",
+  },
+  {
+    id: "orchitis",
+    name: "Orchitis",
+    description:
+      "Inflammation of one or both testicles leading to scrotal pain and swelling.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "epididymitis",
+    name: "Epididymitis",
+    description:
+      "Inflammation of the epididymis causing testicular pain and swelling.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "mental_sexual_weakness",
+    name: "Sexual and Nervous Weakness",
+    description:
+      "Generalized fatigue, nervousness, and low performance impacting sexual health.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
   },
 ];
+
 
 export default function Autism() {
   return (
@@ -204,7 +294,9 @@ export default function Autism() {
       <HeroUniversal
         promoTitle="One of India’s Leading Homeopathic Clinic Networks"
         subtitle="Spreading Hope, Care, and Awareness for Every Child on the Autism Spectrum"
-        bannerText="Autism Care with Homeopathy"
+        bannerText="Autism Care"
+        images={["/autclinic.png", "/authand.png", "/autws.png"]}
+        isAutism={true}
         bannerImage="./autismbanner.jpg"
         phone="+919117520003"
         trust={[

@@ -12,7 +12,7 @@ export default function DiseaseList({ diseaseData = [] }) {
   }
 
   return (
-    <section className="w-full bg-white py-10 px-4">
+    <section className="w-full bg-white py-2 px-4">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-2xl sm:text-3xl uppercase    text-primary font-heading text-center mb-8 text-">
           Explore Diseases
@@ -24,7 +24,7 @@ export default function DiseaseList({ diseaseData = [] }) {
               key={disease.id}
               className="p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition bg-gradient-to-br from-white via-gray-50 to-blue-50"
             >
-              <h2 className="text-lg font-semibold text-gray-900 mb-2">
+              <h2 className="text-lg font-extrabold font-heading text-gray-900 mb-2">
                 {disease.name}
               </h2>
               <p className="text-sm text-gray-600 mb-4 line-clamp-2">

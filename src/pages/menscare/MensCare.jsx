@@ -104,14 +104,22 @@ const diseaseData = [
     name: "Prostate Issues",
     description:
       "Conditions affecting the prostate gland, including enlargement or inflammation.",
-    symptoms: ["Difficulty urinating", "Frequent urination at night", "Pain in lower back or pelvis"],
+    symptoms: [
+      "Difficulty urinating",
+      "Frequent urination at night",
+      "Pain in lower back or pelvis",
+    ],
   },
   {
     id: "erectile_dysfunction",
     name: "Erectile Dysfunction",
     description:
       "The inability to achieve or maintain an erection suitable for sexual activity.",
-    symptoms: ["Difficulty maintaining erection", "Reduced sexual desire", "Stress or anxiety related to performance"],
+    symptoms: [
+      "Difficulty maintaining erection",
+      "Reduced sexual desire",
+      "Stress or anxiety related to performance",
+    ],
   },
   {
     id: "low_testosterone",
@@ -125,7 +133,11 @@ const diseaseData = [
     name: "Male Infertility",
     description:
       "The inability to cause pregnancy due to issues with sperm count, motility, or morphology.",
-    symptoms: ["Difficulty conceiving", "Hormonal imbalances", "Erectile or ejaculatory problems"],
+    symptoms: [
+      "Difficulty conceiving",
+      "Hormonal imbalances",
+      "Erectile or ejaculatory problems",
+    ],
   },
   {
     id: "heart_disease",
@@ -146,14 +158,24 @@ const diseaseData = [
     name: "Depression",
     description:
       "A mood disorder that affects mental and physical health, often underdiagnosed in men.",
-    symptoms: ["Persistent sadness", "Loss of interest", "Fatigue", "Irritability"],
+    symptoms: [
+      "Persistent sadness",
+      "Loss of interest",
+      "Fatigue",
+      "Irritability",
+    ],
   },
   {
     id: "kidney_stones",
     name: "Kidney Stones",
     description:
       "Hard deposits made of minerals that form in the kidneys, more common in men.",
-    symptoms: ["Severe back or abdominal pain", "Blood in urine", "Frequent urination", "Nausea"],
+    symptoms: [
+      "Severe back or abdominal pain",
+      "Blood in urine",
+      "Frequent urination",
+      "Nausea",
+    ],
   },
   {
     id: "liver_disease",
@@ -167,17 +189,25 @@ const diseaseData = [
     name: "Sleep Apnea",
     description:
       "A disorder in which breathing repeatedly stops and starts during sleep.",
-    symptoms: ["Loud snoring", "Daytime sleepiness", "Morning headaches", "Irritability"],
+    symptoms: [
+      "Loud snoring",
+      "Daytime sleepiness",
+      "Morning headaches",
+      "Irritability",
+    ],
   },
   {
     id: "enlarged_heart",
     name: "Enlarged Heart (Cardiomegaly)",
     description:
       "An abnormal enlargement of the heart, often due to high blood pressure or heart disease.",
-    symptoms: ["Shortness of breath", "Irregular heartbeat", "Swelling in legs and feet"],
+    symptoms: [
+      "Shortness of breath",
+      "Irregular heartbeat",
+      "Swelling in legs and feet",
+    ],
   },
 ];
-
 
 export default function MensCare() {
   return (
@@ -189,6 +219,8 @@ export default function MensCare() {
         subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
         images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
         phone="+919117520003"
+        bannerImage="./menscarebanner.jpg"
+        bannerText="Mens Care with Homeopathy"
         trust={[
           { icon: "shield", label: "20+ Years of Care" },
           { icon: "award", label: "1L+ Consultations" },
@@ -225,10 +257,10 @@ export default function MensCare() {
         }}
       />
 
+      <DiseaseTypes diseaseData={diseaseData} />
       <YoutubeCarousel
         videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]}
       />
-      <DiseaseTypes diseaseData={diseaseData} />
       <Products products={products} />
       <SuccessStory />
       <Testimonials testimonials={testimonials} />

@@ -48,6 +48,7 @@ export default function HeroUniversal({
   trust = [],
   options = {},
   extraBelow = null,
+  isAutism = false,
 }) {
   const {
     aspect = "aspect-[16/9]",
@@ -103,20 +104,10 @@ export default function HeroUniversal({
           subtitle={bannerSubtext}
           align="center"
           overlayOpacity={0.8}
+          isAutism={isAutism}
         />
       </div>
-      <div className="mt-2">
-        <MarqueeStrip
-          height={150}
-          gap={36}
-          duration={24}
-          items={[
-            { src: "/autclinic.png", alt: "Autism clinic" },
-            { src: "/authand.png", alt: "Autism hand print" },
-            { src: "/autws.png", alt: "Autism" },
-          ]}
-        />
-      </div>
+
       <div className="px-4 py-10 sm:py-14 md:py-16 max-w-7xl mx-auto">
         {/* Promo strip */}
         <motion.div
@@ -162,6 +153,13 @@ export default function HeroUniversal({
           </div>
         </motion.div>
 
+        <div className="mt-2">
+          <MarqueeStrip
+            items={images} // strings OK now
+            pauseDuration={3000} // 3s wait on each image
+            transitionDuration={800} // smooth slide
+          />
+        </div>
         {/* Carousel
         {!!images.length && (
           <div className="mt-8">
