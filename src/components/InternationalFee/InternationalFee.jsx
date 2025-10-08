@@ -68,9 +68,9 @@ function IndiaFeeSimple({ plans }) {
         <div className="p-4 rounded-lg bg-highlight">
           <h2
             id="india-title"
-            className="text-xl sm:text-3xl font-heading font-extrabold tracking-tight"
+            className="text-xl sm:text-3xl font-heading font-extrabold tracking-tight uppercase"
           >
-            ONLINE & OFFLINE FEE STRUCTURE (INDIA)
+            National Online Fee Structure (India) <br /><span className="font-light text-secondary">+91 9117520003 / +91 9117520002</span>
           </h2>
         </div>
       </header>
@@ -120,7 +120,7 @@ function InternationalFeeTable({ plans }) {
             id="intl-title"
             className="text-xl sm:text-3xl font-heading font-extrabold tracking-tight"
           >
-            INTERNATIONAL FEE STRUCTURES
+            INTERNATIONAL FEE STRUCTURES <br /><span className="font-light text-secondary">+91 9117520003 / +91 9117520002</span>
           </h2>
           <p className="mt-2 text-sm opacity-90">
             Fees shown in USD.

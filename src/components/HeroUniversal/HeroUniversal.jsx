@@ -11,6 +11,7 @@ import {
   Star,
 } from "lucide-react";
 import NarrowBanner from "../NarrowBanner/NarrowBanner";
+import MarqueeStrip from "../MarqueeStrip/MarqueeStrip";
 
 /**
  * Reusable, theme-aware hero for disease pages
@@ -96,14 +97,26 @@ export default function HeroUniversal({
         </div>
       )}
       <div className="mt-2">
-          <NarrowBanner
-            image={bannerImage}
-            title={bannerText}
-            subtitle={bannerSubtext}
-            align="center"
-            overlayOpacity={0.8}
-          />
-        </div>
+        <NarrowBanner
+          image={bannerImage}
+          title={bannerText}
+          subtitle={bannerSubtext}
+          align="center"
+          overlayOpacity={0.8}
+        />
+      </div>
+      <div className="mt-2">
+        <MarqueeStrip
+          height={150}
+          gap={36}
+          duration={24}
+          items={[
+            { src: "/autclinic.png", alt: "Autism clinic" },
+            { src: "/authand.png", alt: "Autism hand print" },
+            { src: "/autws.png", alt: "Autism" },
+          ]}
+        />
+      </div>
       <div className="px-4 py-10 sm:py-14 md:py-16 max-w-7xl mx-auto">
         {/* Promo strip */}
         <motion.div
@@ -219,7 +232,8 @@ export default function HeroUniversal({
               <span className="absolute inset-0 opacity-20 bg-[radial-gradient(transparent,rgba(255,255,255,0.25)_40%,transparent_70%)]" />
               <span className="inline-flex items-center gap-3 text-lg sm:text-xl md:text-2xl font-extrabold uppercase tracking-wide">
                 <PhoneCall className="h-7 w-7 md:h-8 md:w-8 animate-pulse" />
-                Book Your Appointment Instantly – Call @ <br /> {formatPhone(phone)}
+                Book Your Appointment Instantly – Call @ <br />{" "}
+                {formatPhone(phone)}
               </span>
             </a>
             <p className="mt-3 text-center text-sm text-text-muted">

@@ -99,7 +99,7 @@ function ProductCard({ product }) {
       </div>
 
       {description && (
-        <p className="text-sm text-text-muted leading-relaxed mb-5 line-clamp-3">
+        <p className="whitespace-pre-line text-sm text-text-muted leading-relaxed mb-5">
           {description}
         </p>
       )}

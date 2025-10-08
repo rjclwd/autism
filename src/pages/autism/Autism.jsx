@@ -40,8 +40,13 @@ const testimonials = [
 const products = [
   {
     name: "Brainboost",
-    description:
-      "20 Drops from bottle C diluted with one tablespoon of water twice a day or as directed by the physician.",
+    description: `
+• Enhances memory and focus using natural homeopathic ingredients.  
+• Supports concentration, mental clarity, and cognitive performance.  
+• Helps reduce anxiety and strengthens the nervous system.  
+• Beneficial for children with learning or attention challenges.  
+• Safe, gentle, and non-addictive — suitable for long-term use.
+    `,
     price: "499",
     image: "https://m.media-amazon.com/images/I/71pNsXZFC0L._SY879_.jpg",
     badge: "Autism Care, Nervous & Mind Care",
@@ -49,8 +54,12 @@ const products = [
   },
   {
     name: "Cerolin Drops Effective for Brain",
-    description:
-      "20 Drops from bottle C diluted with one tablespoon of water twice a day or as directed by the physician.",
+    description: `
+Indications:  
+• Cerebral attack, autism, cerebral palsy, ADHD, Alzheimer’s disease.  
+• Effective in epilepsy, brain atrophy, brain tumour, and Parkinson’s disease.  
+• Supports recovery in dementia and all types of brain disorders.
+    `,
     price: "1200",
     image: "/cerolin-drops-effective-for-brain.jpg",
     badge: "Autism Care, Nervous & Mind Care",
@@ -58,23 +67,20 @@ const products = [
   },
   {
     name: "Neuroplus",
-    description:
-      "20 Drops from bottle C diluted with one tablespoon of water twice a day or as directed by the physician.",
+    description: `
+• Effective for neurological disorders and brain-related conditions.  
+• Helps improve nerve weakness and brain performance.  
+• Aids in boosting cognitive function and clarity.  
+• Dose: 2.5 ml with half a cup of water, three times a day or as directed by the physician.
+    `,
     price: "1200",
     image: "/neuroplus.jpg",
     badge: "Autism Care, Nervous & Mind Care",
     link: "https://www.drrajeevswellness.com/product/neuroplus/",
   },
-  {
-    name: "RL-33 For Baby & Calcium Tonic",
-    description:
-      "Adults: 1 to 2 teaspoonful thrice daily. Children: 1/2 to 1 teaspoonful thrice or as directed by the Physician.",
-    price: "400",
-    image: "/rl-33-for-baby-calcium-tonic.jpg",
-    badge: "Autism Care, Child Care",
-    link: "https://www.drrajeevswellness.com/product/rl-33-for-baby-calcium-tonic/",
-  },
 ];
+
+
 
 const diseaseData = [
   {
