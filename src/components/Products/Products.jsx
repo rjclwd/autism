@@ -136,7 +136,7 @@ export default function Products({ products = [] }) {
 
   return (
     <section className="py-11">
-      <h2 className="text-center text-3xl md:text-4xl font-primary font-heading font-extrabold text-primary">
+      <h2 className="text-center text-3xl md:text-4xl uppercase font-primary font-heading font-extrabold text-primary">
         Recommended Medicine
       </h2>
       <p className="text-center py-4 italic text-text-muted">

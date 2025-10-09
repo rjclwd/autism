@@ -49,6 +49,7 @@ export default function HeroUniversal({
   options = {},
   extraBelow = null,
   isAutism = false,
+  bannerElement
 }) {
   const {
     aspect = "aspect-[16/9]",
@@ -100,11 +101,16 @@ export default function HeroUniversal({
       <div className="mt-2">
         <NarrowBanner
           image={bannerImage}
-          title={bannerText}
-          subtitle={bannerSubtext}
-          align="center"
-          overlayOpacity={0.8}
-          isAutism={isAutism}
+          title={
+            <div className="uppercase">
+              <h2 className="text-white text-5xl md:text-8xl font-heading font-extrabold leading-tight">
+                {bannerElement} Care
+              </h2>
+              <div className="text-accent/90 text-2xl md:text-4xl font-heading font-bold">
+                with Homeopathy
+              </div>
+            </div>
+          }
         />
       </div>
 
@@ -153,13 +159,13 @@ export default function HeroUniversal({
           </div>
         </motion.div>
 
-        <div className="mt-2">
+        {isAutism &&( <div className="mt-2">
           <MarqueeStrip
             items={images} // strings OK now
             pauseDuration={3000} // 3s wait on each image
             transitionDuration={800} // smooth slide
           />
-        </div>
+        </div>)}
         {/* Carousel
         {!!images.length && (
           <div className="mt-8">

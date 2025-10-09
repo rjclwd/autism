@@ -80,132 +80,199 @@ const products = [
 
 const diseaseData = [
   {
-    id: "diabetes",
-    name: "Diabetes",
+    id: "balanitis",
+    name: "Prostate Enlargement",
     description:
-      "A chronic condition that affects how your body processes blood sugar.",
-    symptoms: ["Increased thirst", "Frequent urination", "Fatigue"],
+      "Inflammation of the foreskin or head of the penis often linked with prostate enlargement symptoms.",
+    link: "https://www.rajeevclinic.com/disease/male-disease-531/balanitis-10778.html",
   },
   {
-    id: "hypertension",
-    name: "Hypertension",
-    description: "High blood pressure that can lead to heart problems.",
-    symptoms: ["Headaches", "Shortness of breath", "Nosebleeds"],
-  },
-  {
-    id: "asthma",
-    name: "Asthma",
+    id: "hydrocele",
+    name: "Hydrocele",
     description:
-      "A condition where airways narrow and swell and produce extra mucus.",
-    symptoms: ["Wheezing", "Coughing", "Chest tightness"],
-  },
-  {
-    id: "prostate_issues",
-    name: "Prostate Issues",
-    description:
-      "Conditions affecting the prostate gland, including enlargement or inflammation.",
-    symptoms: [
-      "Difficulty urinating",
-      "Frequent urination at night",
-      "Pain in lower back or pelvis",
-    ],
-  },
-  {
-    id: "erectile_dysfunction",
-    name: "Erectile Dysfunction",
-    description:
-      "The inability to achieve or maintain an erection suitable for sexual activity.",
-    symptoms: [
-      "Difficulty maintaining erection",
-      "Reduced sexual desire",
-      "Stress or anxiety related to performance",
-    ],
+      "Swelling in the scrotum caused by fluid buildup around the testicle.",
+    link: "https://www.rajeevclinic.com/disease/male-disease-531/hydrocele-553.html",
   },
   {
     id: "low_testosterone",
-    name: "Low Testosterone",
+    name: "Hypogonadism (Low Testosterone)",
     description:
-      "A condition where the body doesn’t produce enough testosterone, affecting mood, energy, and sexual health.",
-    symptoms: ["Fatigue", "Reduced muscle mass", "Low libido", "Mood changes"],
-  },
-  {
-    id: "male_infertility",
-    name: "Male Infertility",
-    description:
-      "The inability to cause pregnancy due to issues with sperm count, motility, or morphology.",
-    symptoms: [
-      "Difficulty conceiving",
-      "Hormonal imbalances",
-      "Erectile or ejaculatory problems",
-    ],
-  },
-  {
-    id: "heart_disease",
-    name: "Heart Disease",
-    description:
-      "A range of conditions affecting the heart, including coronary artery disease and heart attacks.",
-    symptoms: ["Chest pain", "Shortness of breath", "Fatigue", "Palpitations"],
+      "A condition where the testes produce insufficient testosterone affecting mood, energy, and sexual drive.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/hormonal-imbalance-affect-your-skin-21525.html",
   },
   {
     id: "obesity",
     name: "Obesity",
     description:
-      "Excess body fat that increases risk of heart disease, diabetes, and other health problems.",
-    symptoms: ["Weight gain", "Fatigue", "Joint pain", "Sleep apnea"],
+      "Excess body fat leading to hormonal imbalance and increased risk of metabolic disorders.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/hormonal-imbalance-affect-your-skin-21525.html",
+  },
+  {
+    id: "diabetes_male",
+    name: "Diabetes (Male Metabolic Syndrome)",
+    description:
+      "A metabolic disorder affecting sugar regulation and male hormonal health.",
+    link: "https://www.rajeevclinic.com/disease/skin-diseases-39/hormonal-imbalance-affect-your-skin-21528.html",
+  },
+  {
+    id: "genital_warts",
+    name: "Genital Warts",
+    description:
+      "Viral infection causing warts in the genital area, often transmitted sexually.",
+    link: "https://www.rajeevclinic.com/disease/male-disease-531/genital-warts-621.html",
+  },
+  {
+    id: "penis_shortening",
+    name: "Shrinking / Shortening of the Penis",
+    description:
+      "Condition involving loss of penile length due to hormonal, vascular, or fibrotic changes.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "masturbation_issues",
+    name: "Ejaculation of Semen with Urine",
+    description:
+      "Retrograde ejaculation where semen enters the bladder instead of exiting through the penis.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/masturbation-21355.html",
   },
   {
     id: "depression",
     name: "Depression",
     description:
-      "A mood disorder that affects mental and physical health, often underdiagnosed in men.",
-    symptoms: [
-      "Persistent sadness",
-      "Loss of interest",
-      "Fatigue",
-      "Irritability",
-    ],
+      "A mood disorder leading to persistent sadness, loss of interest, and fatigue.",
+    link: "https://www.rajeevclinic.com/disease/mind-533/-depression-534.html",
   },
   {
-    id: "kidney_stones",
-    name: "Kidney Stones",
+    id: "anxiety",
+    name: "Anxiety Disorders",
     description:
-      "Hard deposits made of minerals that form in the kidneys, more common in men.",
-    symptoms: [
-      "Severe back or abdominal pain",
-      "Blood in urine",
-      "Frequent urination",
-      "Nausea",
-    ],
+      "Excessive worry or fear affecting daily life and emotional well-being.",
+    link: "https://www.rajeevclinic.com/disease/mind-533/social-phobia-586.html",
   },
   {
-    id: "liver_disease",
-    name: "Liver Disease",
+    id: "stress_fatigue",
+    name: "Stress & Fatigue",
     description:
-      "Conditions affecting liver function, including fatty liver, hepatitis, and cirrhosis.",
-    symptoms: ["Fatigue", "Jaundice", "Abdominal swelling", "Nausea"],
+      "Emotional and physical exhaustion resulting from prolonged mental pressure.",
+    link: "https://www.rajeevclinic.com/disease/mind-533/post-traumatic-stress-disorder-ptsd--595.html",
   },
   {
-    id: "sleep_apnea",
-    name: "Sleep Apnea",
+    id: "gout",
+    name: "Gout",
     description:
-      "A disorder in which breathing repeatedly stops and starts during sleep.",
-    symptoms: [
-      "Loud snoring",
-      "Daytime sleepiness",
-      "Morning headaches",
-      "Irritability",
-    ],
+      "A painful form of arthritis caused by uric acid crystal buildup in joints.",
+    link: "https://www.rajeevclinic.com/disease/extremities-38/uric-acid-gout--79.html",
   },
   {
-    id: "enlarged_heart",
-    name: "Enlarged Heart (Cardiomegaly)",
+    id: "hair_loss",
+    name: "Hair Loss (Androgenetic Alopecia)",
     description:
-      "An abnormal enlargement of the heart, often due to high blood pressure or heart disease.",
-    symptoms: [
-      "Shortness of breath",
-      "Irregular heartbeat",
-      "Swelling in legs and feet",
-    ],
+      "Genetic and hormonal hair thinning common in men, linked to testosterone metabolism.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/musculoskeletal-disorders-20988.html",
+  },
+  {
+    id: "sexual_weakness_overexertion",
+    name: "Sexual Weakness due to Overexertion",
+    description:
+      "Decreased sexual stamina resulting from physical or mental overexertion.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "nocturnal_emission",
+    name: "Infectious Sexually Transmitted Diseases",
+    description:
+      "Diseases spread through sexual contact, potentially affecting nocturnal emission and reproductive health.",
+    link: "https://www.rajeevclinic.com/disease/male-disease-531/nocturnal-emission-10792.html",
+  },
+  {
+    id: "bph",
+    name: "Benign Prostatic Hyperplasia (BPH)",
+    description:
+      "Noncancerous enlargement of the prostate gland causing urinary difficulties.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "prostatitis",
+    name: "Prostatitis",
+    description:
+      "Inflammation or infection of the prostate gland leading to pain and urinary issues.",
+    link: "https://www.rajeevclinic.com/disease/male-disease-531/prostatitis-20867.html",
+  },
+  {
+    id: "prostate_cancer",
+    name: "Prostate Cancer",
+    description:
+      "Malignant growth within the prostate gland, often developing slowly.",
+    link: "https://www.rajeevclinic.com/disease/cancer-502/prostate-cancer-706.html",
+  },
+  {
+    id: "erectile_dysfunction",
+    name: "Erectile Dysfunction (Impotence)",
+    description:
+      "Inability to achieve or maintain an erection suitable for sexual activity.",
+    link: "https://www.rajeevclinic.com/disease/gynaecology-women%60s-health-4/hypoactive-sexual-desire-disorder-10752.html",
+  },
+  {
+    id: "premature_ejaculation",
+    name: "Premature Ejaculation",
+    description:
+      "Early ejaculation during sexual activity leading to distress or dissatisfaction.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/psychosexual-problems-31542.html",
+  },
+  {
+    id: "low_sperm_count",
+    name: "Low Sperm Count (Oligospermia)",
+    description: "Reduced number of sperm in semen affecting fertility.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/trapped-ovarian-syndrome-31543.html",
+  },
+  {
+    id: "male_infertility",
+    name: "Infertility (Male)",
+    description:
+      "Inability to achieve pregnancy due to sperm or hormonal problems.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/chronic-pelvic-pain-31545.html",
+  },
+  {
+    id: "loss_of_libido",
+    name: "Loss of Libido",
+    description:
+      "Decreased sexual desire caused by stress, hormonal imbalance, or emotional issues.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/asherman%60s-syndrome-31546.html",
+  },
+  {
+    id: "std",
+    name: "Sexually Transmitted Diseases (STD)",
+    description:
+      "Infections passed through sexual contact, affecting reproductive organs.",
+    link: "https://www.rajeevclinic.com/disease/other-disease-110/ovarian-remnant-syndrome-31544.html",
+  },
+  {
+    id: "sexual_nervous_weakness",
+    name: "Sexual and Nervous Weakness",
+    description:
+      "Generalized fatigue, nervousness, and low performance impacting sexual health.",
+    link: "https://www.rajeevclinic.com/disease-terms.html",
+  },
+  {
+    id: "uti",
+    name: "Urinary Tract Infection (UTI)",
+    description:
+      "Infection in the urinary system causing pain and frequent urination.",
+    link: "https://www.rajeevclinic.com/disease/urinary-trouble-12/urinary-tract-infection-92.html",
+  },
+  {
+    id: "orchitis",
+    name: "Orchitis",
+    description:
+      "Inflammation of one or both testicles, often caused by bacterial or viral infection.",
+    link: "https://www.rajeevclinic.com/disease/urinary-trouble-12.html",
+  },
+  {
+    id: "epididymitis",
+    name: "Epididymitis",
+    description:
+      "Inflammation of the epididymis leading to scrotal pain and swelling.",
+    link: "https://www.rajeevclinic.com/disease/urinary-trouble-12/urethritis-369.html",
   },
 ];
 
@@ -215,12 +282,12 @@ export default function MensCare() {
       <AppointmentFloat />
       {/* <Hero /> */}
       <HeroUniversal
+        bannerElement={<span className="">Mens</span>}
         promoTitle="One of India’s Leading Homeopathic Clinic Networks"
         subtitle="Holistic homeopathic solutions designed to restore men’s health, strength, and vitality."
         images={["/sexhelmen.png", "/sexhelmenemo.png", "/sexhelmenfat.png"]}
         phone="+919117520003"
         bannerImage="./menscarebanner.jpg"
-        bannerText="Mens Care with Homeopathy"
         trust={[
           { icon: "shield", label: "20+ Years of Care" },
           { icon: "award", label: "1L+ Consultations" },
@@ -262,7 +329,7 @@ export default function MensCare() {
         videos={["BFBoEE1Yvps", "Mjgd4mMzO1o", "yZAMkqHAJFg", "SyIWZMOclmk"]}
       />
       <Products products={products} />
-      <SuccessStory />
+      {/* <SuccessStory /> */}
       <Testimonials testimonials={testimonials} />
     </div>
   );
